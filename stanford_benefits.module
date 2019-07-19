@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the stanford_benefits feature.
+ */
+
+include_once 'stanford_benefits.features.inc';
