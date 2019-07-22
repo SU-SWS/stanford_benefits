@@ -28,6 +28,12 @@ function stanford_benefits_field_group_info() {
       2 => 'field_full_time_employee_contrib',
       3 => 'field_part_time_employee_contrib',
       4 => 'field_pre_authorization_require',
+      5 => 'field_care_management',
+      6 => 'field_deductible',
+      7 => 'field_office_co_pay',
+      8 => 'field_coinsurance',
+      9 => 'field_out_of_pocket_maximum',
+      10 => 'field_overall_lifetime_maximum',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -110,6 +116,41 @@ function stanford_benefits_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_maternity|node|benefit|form';
+  $field_group->group_name = 'group_maternity';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'benefit';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Maternity',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_maternity_hospital_stay',
+      1 => 'field_babys_first_exam',
+      2 => 'field_birthing_centers',
+      3 => 'field_midwives',
+      4 => 'field_prenatal_visits',
+      5 => 'field_doctor_delivery_charge',
+      6 => 'field_pregnancy_termination',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Maternity',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-maternity field-group-fieldset',
+        'description' => 'Enter the maternity information for the benefit.',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_ratings|node|benefit|form';
   $field_group->group_name = 'group_ratings';
   $field_group->entity_type = 'node';
@@ -141,6 +182,7 @@ function stanford_benefits_field_group_info() {
   // Included for use with string extractors like potx.
   t('Basics');
   t('Criteria');
+  t('Maternity');
   t('Ratings - National Committee For Quality Assurance (NCQA)');
 
   return $field_groups;
