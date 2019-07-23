@@ -131,6 +131,336 @@ function stanford_benefits_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-benefit-field_acupuncture'.
+  $field_instances['node-benefit-field_acupuncture'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Acupuncture information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 27,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_acupuncture',
+    'label' => 'Acupuncture',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 29,
+    ),
+  );
+
+  // Exported field_instance: 'node-benefit-field_allergy_tests'.
+  $field_instances['node-benefit-field_allergy_tests'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Allergy Tests information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 28,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_allergy_tests',
+    'label' => 'Allergy Tests',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 30,
+    ),
+  );
+
+  // Exported field_instance: 'node-benefit-field_allergy_treatment'.
+  $field_instances['node-benefit-field_allergy_treatment'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Allergy Treatment information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 29,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_allergy_treatment',
+    'label' => 'Allergy Treatment',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance: 'node-benefit-field_ambulance_charges'.
+  $field_instances['node-benefit-field_ambulance_charges'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Ambulance charges information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 30,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ambulance_charges',
+    'label' => 'Ambulance charges',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance: 'node-benefit-field_autism'.
+  $field_instances['node-benefit-field_autism'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Autism information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 25,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_autism',
+    'label' => 'Autism',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 27,
+    ),
+  );
+
   // Exported field_instance: 'node-benefit-field_babys_first_exam'.
   $field_instances['node-benefit-field_babys_first_exam'] = array(
     'bundle' => 'benefit',
@@ -329,6 +659,204 @@ function stanford_benefits_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-benefit-field_cat_scans'.
+  $field_instances['node-benefit-field_cat_scans'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the CAT Scans information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 31,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_cat_scans',
+    'label' => 'CAT Scans',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance: 'node-benefit-field_chiropractors'.
+  $field_instances['node-benefit-field_chiropractors'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Chiropractors information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 32,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_chiropractors',
+    'label' => 'Chiropractors',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 34,
+    ),
+  );
+
+  // Exported field_instance: 'node-benefit-field_christian_science'.
+  $field_instances['node-benefit-field_christian_science'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Christian Science Practitioners information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 33,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_christian_science',
+    'label' => 'Christian Science Practitioners',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 35,
+    ),
+  );
+
   // Exported field_instance: 'node-benefit-field_coinsurance'.
   $field_instances['node-benefit-field_coinsurance'] = array(
     'bundle' => 'benefit',
@@ -395,6 +923,72 @@ function stanford_benefits_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-benefit-field_cosmetic_surgery'.
+  $field_instances['node-benefit-field_cosmetic_surgery'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Cosmetic Surgery information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 34,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_cosmetic_surgery',
+    'label' => 'Cosmetic Surgery',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 36,
+    ),
+  );
+
   // Exported field_instance: 'node-benefit-field_deductible'.
   $field_instances['node-benefit-field_deductible'] = array(
     'bundle' => 'benefit',
@@ -458,6 +1052,72 @@ function stanford_benefits_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-benefit-field_dental_treatment'.
+  $field_instances['node-benefit-field_dental_treatment'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Dental Treatment information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 35,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_dental_treatment',
+    'label' => 'Dental Treatment',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 37,
     ),
   );
 
@@ -783,6 +1443,72 @@ function stanford_benefits_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 19,
+    ),
+  );
+
+  // Exported field_instance: 'node-benefit-field_mental_health'.
+  $field_instances['node-benefit-field_mental_health'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Mental Health information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 24,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_mental_health',
+    'label' => 'Mental Health',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 26,
     ),
   );
 
@@ -1507,25 +2233,112 @@ function stanford_benefits_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-benefit-field_substance_abuse'.
+  $field_instances['node-benefit-field_substance_abuse'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Substance Abuse information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 26,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_substance_abuse',
+    'label' => 'Substance Abuse',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 28,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Access & Services');
+  t('Acupuncture');
+  t('Allergy Tests');
+  t('Allergy Treatment');
+  t('Ambulance charges');
+  t('Autism');
   t('Baby\'s First Exam');
   t('Birthing Centers');
+  t('CAT Scans');
   t('Care Management');
+  t('Chiropractors');
+  t('Christian Science Practitioners');
   t('Coinsurance');
+  t('Cosmetic Surgery');
   t('Deductible');
+  t('Dental Treatment');
   t('Description');
   t('Doctor Delivery Charge');
   t('Employee Type');
   t('Enter star rating for this criteria.');
+  t('Enter the Acupuncture information for the benefit.');
+  t('Enter the Allergy Tests information for the benefit.');
+  t('Enter the Allergy Treatment information for the benefit.');
+  t('Enter the Ambulance charges information for the benefit.');
+  t('Enter the Autism information for the benefit.');
   t('Enter the Baby\'s First Exam information for the benefit.');
   t('Enter the Birthing Centers information for the benefit.');
+  t('Enter the CAT Scans information for the benefit.');
   t('Enter the Care Management for the benefit.');
+  t('Enter the Chiropractors information for the benefit.');
+  t('Enter the Christian Science Practitioners information for the benefit.');
   t('Enter the Coinsurance for the benefit.');
+  t('Enter the Cosmetic Surgery information for the benefit.');
   t('Enter the Deductible for the benefit.');
+  t('Enter the Dental Treatment information for the benefit.');
   t('Enter the Doctor Delivery Charge information for the benefit.');
   t('Enter the Maternity Hospital Stay for the benefit.');
+  t('Enter the Mental Health information for the benefit.');
   t('Enter the Midwives information for the benefit.');
   t('Enter the Office co-pay for the benefit.');
   t('Enter the Out-of-Pocket Maximum for the benefit.');
@@ -1533,12 +2346,14 @@ function stanford_benefits_field_default_field_instances() {
   t('Enter the Pre-Authorization Requirement for the benefit.');
   t('Enter the Pregnancy Termination information for the benefit.');
   t('Enter the Prenatal Visits information for the benefit.');
+  t('Enter the Substance Abuse information for the benefit.');
   t('Enter the description of for this benefit.');
   t('Enter the overview for the benefit.');
   t('Full-Time Employee * Contribution Per Pay Period');
   t('Getting Better');
   t('Living With Illness');
   t('Maternity Hospital Stay');
+  t('Mental Health');
   t('Midwives');
   t('National Committee For Quality Assurance (NCQA) - Health Plan Report Card: <a href="http://reportcard.ncqa.org" target="_blank">http://reportcard.ncqa.org</a>');
   t('Office co-pay');
@@ -1554,6 +2369,7 @@ function stanford_benefits_field_default_field_instances() {
   t('Prenatal Visits');
   t('Qualified Providers');
   t('Staying Healthy');
+  t('Substance Abuse');
   t('What kind of employee/retiree is this benefit for?');
 
   return $field_instances;

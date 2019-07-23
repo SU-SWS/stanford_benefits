@@ -151,6 +151,74 @@ function stanford_benefits_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_mental_health|node|benefit|form';
+  $field_group->group_name = 'group_mental_health';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'benefit';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Mental Health/Substance Abuse',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_mental_health',
+      1 => 'field_autism',
+      2 => 'field_substance_abuse',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Mental Health/Substance Abuse',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-mental-health field-group-fieldset',
+        'description' => 'Enter the Mental Health/Substance Abuse information for the benefit.',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_other_services_a_d|node|benefit|form';
+  $field_group->group_name = 'group_other_services_a_d';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'benefit';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Other Services (A-D)',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_acupuncture',
+      1 => 'field_allergy_tests',
+      2 => 'field_allergy_treatment',
+      3 => 'field_ambulance_charges',
+      4 => 'field_cat_scans',
+      5 => 'field_chiropractors',
+      6 => 'field_christian_science',
+      7 => 'field_cosmetic_surgery',
+      8 => 'field_dental_treatment',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Other Services (A-D)',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-other-services-a-d field-group-fieldset',
+        'description' => 'Enter the Other Services (A-D) information for the benefit.',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_ratings|node|benefit|form';
   $field_group->group_name = 'group_ratings';
   $field_group->entity_type = 'node';
@@ -183,6 +251,8 @@ function stanford_benefits_field_group_info() {
   t('Basics');
   t('Criteria');
   t('Maternity');
+  t('Mental Health/Substance Abuse');
+  t('Other Services (A-D)');
   t('Ratings - National Committee For Quality Assurance (NCQA)');
 
   return $field_groups;
