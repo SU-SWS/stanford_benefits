@@ -219,6 +219,38 @@ function stanford_benefits_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_other_services_e_n|node|benefit|form';
+  $field_group->group_name = 'group_other_services_e_n';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'benefit';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Other Services (E-N)',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_emergency_room',
+      1 => 'field_urgent_care',
+      2 => 'field_hearing_care',
+      3 => 'field_home_health_care',
+      4 => 'field_hospice_care',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-other-services-e-n field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_ratings|node|benefit|form';
   $field_group->group_name = 'group_ratings';
   $field_group->entity_type = 'node';
@@ -253,6 +285,7 @@ function stanford_benefits_field_group_info() {
   t('Maternity');
   t('Mental Health/Substance Abuse');
   t('Other Services (A-D)');
+  t('Other Services (E-N)');
   t('Ratings - National Committee For Quality Assurance (NCQA)');
 
   return $field_groups;
