@@ -1187,6 +1187,72 @@ function stanford_benefits_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-benefit-field_durable_medical_equip'.
+  $field_instances['node-benefit-field_durable_medical_equip'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Durable Medical Equipment information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 45,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_durable_medical_equip',
+    'label' => 'Durable Medical Equipment',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 47,
+    ),
+  );
+
   // Exported field_instance: 'node-benefit-field_emergency_room'.
   $field_instances['node-benefit-field_emergency_room'] = array(
     'bundle' => 'benefit',
@@ -1599,6 +1665,204 @@ function stanford_benefits_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-benefit-field_hospital_stay'.
+  $field_instances['node-benefit-field_hospital_stay'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Hospital Stay information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 41,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_hospital_stay',
+    'label' => 'Hospital Stay',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 43,
+    ),
+  );
+
+  // Exported field_instance: 'node-benefit-field_infertility_treatment'.
+  $field_instances['node-benefit-field_infertility_treatment'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Infertility Treatment information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 42,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_infertility_treatment',
+    'label' => 'Infertility Treatment',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 44,
+    ),
+  );
+
+  // Exported field_instance: 'node-benefit-field_laboratory_charges'.
+  $field_instances['node-benefit-field_laboratory_charges'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Laboratory Charges information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 43,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_laboratory_charges',
+    'label' => 'Laboratory Charges',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 45,
+    ),
+  );
+
   // Exported field_instance: 'node-benefit-field_living_with_illness'.
   $field_instances['node-benefit-field_living_with_illness'] = array(
     'bundle' => 'benefit',
@@ -1839,6 +2103,72 @@ function stanford_benefits_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 22,
+    ),
+  );
+
+  // Exported field_instance: 'node-benefit-field_occupational_therapy'.
+  $field_instances['node-benefit-field_occupational_therapy'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Occupational Therapy information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 46,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_occupational_therapy',
+    'label' => 'Occupational Therapy',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 48,
     ),
   );
 
@@ -2452,6 +2782,72 @@ function stanford_benefits_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-benefit-field_s_mri'.
+  $field_instances['node-benefit-field_s_mri'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Magnetic resonance imaging - MRI information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 44,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_s_mri',
+    'label' => 'Magnetic resonance imaging - MRI',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 46,
+    ),
+  );
+
   // Exported field_instance: 'node-benefit-field_staying_healthy'.
   $field_instances['node-benefit-field_staying_healthy'] = array(
     'bundle' => 'benefit',
@@ -2649,6 +3045,7 @@ function stanford_benefits_field_default_field_instances() {
   t('Dental Treatment');
   t('Description');
   t('Doctor Delivery Charge');
+  t('Durable Medical Equipment');
   t('Emergency Room');
   t('Employee Type');
   t('Enter star rating for this criteria.');
@@ -2668,13 +3065,19 @@ function stanford_benefits_field_default_field_instances() {
   t('Enter the Deductible for the benefit.');
   t('Enter the Dental Treatment information for the benefit.');
   t('Enter the Doctor Delivery Charge information for the benefit.');
+  t('Enter the Durable Medical Equipment information for the benefit.');
   t('Enter the Emergency Room information for the benefit.');
   t('Enter the Hearing Care information for the benefit.');
   t('Enter the Home Health Care information for the benefit.');
   t('Enter the Hospice Care information for the benefit.');
+  t('Enter the Hospital Stay information for the benefit.');
+  t('Enter the Infertility Treatment information for the benefit.');
+  t('Enter the Laboratory Charges information for the benefit.');
+  t('Enter the Magnetic resonance imaging - MRI information for the benefit.');
   t('Enter the Maternity Hospital Stay for the benefit.');
   t('Enter the Mental Health information for the benefit.');
   t('Enter the Midwives information for the benefit.');
+  t('Enter the Occupational Therapy information for the benefit.');
   t('Enter the Office co-pay for the benefit.');
   t('Enter the Out-of-Pocket Maximum for the benefit.');
   t('Enter the Overall Lifetime Maximum for the benefit.');
@@ -2690,11 +3093,16 @@ function stanford_benefits_field_default_field_instances() {
   t('Hearing Care');
   t('Home Health Care');
   t('Hospice Care');
+  t('Hospital Stay');
+  t('Infertility Treatment');
+  t('Laboratory Charges');
   t('Living With Illness');
+  t('Magnetic resonance imaging - MRI');
   t('Maternity Hospital Stay');
   t('Mental Health');
   t('Midwives');
   t('National Committee For Quality Assurance (NCQA) - Health Plan Report Card: <a href="http://reportcard.ncqa.org" target="_blank">http://reportcard.ncqa.org</a>');
+  t('Occupational Therapy');
   t('Office co-pay');
   t('Out-of-Pocket Maximum');
   t('Overall Accredition Status');

@@ -234,16 +234,51 @@ function stanford_benefits_field_group_info() {
       2 => 'field_hearing_care',
       3 => 'field_home_health_care',
       4 => 'field_hospice_care',
+      5 => 'field_hospital_stay',
+      6 => 'field_infertility_treatment',
+      7 => 'field_laboratory_charges',
+      8 => 'field_s_mri',
+      9 => 'field_durable_medical_equip',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Other Services (E-N)',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-other-services-e-n field-group-fieldset',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-other-services-e-n field-group-fieldset',
+        'description' => 'Enter the Other Services (E-N) information for the benefit.',
       ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_other_services_o_z|node|benefit|form';
+  $field_group->group_name = 'group_other_services_o_z';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'benefit';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Other Services (O-Z)',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_occupational_therapy',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Other Services (O-Z)',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-other-services-o-z field-group-fieldset',
+        'description' => 'Enter the Other Services (O-Z) information for the benefit.',
+      ),
+      'formatter' => 'collapsible',
     ),
   );
   $field_groups[''] = $field_group;
@@ -286,6 +321,7 @@ function stanford_benefits_field_group_info() {
   t('Mental Health/Substance Abuse');
   t('Other Services (A-D)');
   t('Other Services (E-N)');
+  t('Other Services (O-Z)');
   t('Ratings - National Committee For Quality Assurance (NCQA)');
 
   return $field_groups;
