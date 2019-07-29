@@ -296,6 +296,72 @@ function stanford_benefits_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_prescription_drugs|node|benefit|form';
+  $field_group->group_name = 'group_prescription_drugs';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'benefit';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Prescription Drugs',
+    'weight' => '9',
+    'children' => array(
+      0 => 'field_pharmacy_retail',
+      1 => 'field_mail_order_drug_program',
+      2 => 'field_birth_control_pills',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Prescription Drugs',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-prescription-drugs field-group-fieldset',
+        'description' => 'Enter the Prescription Drugs information for the benefit.',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_preventive_care|node|benefit|form';
+  $field_group->group_name = 'group_preventive_care';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'benefit';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Preventive Care',
+    'weight' => '10',
+    'children' => array(
+      0 => 'field_physical_exams_for_adults',
+      1 => 'field_pe_for_children',
+      2 => 'field_pap_smears',
+      3 => 'field_mammograms',
+      4 => 'field_immunizations',
+      5 => 'field_prostate_specific',
+      6 => 'field_well_woman_visits',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Preventive Care',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-preventive-care field-group-fieldset',
+        'description' => 'Enter the Preventive Care information for the benefit.',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_ratings|node|benefit|form';
   $field_group->group_name = 'group_ratings';
   $field_group->entity_type = 'node';
@@ -332,6 +398,8 @@ function stanford_benefits_field_group_info() {
   t('Other Services (A-D)');
   t('Other Services (E-N)');
   t('Other Services (O-Z)');
+  t('Prescription Drugs');
+  t('Preventive Care');
   t('Ratings - National Committee For Quality Assurance (NCQA)');
 
   return $field_groups;

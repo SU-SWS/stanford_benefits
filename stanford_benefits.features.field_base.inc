@@ -145,6 +145,25 @@ function stanford_benefits_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_birth_control_pills'.
+  $field_bases['field_birth_control_pills'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_birth_control_pills',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_birthing_centers'.
   $field_bases['field_birthing_centers'] = array(
     'active' => 1,
@@ -515,6 +534,25 @@ function stanford_benefits_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_immunizations'.
+  $field_bases['field_immunizations'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_immunizations',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_infertility_treatment'.
   $field_bases['field_infertility_treatment'] = array(
     'active' => 1,
@@ -572,6 +610,44 @@ function stanford_benefits_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'starrating_rating',
+  );
+
+  // Exported field_base: 'field_mail_order_drug_program'.
+  $field_bases['field_mail_order_drug_program'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_mail_order_drug_program',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_mammograms'.
+  $field_bases['field_mammograms'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_mammograms',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
   );
 
   // Exported field_base: 'field_maternity_hospital_stay'.
@@ -758,6 +834,25 @@ function stanford_benefits_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_pap_smears'.
+  $field_bases['field_pap_smears'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_pap_smears',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_part_time_employee_contrib'.
   $field_bases['field_part_time_employee_contrib'] = array(
     'active' => 1,
@@ -765,6 +860,63 @@ function stanford_benefits_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_part_time_employee_contrib',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_pe_for_children'.
+  $field_bases['field_pe_for_children'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_pe_for_children',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_pharmacy_retail'.
+  $field_bases['field_pharmacy_retail'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_pharmacy_retail',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_physical_exams_for_adults'.
+  $field_bases['field_physical_exams_for_adults'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_physical_exams_for_adults',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -841,6 +993,25 @@ function stanford_benefits_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prenatal_visits',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_prostate_specific'.
+  $field_bases['field_prostate_specific'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prostate_specific',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -1094,6 +1265,25 @@ function stanford_benefits_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_vision_care',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_well_woman_visits'.
+  $field_bases['field_well_woman_visits'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_well_woman_visits',
     'indexes' => array(
       'format' => array(
         0 => 'format',
