@@ -99,11 +99,12 @@ function stanford_benefits_field_group_info() {
     'label' => 'Ratings - National Committee For Quality Assurance (NCQA)',
     'weight' => '2',
     'children' => array(
-      0 => 'field_access_services',
-      1 => 'field_qualified_providers',
-      2 => 'field_staying_healthy',
-      3 => 'field_getting_better',
-      4 => 'field_living_with_illness',
+      0 => 'field_overall_accredition_status',
+      1 => 'field_access_services',
+      2 => 'field_qualified_providers',
+      3 => 'field_staying_healthy',
+      4 => 'field_getting_better',
+      5 => 'field_living_with_illness',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -154,6 +155,39 @@ function stanford_benefits_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_maternity|node|benefit|default';
+  $field_group->group_name = 'group_maternity';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'benefit';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Maternity',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_maternity_hospital_stay',
+      1 => 'field_babys_first_exam',
+      2 => 'field_birthing_centers',
+      3 => 'field_midwives',
+      4 => 'field_prenatal_visits',
+      5 => 'field_doctor_delivery_charge',
+      6 => 'field_pregnancy_termination',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-maternity field-group-fieldset',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_maternity|node|benefit|form';
   $field_group->group_name = 'group_maternity';
   $field_group->entity_type = 'node';
@@ -189,6 +223,35 @@ function stanford_benefits_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_mental_health|node|benefit|default';
+  $field_group->group_name = 'group_mental_health';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'benefit';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Mental Health/Substance Abuse',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_mental_health',
+      1 => 'field_autism',
+      2 => 'field_substance_abuse',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-mental-health field-group-fieldset',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_mental_health|node|benefit|form';
   $field_group->group_name = 'group_mental_health';
   $field_group->entity_type = 'node';
@@ -213,6 +276,114 @@ function stanford_benefits_field_group_info() {
         'description' => 'Enter the Mental Health/Substance Abuse information for the benefit.',
       ),
       'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_other_serv_a_d|node|benefit|default';
+  $field_group->group_name = 'group_other_serv_a_d';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'benefit';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Other Services (A-D)',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_acupuncture',
+      1 => 'field_allergy_tests',
+      2 => 'field_allergy_treatment',
+      3 => 'field_ambulance_charges',
+      4 => 'field_cat_scans',
+      5 => 'field_chiropractors',
+      6 => 'field_christian_science',
+      7 => 'field_cosmetic_surgery',
+      8 => 'field_dental_treatment',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-other-serv-a-d field-group-fieldset',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_other_serv_e_n|node|benefit|default';
+  $field_group->group_name = 'group_other_serv_e_n';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'benefit';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Other Services (E-N)',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_emergency_room',
+      1 => 'field_urgent_care',
+      2 => 'field_hearing_care',
+      3 => 'field_home_health_care',
+      4 => 'field_hospice_care',
+      5 => 'field_hospital_stay',
+      6 => 'field_infertility_treatment',
+      7 => 'field_laboratory_charges',
+      8 => 'field_s_mri',
+      9 => 'field_durable_medical_equip',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-other-serv-e-n field-group-fieldset',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_other_serv_o_z|node|benefit|default';
+  $field_group->group_name = 'group_other_serv_o_z';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'benefit';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Other Services (O-Z)',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_occupational_therapy',
+      1 => 'field_organ_transplants',
+      2 => 'field_skilled_nursing',
+      3 => 'field_physical_therapy',
+      4 => 'field_surgery_physician_services',
+      5 => 'field_surgery_facility_charges',
+      6 => 'field_speech_therapy',
+      7 => 'field_tubal_ligation',
+      8 => 'field_vasectomy',
+      9 => 'field_vision_care',
+      10 => 'field_x_rays',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-other-serv-o-z field-group-fieldset',
+        'id' => '',
+      ),
     ),
   );
   $field_groups[''] = $field_group;
@@ -334,6 +505,35 @@ function stanford_benefits_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_prescription_drugs|node|benefit|default';
+  $field_group->group_name = 'group_prescription_drugs';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'benefit';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Prescription Drugs',
+    'weight' => '9',
+    'children' => array(
+      0 => 'field_pharmacy_retail',
+      1 => 'field_mail_order_drug_program',
+      2 => 'field_birth_control_pills',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-prescription-drugs field-group-fieldset',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_prescription_drugs|node|benefit|form';
   $field_group->group_name = 'group_prescription_drugs';
   $field_group->entity_type = 'node';
@@ -358,6 +558,39 @@ function stanford_benefits_field_group_info() {
         'description' => 'Enter the Prescription Drugs information for the benefit.',
       ),
       'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_preventive_care|node|benefit|default';
+  $field_group->group_name = 'group_preventive_care';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'benefit';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Preventive Care',
+    'weight' => '10',
+    'children' => array(
+      0 => 'field_physical_exams_for_adults',
+      1 => 'field_pe_for_children',
+      2 => 'field_pap_smears',
+      3 => 'field_mammograms',
+      4 => 'field_immunizations',
+      5 => 'field_prostate_specific',
+      6 => 'field_well_woman_visits',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-preventive-care field-group-fieldset',
+        'id' => '',
+      ),
     ),
   );
   $field_groups[''] = $field_group;
