@@ -71,14 +71,14 @@ function stanford_benefits_field_default_field_instances() {
         ),
       ),
       'display_summary' => 0,
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 1,
+        'rows' => 5,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
@@ -91,7 +91,7 @@ function stanford_benefits_field_default_field_instances() {
     'bundle' => 'benefit',
     'default_value' => array(
       0 => array(
-        'value' => 'null',
+        'value' => 0,
       ),
     ),
     'deleted' => 0,
@@ -524,6 +524,42 @@ function stanford_benefits_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 20,
+    ),
+  );
+
+  // Exported field_instance: 'node-benefit-field_benefit_type'.
+  $field_instances['node-benefit-field_benefit_type'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select the type of benefit being created.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_benefit_type',
+    'label' => 'Benefit Type',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 1,
     ),
   );
 
@@ -1390,13 +1426,13 @@ function stanford_benefits_field_default_field_instances() {
     'bundle' => 'benefit',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'What kind of employee/retiree is this benefit for?',
+    'description' => 'Select the type of employee of the benefit.',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1417,7 +1453,7 @@ function stanford_benefits_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -1492,7 +1528,7 @@ function stanford_benefits_field_default_field_instances() {
     'bundle' => 'benefit',
     'default_value' => array(
       0 => array(
-        'value' => 'null',
+        'value' => 0,
       ),
     ),
     'deleted' => 0,
@@ -1999,7 +2035,7 @@ function stanford_benefits_field_default_field_instances() {
     'bundle' => 'benefit',
     'default_value' => array(
       0 => array(
-        'value' => 'null',
+        'value' => 0,
       ),
     ),
     'deleted' => 0,
@@ -3405,7 +3441,7 @@ function stanford_benefits_field_default_field_instances() {
     'bundle' => 'benefit',
     'default_value' => array(
       0 => array(
-        'value' => 'null',
+        'value' => 0,
       ),
     ),
     'deleted' => 0,
@@ -3714,7 +3750,7 @@ function stanford_benefits_field_default_field_instances() {
     'bundle' => 'benefit',
     'default_value' => array(
       0 => array(
-        'value' => 'null',
+        'value' => 0,
       ),
     ),
     'deleted' => 0,
@@ -4357,6 +4393,7 @@ function stanford_benefits_field_default_field_instances() {
   t('Ambulance charges');
   t('Autism');
   t('Baby\'s First Exam');
+  t('Benefit Type');
   t('Birth Control Pills');
   t('Birthing Centers');
   t('CAT Scans');
@@ -4467,6 +4504,8 @@ function stanford_benefits_field_default_field_instances() {
   t('Prenatal Visits');
   t('Prostate Specific Antigen test - PSA');
   t('Qualified Providers');
+  t('Select the type of benefit being created.');
+  t('Select the type of employee of the benefit.');
   t('Skilled Nursing');
   t('Speech Therapy');
   t('Staying Healthy');
@@ -4478,7 +4517,6 @@ function stanford_benefits_field_default_field_instances() {
   t('Vasectomy');
   t('Vision care');
   t('Well-woman visits');
-  t('What kind of employee/retiree is this benefit for?');
   t('X-rays');
 
   return $field_instances;

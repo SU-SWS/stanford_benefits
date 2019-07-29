@@ -21,7 +21,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Basics',
-    'weight' => '3',
+    'weight' => '1',
     'children' => array(
       0 => 'body',
       1 => 'field_s_benefit_description',
@@ -58,7 +58,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Basics',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'body',
       1 => 'field_s_benefit_description',
@@ -97,7 +97,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Ratings - National Committee For Quality Assurance (NCQA)',
-    'weight' => '2',
+    'weight' => '0',
     'children' => array(
       0 => 'field_overall_accredition_status',
       1 => 'field_access_services',
@@ -163,7 +163,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Maternity',
-    'weight' => '4',
+    'weight' => '2',
     'children' => array(
       0 => 'field_maternity_hospital_stay',
       1 => 'field_babys_first_exam',
@@ -196,7 +196,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Maternity',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_maternity_hospital_stay',
       1 => 'field_babys_first_exam',
@@ -231,7 +231,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Mental Health/Substance Abuse',
-    'weight' => '5',
+    'weight' => '3',
     'children' => array(
       0 => 'field_mental_health',
       1 => 'field_autism',
@@ -260,7 +260,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Mental Health/Substance Abuse',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_mental_health',
       1 => 'field_autism',
@@ -291,7 +291,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Other Services (A-D)',
-    'weight' => '6',
+    'weight' => '4',
     'children' => array(
       0 => 'field_acupuncture',
       1 => 'field_allergy_tests',
@@ -326,7 +326,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Other Services (E-N)',
-    'weight' => '7',
+    'weight' => '5',
     'children' => array(
       0 => 'field_emergency_room',
       1 => 'field_urgent_care',
@@ -362,7 +362,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Other Services (O-Z)',
-    'weight' => '8',
+    'weight' => '6',
     'children' => array(
       0 => 'field_occupational_therapy',
       1 => 'field_organ_transplants',
@@ -399,7 +399,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Other Services (A-D)',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_acupuncture',
       1 => 'field_allergy_tests',
@@ -436,7 +436,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Other Services (E-N)',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'field_emergency_room',
       1 => 'field_urgent_care',
@@ -474,7 +474,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Other Services (O-Z)',
-    'weight' => '8',
+    'weight' => '9',
     'children' => array(
       0 => 'field_occupational_therapy',
       1 => 'field_organ_transplants',
@@ -513,7 +513,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Prescription Drugs',
-    'weight' => '9',
+    'weight' => '7',
     'children' => array(
       0 => 'field_pharmacy_retail',
       1 => 'field_mail_order_drug_program',
@@ -542,7 +542,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Prescription Drugs',
-    'weight' => '9',
+    'weight' => '10',
     'children' => array(
       0 => 'field_pharmacy_retail',
       1 => 'field_mail_order_drug_program',
@@ -573,7 +573,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Preventive Care',
-    'weight' => '10',
+    'weight' => '8',
     'children' => array(
       0 => 'field_physical_exams_for_adults',
       1 => 'field_pe_for_children',
@@ -606,7 +606,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Preventive Care',
-    'weight' => '10',
+    'weight' => '11',
     'children' => array(
       0 => 'field_physical_exams_for_adults',
       1 => 'field_pe_for_children',
@@ -641,7 +641,7 @@ function stanford_benefits_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Ratings - National Committee For Quality Assurance (NCQA)',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_overall_accredition_status',
       1 => 'group_criteria',

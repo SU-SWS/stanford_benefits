@@ -145,6 +145,32 @@ function stanford_benefits_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_benefit_type'.
+  $field_bases['field_benefit_type'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_benefit_type',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'benefit_plan_type',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_birth_control_pills'.
   $field_bases['field_birth_control_pills'] = array(
     'active' => 1,
@@ -400,22 +426,22 @@ function stanford_benefits_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_employee_type',
     'indexes' => array(
-      'value' => array(
-        0 => 'value',
+      'tid' => array(
+        0 => 'tid',
       ),
     ),
     'locked' => 0,
-    'module' => 'list',
+    'module' => 'taxonomy',
     'settings' => array(
       'allowed_values' => array(
-        'Active employees' => 'Active employees',
-        'Early retirees under 65' => 'Early retirees under 65',
-        'Retirees' => 'Retirees',
+        0 => array(
+          'vocabulary' => 'employee_type',
+          'parent' => 0,
+        ),
       ),
-      'allowed_values_function' => '',
     ),
     'translatable' => 0,
-    'type' => 'list_text',
+    'type' => 'taxonomy_term_reference',
   );
 
   // Exported field_base: 'field_full_time_employee_contrib'.
