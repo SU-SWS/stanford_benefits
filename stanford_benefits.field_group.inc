@@ -268,6 +268,16 @@ function stanford_benefits_field_group_info() {
     'weight' => '8',
     'children' => array(
       0 => 'field_occupational_therapy',
+      1 => 'field_organ_transplants',
+      2 => 'field_skilled_nursing',
+      3 => 'field_physical_therapy',
+      4 => 'field_surgery_physician_services',
+      5 => 'field_surgery_facility_charges',
+      6 => 'field_speech_therapy',
+      7 => 'field_tubal_ligation',
+      8 => 'field_vasectomy',
+      9 => 'field_vision_care',
+      10 => 'field_x_rays',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
