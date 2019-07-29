@@ -27,7 +27,7 @@ function stanford_benefits_field_default_field_instances() {
           'trim_length' => 600,
         ),
         'type' => 'stanford_link_formatter_link_to_field',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -143,7 +143,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 27,
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -209,7 +209,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 28,
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -275,7 +275,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 29,
+        'weight' => 28,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -341,7 +341,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 30,
+        'weight' => 29,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -407,7 +407,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 25,
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -473,7 +473,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 18,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -539,7 +539,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 60,
+        'weight' => 58,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -605,7 +605,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 19,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -671,7 +671,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -737,7 +737,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 31,
+        'weight' => 30,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -803,7 +803,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 32,
+        'weight' => 31,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -869,7 +869,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 33,
+        'weight' => 32,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -935,7 +935,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 14,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1001,7 +1001,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 34,
+        'weight' => 33,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1067,7 +1067,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 12,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1133,7 +1133,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 35,
+        'weight' => 34,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1199,7 +1199,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 22,
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1265,7 +1265,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 45,
+        'weight' => 44,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1331,7 +1331,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 36,
+        'weight' => 35,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1434,7 +1434,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1545,7 +1545,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 38,
+        'weight' => 37,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1611,7 +1611,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 39,
+        'weight' => 38,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1677,7 +1677,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 40,
+        'weight' => 39,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1743,7 +1743,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 41,
+        'weight' => 40,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1809,7 +1809,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 65,
+        'weight' => 63,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1875,7 +1875,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 42,
+        'weight' => 41,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1941,7 +1941,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 43,
+        'weight' => 42,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2052,7 +2052,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 59,
+        'weight' => 57,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2118,7 +2118,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 64,
+        'weight' => 62,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2184,7 +2184,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 17,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2250,7 +2250,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 24,
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2316,7 +2316,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 20,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2382,7 +2382,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 46,
+        'weight' => 45,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2448,7 +2448,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 13,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2514,7 +2514,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 47,
+        'weight' => 46,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2580,7 +2580,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 15,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2683,7 +2683,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 16,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2749,7 +2749,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 63,
+        'weight' => 61,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2815,7 +2815,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2881,7 +2881,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 62,
+        'weight' => 60,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2947,7 +2947,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 58,
+        'weight' => 56,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3013,7 +3013,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 61,
+        'weight' => 59,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3079,7 +3079,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 49,
+        'weight' => 48,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3145,7 +3145,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3211,7 +3211,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 23,
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3277,7 +3277,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 21,
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3343,7 +3343,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 66,
+        'weight' => 64,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3454,7 +3454,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3520,7 +3520,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 44,
+        'weight' => 43,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3586,7 +3586,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 48,
+        'weight' => 47,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3652,7 +3652,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 52,
+        'weight' => 51,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3763,7 +3763,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 26,
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3829,7 +3829,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 51,
+        'weight' => 50,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3895,7 +3895,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 50,
+        'weight' => 49,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3961,7 +3961,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 53,
+        'weight' => 52,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4027,7 +4027,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 37,
+        'weight' => 36,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4093,7 +4093,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 54,
+        'weight' => 53,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4159,7 +4159,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 55,
+        'weight' => 54,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4225,7 +4225,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 67,
+        'weight' => 65,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4291,7 +4291,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 56,
+        'weight' => 55,
       ),
       'teaser' => array(
         'label' => 'above',

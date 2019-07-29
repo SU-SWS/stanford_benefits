@@ -13,6 +13,43 @@ function stanford_benefits_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_basics|node|benefit|default';
+  $field_group->group_name = 'group_basics';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'benefit';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Basics',
+    'weight' => '3',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_s_benefit_description',
+      2 => 'field_full_time_employee_contrib',
+      3 => 'field_part_time_employee_contrib',
+      4 => 'field_pre_authorization_require',
+      5 => 'field_care_management',
+      6 => 'field_deductible',
+      7 => 'field_office_co_pay',
+      8 => 'field_coinsurance',
+      9 => 'field_out_of_pocket_maximum',
+      10 => 'field_overall_lifetime_maximum',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-basics field-group-fieldset',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_basics|node|benefit|form';
   $field_group->group_name = 'group_basics';
   $field_group->entity_type = 'node';
@@ -59,23 +96,24 @@ function stanford_benefits_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Criteria',
+    'label' => 'Ratings - National Committee For Quality Assurance (NCQA)',
     'weight' => '2',
     'children' => array(
       0 => 'field_access_services',
       1 => 'field_qualified_providers',
       2 => 'field_staying_healthy',
       3 => 'field_getting_better',
+      4 => 'field_living_with_illness',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Criteria',
+      'label' => 'Ratings - National Committee For Quality Assurance (NCQA)',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-criteria field-group-fieldset',
         'description' => 'Up to four stars are given for each of the following criteria:',
       ),
-      'formatter' => 'open',
+      'formatter' => 'collapsible',
     ),
   );
   $field_groups[''] = $field_group;

@@ -83,6 +83,7 @@ features[field_base][] = field_vasectomy
 features[field_base][] = field_vision_care
 features[field_base][] = field_well_woman_visits
 features[field_base][] = field_x_rays
+features[field_group][] = group_basics|node|benefit|default
 features[field_group][] = group_basics|node|benefit|form
 features[field_group][] = group_criteria|node|benefit|default
 features[field_group][] = group_criteria|node|benefit|form
