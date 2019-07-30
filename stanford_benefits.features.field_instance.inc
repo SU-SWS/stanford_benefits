@@ -1421,42 +1421,6 @@ function stanford_benefits_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-benefit-field_employee_type'.
-  $field_instances['node-benefit-field_employee_type'] = array(
-    'bundle' => 'benefit',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Select the type of employee of the benefit.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_employee_type',
-    'label' => 'Employee Type',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 2,
-    ),
-  );
-
   // Exported field_instance: 'node-benefit-field_full_time_employee_contrib'.
   $field_instances['node-benefit-field_full_time_employee_contrib'] = array(
     'bundle' => 'benefit',
@@ -4408,7 +4372,6 @@ function stanford_benefits_field_default_field_instances() {
   t('Doctor Delivery Charge');
   t('Durable Medical Equipment');
   t('Emergency Room');
-  t('Employee Type');
   t('Enter star rating for this criteria.');
   t('Enter the Acupuncture information for the benefit.');
   t('Enter the Allergy Tests information for the benefit.');
@@ -4505,7 +4468,6 @@ function stanford_benefits_field_default_field_instances() {
   t('Prostate Specific Antigen test - PSA');
   t('Qualified Providers');
   t('Select the type of benefit being created.');
-  t('Select the type of employee of the benefit.');
   t('Skilled Nursing');
   t('Speech Therapy');
   t('Staying Healthy');
