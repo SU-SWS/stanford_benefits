@@ -117,12 +117,16 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
   $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
+    957 => '957',
+  );
   $handler->display->display_options['filters']['term_node_tid_depth']['exposed'] = TRUE;
   $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator_id'] = 'term_node_tid_depth_op';
   $handler->display->display_options['filters']['term_node_tid_depth']['expose']['label'] = 'Benefit type';
   $handler->display->display_options['filters']['term_node_tid_depth']['expose']['description'] = 'Select the benefit type to compare.';
   $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator'] = 'term_node_tid_depth_op';
   $handler->display->display_options['filters']['term_node_tid_depth']['expose']['identifier'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['required'] = TRUE;
   $handler->display->display_options['filters']['term_node_tid_depth']['expose']['remember'] = TRUE;
   $handler->display->display_options['filters']['term_node_tid_depth']['expose']['remember_roles'] = array(
     2 => '2',
@@ -141,8 +145,8 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth']['hierarchy'] = 1;
   $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '1';
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
+  /* Display: Benefit Comparison Tool */
+  $handler = $view->new_display('block', 'Benefit Comparison Tool', 'block');
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Compare plans';
@@ -162,7 +166,7 @@ function stanford_benefits_views_default_views() {
     t('Full-Time Employee * Contribution Per Pay Period'),
     t('Benefit type'),
     t('Select the benefit type to compare.'),
-    t('Block'),
+    t('Benefit Comparison Tool'),
     t('Compare plans'),
   );
   $export['caw_benefit_comparison_tool'] = $view;
