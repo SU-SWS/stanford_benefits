@@ -89,6 +89,75 @@ function stanford_benefits_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_basics|node|dental_benefit|default';
+  $field_group->group_name = 'group_basics';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dental_benefit';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Basics',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_full_time_employee_contrib',
+      1 => 'field_part_time_employee_contrib',
+      2 => 'field_deductible',
+      3 => 'field_coinsurance',
+      4 => 'field_annual_maximum',
+      5 => 'field_lifetime_maximum',
+      6 => 'field_overview',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Basics',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-basics field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_basics|node|dental_benefit|form';
+  $field_group->group_name = 'group_basics';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dental_benefit';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Basics',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_full_time_employee_contrib',
+      1 => 'field_part_time_employee_contrib',
+      2 => 'field_deductible',
+      3 => 'field_coinsurance',
+      4 => 'field_annual_maximum',
+      5 => 'field_lifetime_maximum',
+      6 => 'field_overview',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Basics',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-basics field-group-fieldset',
+        'description' => 'Enter the basic information for the benefit.',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_criteria|node|benefit|default';
   $field_group->group_name = 'group_criteria';
   $field_group->entity_type = 'node';
@@ -283,6 +352,64 @@ function stanford_benefits_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_orthodontic_services|node|dental_benefit|default';
+  $field_group->group_name = 'group_orthodontic_services';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dental_benefit';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Orthodontic Services',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_orthodontia',
+      1 => 'field_retainers',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-orthodontic-services field-group-fieldset',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_orthodontic_services|node|dental_benefit|form';
+  $field_group->group_name = 'group_orthodontic_services';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dental_benefit';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Orthodontic Services',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_orthodontia',
+      1 => 'field_retainers',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Orthodontic Services',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-orthodontic-services field-group-fieldset',
+        'description' => 'Enter the Orthodontic Services information for the benefit.',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_other_serv_a_d|node|benefit|default';
   $field_group->group_name = 'group_other_serv_a_d';
   $field_group->entity_type = 'node';
@@ -428,6 +555,70 @@ function stanford_benefits_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_other_services_a_e|node|dental_benefit|default';
+  $field_group->group_name = 'group_other_services_a_e';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dental_benefit';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Other Services (A-E)',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_anesthesia',
+      1 => 'field_bridges',
+      2 => 'field_crown',
+      3 => 'field_dentures',
+      4 => 'field_extractions',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-other-services-a-e field-group-fieldset',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_other_services_a_e|node|dental_benefit|form';
+  $field_group->group_name = 'group_other_services_a_e';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dental_benefit';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Other Services (A-E)',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_anesthesia',
+      1 => 'field_bridges',
+      2 => 'field_crown',
+      3 => 'field_dentures',
+      4 => 'field_extractions',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Other Services (A-E)',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-other-services-a-e field-group-fieldset',
+        'description' => 'Enter the Other Services (A-E) information for the benefit.',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_other_services_e_n|node|benefit|form';
   $field_group->group_name = 'group_other_services_e_n';
   $field_group->entity_type = 'node';
@@ -457,6 +648,74 @@ function stanford_benefits_field_group_info() {
         'id' => '',
         'classes' => 'group-other-services-e-n field-group-fieldset',
         'description' => 'Enter the Other Services (E-N) information for the benefit.',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_other_services_f_o|node|dental_benefit|default';
+  $field_group->group_name = 'group_other_services_f_o';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dental_benefit';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Other Services (F-O)',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_fillings',
+      1 => 'field_gingivectomy',
+      2 => 'field_gold_restorations',
+      3 => 'field_implants',
+      4 => 'field_onlays',
+      5 => 'field_oral_surgery',
+      6 => 'field_inlays',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-other-services-f-o field-group-fieldset',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_other_services_f_o|node|dental_benefit|form';
+  $field_group->group_name = 'group_other_services_f_o';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dental_benefit';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Other Services (F-O)',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_fillings',
+      1 => 'field_gingivectomy',
+      2 => 'field_gold_restorations',
+      3 => 'field_implants',
+      4 => 'field_onlays',
+      5 => 'field_oral_surgery',
+      6 => 'field_inlays',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Other Services (F-O)',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-other-services-f-o field-group-fieldset',
+        'description' => 'Enter the Other Services (F-O) information for the benefit.',
       ),
       'formatter' => 'collapsible',
     ),
@@ -496,6 +755,72 @@ function stanford_benefits_field_group_info() {
         'id' => '',
         'classes' => 'group-other-services-o-z field-group-fieldset',
         'description' => 'Enter the Other Services (O-Z) information for the benefit.',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_other_services_p_z|node|dental_benefit|default';
+  $field_group->group_name = 'group_other_services_p_z';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dental_benefit';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Other Services (P-Z)',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_periodontal_surgery',
+      1 => 'field_prescription_drugs',
+      2 => 'field_root_canals',
+      3 => 'field_space_maintainers',
+      4 => 'field_splinting',
+      5 => 'field_tmj',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-other-services-p-z field-group-fieldset',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_other_services_p_z|node|dental_benefit|form';
+  $field_group->group_name = 'group_other_services_p_z';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dental_benefit';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Other Services (P-Z)',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_periodontal_surgery',
+      1 => 'field_prescription_drugs',
+      2 => 'field_root_canals',
+      3 => 'field_space_maintainers',
+      4 => 'field_splinting',
+      5 => 'field_tmj',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Other Services (P-Z)',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-other-services-p-z field-group-fieldset',
+        'description' => 'Enter the Other Services (P-Z) information for the benefit.',
       ),
       'formatter' => 'collapsible',
     ),
@@ -633,6 +958,70 @@ function stanford_benefits_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_preventive_care|node|dental_benefit|default';
+  $field_group->group_name = 'group_preventive_care';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dental_benefit';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Preventive Type of Care	',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_cleanings',
+      1 => 'field_fluoride_treatments',
+      2 => 'field_routine_exams',
+      3 => 'field_sealants',
+      4 => 'field_d_x_rays',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-preventive-care field-group-fieldset',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_preventive_car|node|dental_benefit|form';
+  $field_group->group_name = 'group_preventive_car';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dental_benefit';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Preventive Type of Care',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_cleanings',
+      1 => 'field_fluoride_treatments',
+      2 => 'field_routine_exams',
+      3 => 'field_sealants',
+      4 => 'field_d_x_rays',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Preventive Type of Care',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-preventive-car field-group-fieldset',
+        'description' => 'Enter the Preventive Type of Care information for the benefit.',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_ratings|node|benefit|form';
   $field_group->group_name = 'group_ratings';
   $field_group->entity_type = 'node';
@@ -666,11 +1055,17 @@ function stanford_benefits_field_group_info() {
   t('Criteria');
   t('Maternity');
   t('Mental Health/Substance Abuse');
+  t('Orthodontic Services');
   t('Other Services (A-D)');
+  t('Other Services (A-E)');
   t('Other Services (E-N)');
+  t('Other Services (F-O)');
   t('Other Services (O-Z)');
+  t('Other Services (P-Z)');
   t('Prescription Drugs');
   t('Preventive Care');
+  t('Preventive Type of Care');
+  t('Preventive Type of Care	');
   t('Ratings - National Committee For Quality Assurance (NCQA)');
 
   return $field_groups;

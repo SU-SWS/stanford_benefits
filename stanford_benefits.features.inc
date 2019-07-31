@@ -29,11 +29,19 @@ function stanford_benefits_views_api($module = NULL, $api = NULL) {
 function stanford_benefits_node_info() {
   $items = array(
     'benefit' => array(
-      'name' => t('Benefit'),
+      'name' => t('Medical Benefit'),
       'base' => 'node_content',
       'description' => t('The different benefits available to employees.'),
       'has_title' => '1',
       'title_label' => t('Benefit name'),
+      'help' => '',
+    ),
+    'dental_benefit' => array(
+      'name' => t('Dental Benefit'),
+      'base' => 'node_content',
+      'description' => t('The different dental benefits available to employees.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
       'help' => '',
     ),
   );

@@ -235,6 +235,7 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
+    'dental_benefit' => 'dental_benefit',
     'benefit' => 'benefit',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
@@ -482,6 +483,7 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
+    'dental_benefit' => 'dental_benefit',
     'benefit' => 'benefit',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;

@@ -4,6 +4,12 @@
  * Code for the stanford_benefits feature.
  */
 
+include_once 'stanford_benefits.features.inc';
+/**
+ * @file
+ * Code for the stanford_benefits feature.
+ */
+
 /**
  * Implements hook_preprocess_HOOK().
  */
