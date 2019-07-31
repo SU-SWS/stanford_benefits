@@ -1,0 +1,70 @@
+.content .node-benefit h2 {
+  font-size: 18px;
+  height: 50px;
+}
+.view-caw-benefit-comparison-tool .bef-toggle {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.view-caw-benefit-comparison-tool .view-content {
+  display: none;
+}
+
+.view-caw-benefit-comparison-tool .bef-checkboxes .form-type-bef-checkbox {
+  float: left;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.view-caw-benefit-comparison-tool .bef-checkboxes .form-type-bef-checkbox input[type="checkbox"] {
+  float: left;
+  width: 3%;
+}
+.view-caw-benefit-comparison-tool .bef-checkboxes .form-type-bef-checkbox label.option {
+  float: left;
+  line-height: 12px;
+  width: 97%;
+}
+
+.views-widget-filter-term_node_tid_depth_join select {
+  width: 100%;
+}
+
+.node-benefit legend {
+  font-size: 14px;
+}
+
+.node-benefit .field-name-field-midwives,
+.node-benefit .field-name-field-pregnancy-termination {
+  height: 100px;
+}
+
+.node-benefit .field-name-field-full-time-employee-contrib,
+.node-benefit .field-name-field-part-time-employee-contrib {
+  height: 150px;
+}
+
+.node-benefit .field-name-field-pre-authorization-require,
+.node-benefit .field-name-field-out-of-pocket-maximum,
+.node-benefit .field-name-field-autism {
+  height: 250px;
+}
+
+.node-benefit .row-300 {
+  height: 300px;
+}
+
+.node-benefit .field-name-field-care-management,
+.node-benefit .field-name-field-mental-health,
+.node-benefit .field-name-field-substance-abuse {
+  height: 400px;
+}
+
+.node-benefit .field-group-fieldset {
+  margin-top: 40px;
+}
+
+.node-benefit .field-name-body {
+  height: 200px;
+}
