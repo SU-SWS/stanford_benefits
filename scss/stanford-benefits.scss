@@ -8,6 +8,13 @@
     font-size: 14px;
   }
 
+  table.views-view-grid {
+    display: block;
+    overflow: auto;
+    height: 600px;
+    width: 800px;
+  }
+
   .bef-toggle {
     float: left;
     margin-bottom: 20px;

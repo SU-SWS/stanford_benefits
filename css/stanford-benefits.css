@@ -5,6 +5,12 @@
 .view-caw-benefit-comparison-tool legend {
   font-size: 14px; }
 
+.view-caw-benefit-comparison-tool table.views-view-grid {
+  display: block;
+  overflow: auto;
+  height: 600px;
+  width: 800px; }
+
 .view-caw-benefit-comparison-tool .bef-toggle {
   float: left;
   margin-bottom: 20px; }
