@@ -5,3 +5,15 @@
  */
 
 include_once 'stanford_benefits.features.inc';
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function stanford_benefits_preprocess_page(&$vars) {
+  $arg1 = arg(1);
+
+  if ($arg1 == "4013") {
+    drupal_add_css(drupal_get_path("module", "stanford_benefits") . "/css/stanford_benefits.css");
+    drupal_add_js(drupal_get_path("module", "stanford_benefits") . "/js/stanford_benefits.js");
+  }
+}
