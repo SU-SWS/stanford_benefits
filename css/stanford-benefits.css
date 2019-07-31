@@ -7,8 +7,8 @@
 
 .view-caw-benefit-comparison-tool table.views-view-grid {
   display: block;
-  overflow: auto;
   height: 600px;
+  overflow: auto;
   width: 800px; }
 
 .view-caw-benefit-comparison-tool .bef-toggle {
@@ -22,12 +22,12 @@
 
 .view-caw-benefit-comparison-tool .bef-checkboxes .form-type-bef-checkbox input[type="checkbox"] {
   float: left;
-  width: 3%; }
+  width: 20px; }
 
 .view-caw-benefit-comparison-tool .bef-checkboxes .form-type-bef-checkbox label.option {
   float: left;
   line-height: 12px;
-  width: 97%; }
+  width: auto; }
 
 .view-caw-benefit-comparison-tool .field-name-field-midwives,
 .view-caw-benefit-comparison-tool .field-name-field-pregnancy-termination {
