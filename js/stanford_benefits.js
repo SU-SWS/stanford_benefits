@@ -1,9 +1,7 @@
 (function ($) {
-
 /**
  * Drupal attach behaviour.
  */
-
   Drupal.behaviors.stanford_benefits = {
     attach: function (context, settings) {
       $( document ).ready(function() {
