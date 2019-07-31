@@ -106,14 +106,6 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'benefit' => 'benefit',
-  );
-  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Medical/Active benefit plan selection */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
@@ -148,11 +140,20 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['tid']['expose']['reduce'] = TRUE;
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'benefit_plan_type';
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'benefit' => 'benefit',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
 
   /* Display: Benefit Comparison Tool */
   $handler = $view->new_display('block', 'Benefit Comparison Tool', 'block');
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Compare plans';
   $handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
   $handler->display->display_options['exposed_form']['options']['bef'] = array(
     'general' => array(
@@ -164,7 +165,7 @@ function stanford_benefits_views_default_views() {
         ),
       ),
       'allow_secondary' => 0,
-      'secondary_label' => 'Select ',
+      'secondary_label' => 'Advanced options',
       'secondary_collapse_override' => '0',
     ),
     'tid' => array(
@@ -203,8 +204,9 @@ function stanford_benefits_views_default_views() {
     t('Full-Time Employee * Contribution Per Pay Period'),
     t('SELECT THE PLAN(S) TO COMPARE:'),
     t('Benefit Comparison Tool'),
+    t('Compare plans'),
     t('Select any filter and click on Apply to see results'),
-    t('Select '),
+    t('Advanced options'),
   );
   $export['caw_benefit_comparison_tool'] = $view;
 
