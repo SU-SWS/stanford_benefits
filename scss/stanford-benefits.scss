@@ -1,7 +1,9 @@
-.view-caw-benefit-comparison-tool h2 {
+.content .node-benefit h2 {
   font-size: 18px;
   height: 50px;
+}
 
+.view-caw-benefit-comparison-tool {
   legend {
     font-size: 14px;
   }
@@ -63,8 +65,8 @@
   }
 
   .view-content {
-     display: none;
-   }
+    display: none;
+  }
 
   .views-widget-filter-term_node_tid_depth_join select {
     width: 100%;

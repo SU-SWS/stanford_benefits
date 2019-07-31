@@ -1,43 +1,57 @@
-.view-caw-benefit-comparison-tool h2 {
+.content .node-benefit h2 {
   font-size: 18px;
   height: 50px; }
-  .view-caw-benefit-comparison-tool h2 legend {
-    font-size: 14px; }
-  .view-caw-benefit-comparison-tool h2 .bef-toggle {
-    float: left;
-    margin-bottom: 20px; }
-  .view-caw-benefit-comparison-tool h2 .bef-checkboxes .form-type-bef-checkbox {
-    float: left;
-    margin-bottom: 10px;
-    width: 100%; }
-  .view-caw-benefit-comparison-tool h2 .bef-checkboxes .form-type-bef-checkbox input[type="checkbox"] {
-    float: left;
-    width: 3%; }
-  .view-caw-benefit-comparison-tool h2 .bef-checkboxes .form-type-bef-checkbox label.option {
-    float: left;
-    line-height: 12px;
-    width: 97%; }
-  .view-caw-benefit-comparison-tool h2 .field-name-field-midwives,
-  .view-caw-benefit-comparison-tool h2 .field-name-field-pregnancy-termination {
-    height: 100px; }
-  .view-caw-benefit-comparison-tool h2 .field-name-field-full-time-employee-contrib,
-  .view-caw-benefit-comparison-tool h2 .field-name-field-part-time-employee-contrib {
-    height: 150px; }
-  .view-caw-benefit-comparison-tool h2 .field-name-field-pre-authorization-require,
-  .view-caw-benefit-comparison-tool h2 .field-name-field-out-of-pocket-maximum,
-  .view-caw-benefit-comparison-tool h2 .field-name-field-autism {
-    height: 250px; }
-  .view-caw-benefit-comparison-tool h2 .field-name-field-care-management,
-  .view-caw-benefit-comparison-tool h2 .field-name-field-mental-health,
-  .view-caw-benefit-comparison-tool h2 .field-name-field-substance-abuse {
-    height: 400px; }
-  .view-caw-benefit-comparison-tool h2 .field-group-fieldset {
-    margin-top: 40px; }
-  .view-caw-benefit-comparison-tool h2 .field-name-body {
-    height: 200px; }
-  .view-caw-benefit-comparison-tool h2 .row-300 {
-    height: 300px; }
-  .view-caw-benefit-comparison-tool h2 .view-content {
-    display: none; }
-  .view-caw-benefit-comparison-tool h2 .views-widget-filter-term_node_tid_depth_join select {
-    width: 100%; }
+
+.view-caw-benefit-comparison-tool legend {
+  font-size: 14px; }
+
+.view-caw-benefit-comparison-tool .bef-toggle {
+  float: left;
+  margin-bottom: 20px; }
+
+.view-caw-benefit-comparison-tool .bef-checkboxes .form-type-bef-checkbox {
+  float: left;
+  margin-bottom: 10px;
+  width: 100%; }
+
+.view-caw-benefit-comparison-tool .bef-checkboxes .form-type-bef-checkbox input[type="checkbox"] {
+  float: left;
+  width: 3%; }
+
+.view-caw-benefit-comparison-tool .bef-checkboxes .form-type-bef-checkbox label.option {
+  float: left;
+  line-height: 12px;
+  width: 97%; }
+
+.view-caw-benefit-comparison-tool .field-name-field-midwives,
+.view-caw-benefit-comparison-tool .field-name-field-pregnancy-termination {
+  height: 100px; }
+
+.view-caw-benefit-comparison-tool .field-name-field-full-time-employee-contrib,
+.view-caw-benefit-comparison-tool .field-name-field-part-time-employee-contrib {
+  height: 150px; }
+
+.view-caw-benefit-comparison-tool .field-name-field-pre-authorization-require,
+.view-caw-benefit-comparison-tool .field-name-field-out-of-pocket-maximum,
+.view-caw-benefit-comparison-tool .field-name-field-autism {
+  height: 250px; }
+
+.view-caw-benefit-comparison-tool .field-name-field-care-management,
+.view-caw-benefit-comparison-tool .field-name-field-mental-health,
+.view-caw-benefit-comparison-tool .field-name-field-substance-abuse {
+  height: 400px; }
+
+.view-caw-benefit-comparison-tool .field-group-fieldset {
+  margin-top: 40px; }
+
+.view-caw-benefit-comparison-tool .field-name-body {
+  height: 200px; }
+
+.view-caw-benefit-comparison-tool .row-300 {
+  height: 300px; }
+
+.view-caw-benefit-comparison-tool .view-content {
+  display: none; }
+
+.view-caw-benefit-comparison-tool .views-widget-filter-term_node_tid_depth_join select {
+  width: 100%; }
