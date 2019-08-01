@@ -2,193 +2,182 @@
 /**
  * Drupal attach behaviour.
  */
+
   Drupal.behaviors.stanford_benefits = {
     attach: function (context, settings) {
+      var ActiveSelection = false;
       $( document ).ready(function() {
-        // We need to hid fields when the page loads.
-        $('#edit-term-medical-preretirees-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-medical-preretirees-benefit-wrapper .views-widget').css('display', 'none');
+        // If no checkboxes are selected hide things.
 
-        $('#edit-term-medical-active-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-medical-active-benefit-wrapper .views-widget').css('display', 'none');
+        var CompTool = '.view-caw-benefit-comparison-tool';
+        var CompToolBlock = '#views-exposed-form-caw-benefit-comparison-tool-block';
+        var MedicalActive = '#edit-term-medical-active-benefit-wrapper';
+        var MedicalPreretirees = '#edit-term-medical-preretirees-benefit-wrapper';
+        var MedicalRetirees = '#edit-term-medical-retirees-benefit-wrapper';
+        var DentalActive = '#edit-term-dental-active-benefit-wrapper';
+        var DentalRetirees = '#edit-term-dental-retirees-benefit-wrapper';
 
-        $('#edit-term-medical-retirees-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-medical-retirees-benefit-wrapper .views-widget').css('display', 'none');
+        // If nothing has been checked, reset the state of the form.
+        if (!AnyChecked()) {
+          $(MedicalActive + ' .description').css('display', 'none');
+          $(MedicalActive + ' .views-wrapper').css('display', 'none');
 
-        $('#edit-term-dental-active-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-dental-active-benefit-wrapper .views-widget').css('display', 'none');
+          $(MedicalPreretirees + ' .description').css('display', 'none');
+          $(MedicalPreretirees + ' .views-wrapper').css('display', 'none');
 
-        $('#edit-term-dental-retirees-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-dental-retirees-benefit-wrapper .views-widget').css('display', 'none');
+          $(MedicalRetirees + ' .description').css('display', 'none');
+          $(MedicalRetirees + ' .views-wrapper').css('display', 'none');
 
-        $('.view-caw-benefit-comparison-tool .view-empty').css('display', 'none');
+          $(DentalActive + ' .description').css('display', 'none');
+          $(DentalActive + ' .views-wrapper').css('display', 'none');
 
-        $('#views-exposed-form-caw-benefit-comparison-tool-block .views-submit-button').css('display', 'none');
+          $(DentalRetirees + ' .description').css('display', 'none');
+          $(DentalRetirees + ' .views-wrapper').css('display', 'none');
 
-        $('#edit-term-medical-active-benefit-wrapper').before( $('#medical-plan-header') );
-        $('#edit-term-dental-active-benefit-wrapper').before( $('#dental-plan-header') );
-        $('.view-header > p').remove();
-        $('.view-caw-benefit-comparison-tool .view-header').before( $('.view-caw-benefit-comparison-tool .view-header h2.plan-rates-title') );
-        $('#edit-term-medical-active-benefit-wrapper .views-widget').before( $('#edit-term-medical-active-benefit-wrapper .description') );
-        $('#edit-term-medical-preretirees-benefit-wrapper .views-widget').before( $('#edit-term-medical-preretirees-benefit-wrapper .description') );
-        $('#edit-term-medical-retirees-benefit-wrapper .views-widget').before( $('#edit-term-medical-retirees-benefit-wrapper .description') );
-        $('#edit-term-dental-active-benefit-wrapper .views-widget').before( $('#edit-term-dental-active-benefit-wrapper .description') );
-        $('#edit-term-dental-retirees-benefit-wrapper .views-widget').before( $('#edit-term-dental-retirees-benefit-wrapper .description') );
+          $('.view-caw-benefit-comparison-tool' + ' .view-empty').css('display', 'none');
 
-        // If no checkboxes are selected, hide results to fix view bug.
-        if (!$('input[name="term_medical_active_benefit[]"]:checked').length &&
-          !$('input[name="term_medical_preretirees_benefit[]"]:checked').length &&
-          !$('input[name="term_medical_retirees_benefit[]"]:checked').length &&
-          !$('input[name="term_dental_active_benefit[]"]:checked').length) {
-            $('.view-caw-benefit-comparison-tool .view-content').css("display", "none");
+          $('#views-exposed-form-caw-benefit-comparison-tool-block' + ' .views-submit-button').css('display', 'none');
+
+          // We need to move some things around for UI beauty.
+          $(MedicalActive).before( $('#medical-plan-header') );
+          $(DentalActive).before( $('#dental-plan-header') );
+          $('.view-header' + ' > p').remove();
+          $('.view-caw-benefit-comparison-tool' + ' .view-header').before( $('.view-caw-benefit-comparison-tool' + ' .view-header' + ' h2.plan-rates-title') );
+          $(MedicalActive + ' .views-widget').before( $(MedicalActive + ' .description') );
+          $(MedicalPreretirees + ' .views-widget').before( $(MedicalPreretirees + ' .description') );
+          $(MedicalRetirees + ' .views-widget').before( $(MedicalRetirees + ' .description') );
+          $(DentalActive + ' .views-widget').before( $(DentalActive + ' .description') );
+          $(DentalRetirees + ' .views-widget').before( $(DentalRetirees + ' .description') );
         }
         else {
-          $('.view-caw-benefit-comparison-tool .view-content').css("display", "block");
-        }
-      });
-
-      $('#edit-submit-caw-benefit-comparison-tool').click(function() {
-
-      });
-
-      // Show the Medical/Active exposed filters
-      $('#edit-term-medical-active-benefit-wrapper label').click(function() {
-        if ($('#edit-term-medical-active-benefit-wrapper .description').is(':visible')) {
-          $('#edit-term-medical-active-benefit-wrapper .description').css('display', 'none');
-          $('#edit-term-medical-active-benefit-wrapper .views-widget').css('display', 'none');
-          $('.view-caw-benefit-comparison-tool .view-empty').css('display', 'none');
-          $('#views-exposed-form-caw-benefit-comparison-tool-block .views-submit-button').css('display', 'none');
-        }
-        else {
-          $('#edit-term-medical-active-benefit-wrapper .description').css('display', 'block');
-          $('#edit-term-medical-active-benefit-wrapper .views-widget').css('display', 'block');
-          $('.view-caw-benefit-comparison-tool .view-empty').css('display', 'block');
-          $('#views-exposed-form-caw-benefit-comparison-tool-block .views-submit-button').css('display', 'block');
+          if (IsChecked('term_medical_active_benefit')) {
+            ShowFormFor('term_medical_active_benefit');
+          }
+          if (IsChecked('term_medical_preretirees_benefit')) {
+            ShowFormFor('term_medical_preretirees_benefit');
+          }
+          if (IsChecked('term_medical_retirees_benefit')) {
+            ShowFormFor('term_medical_retirees_benefit');
+          }
+          if (IsChecked('term_dental_active_benefit')) {
+            ShowFormFor('term_dental_active_benefit');
+          }
+          if (IsChecked('term_dental_active_benefit')) {
+            ShowFormFor('term_dental_active_benefit');
+          }
         }
 
-        $('#edit-term-medical-preretirees-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-medical-preretirees-benefit-wrapper .views-widget').css('display', 'none');
+        // Show the Medical/Active exposed filters
+        $(MedicalActive + ' label').click(function() {
+          ShowSection(MedicalActive);
+        });
 
-        $('#edit-term-medical-retirees-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-medical-retirees-benefit-wrapper .views-widget').css('display', 'none');
+        // Show the Medical/Pre-retirees exposed filters
+        $(MedicalPreretirees + ' label').click(function() {
+          ShowSection(MedicalPreretirees);
+        });
 
-        $('#edit-term-dental-active-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-dental-active-benefit-wrapper .views-widget').css('display', 'none');
+        // Show the Medical/Retirees exposed filters
+        $(MedicalRetirees + ' label').click(function() {
+          ShowSection(MedicalRetirees);
+        });
 
-        $('#edit-term-dental-retirees-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-dental-retirees-benefit-wrapper .views-widget').css('display', 'none');
-      });
+        // Show the Dental/Active exposed filters
+        $(DentalActive + ' label').click(function() {
+          ShowSection(DentalActive);
+        });
 
-      // Show the Medical/Pre-retirees exposed filters
-      $('#edit-term-medical-preretirees-benefit-wrapper label').click(function() {
-        if ($('#edit-term-medical-preretirees-benefit-wrapper .description').is(':visible')) {
-          $('#edit-term-medical-preretirees-benefit-wrapper .description').css('display', 'none');
-          $('#edit-term-medical-preretirees-benefit-wrapper .views-widget').css('display', 'none');
-          $('.view-caw-benefit-comparison-tool .view-empty').css('display', 'none');
-          $('#views-exposed-form-caw-benefit-comparison-tool-block .views-submit-button').css('display', 'none');
-        }
-        else {
-          $('#edit-term-medical-preretirees-benefit-wrapper .description').css('display', 'block');
-          $('#edit-term-medical-preretirees-benefit-wrapper .views-widget').css('display', 'block');
-          $('.view-caw-benefit-comparison-tool .view-empty').css('display', 'block');
-          $('#views-exposed-form-caw-benefit-comparison-tool-block .views-submit-button').css('display', 'block');
-        }
+        // Show the Dental/Retirees exposed filters
+        $(DentalRetirees + ' label').click(function() {
+          ShowSection(DentalRetirees);
+        });
 
-        $('#edit-term-medical-active-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-medical-active-benefit-wrapper .views-widget').css('display', 'none');
+        // Show the right section when clicked.
+        function ShowSection(section) {
+          if ($(section + ' .description').is(':visible')) {
+            $(section + ' .description').css('display', 'none');
+            $(section + ' .views-widget').css('display', 'none');
+            $(CompTool + ' .view-empty').css('display', 'none');
+            $(CompToolBlock + ' .views-submit-button').css('display', 'none');
+          }
+          else {
+            $(section + ' .description').css('display', 'block');
+            $(section + ' .views-widget').css('display', 'block');
+            $(CompTool + ' .view-empty').css('display', 'block');
+            $(CompToolBlock + ' .views-submit-button').css('display', 'block');
+          }
 
-        $('#edit-term-medical-retirees-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-medical-retirees-benefit-wrapper .views-widget').css('display', 'none');
-
-        $('#edit-term-dental-active-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-dental-active-benefit-wrapper .views-widget').css('display', 'none');
-
-        $('#edit-term-dental-retirees-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-dental-retirees-benefit-wrapper .views-widget').css('display', 'none');
-      });
-
-      // Show the Medical/Retirees exposed filters
-      $('#edit-term-medical-retirees-benefit-wrapper label').click(function() {
-        if ($('#edit-term-medical-retirees-benefit-wrapper .description').is(':visible')) {
-          $('#edit-term-medical-retirees-benefit-wrapper .description').css('display', 'none');
-          $('#edit-term-medical-retirees-benefit-wrapper .views-widget').css('display', 'none');
-          $('.view-caw-benefit-comparison-tool .view-empty').css('display', 'none');
-          $('#views-exposed-form-caw-benefit-comparison-tool-block .views-submit-button').css('display', 'none');
-        }
-        else {
-          $('#edit-term-medical-retirees-benefit-wrapper .description').css('display', 'block');
-          $('#edit-term-medical-retirees-benefit-wrapper .views-widget').css('display', 'block');
-          $('.view-caw-benefit-comparison-tool .view-empty').css('display', 'block');
-          $('#views-exposed-form-caw-benefit-comparison-tool-block .views-submit-button').css('display', 'block');
-        }
-
-        $('#edit-term-medical-preretirees-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-medical-preretirees-benefit-wrapper .views-widget').css('display', 'none');
-
-        $('#edit-term-medical-active-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-medical-active-benefit-wrapper .views-widget').css('display', 'none');
-
-        $('#edit-term-dental-active-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-dental-active-benefit-wrapper .views-widget').css('display', 'none');
-
-        $('#edit-term-dental-retirees-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-dental-retirees-benefit-wrapper .views-widget').css('display', 'none');
-      });
-
-      // Show the Dental/Active exposed filters
-      $('#edit-term-dental-active-benefit-wrapper label').click(function() {
-        if ($('#edit-term-dental-active-benefit-wrapper .description').is(':visible')) {
-          $('#edit-term-dental-active-benefit-wrapper .description').css('display', 'none');
-          $('#edit-term-dental-active-benefit-wrapper .views-widget').css('display', 'none');
-          $('.view-caw-benefit-comparison-tool .view-empty').css('display', 'none');
-          $('#views-exposed-form-caw-benefit-comparison-tool-block .views-submit-button').css('display', 'none');
-        }
-        else {
-          $('#edit-term-dental-active-benefit-wrapper .description').css('display', 'block');
-          $('#edit-term-dental-active-benefit-wrapper .views-widget').css('display', 'block');
-          $('.view-caw-benefit-comparison-tool .view-empty').css('display', 'block');
-          $('#views-exposed-form-caw-benefit-comparison-tool-block .views-submit-button').css('display', 'block');
+          if ( section !== MedicalActive) {
+            $(MedicalActive + ' .description').css('display', 'none');
+            $(MedicalActive + ' .views-widget').css('display', 'none');
+          }
+          if ( section !== MedicalPreretirees) {
+            $(MedicalPreretirees + ' .description').css('display', 'none');
+            $(MedicalPreretirees + ' .views-widget').css('display', 'none');
+          }
+          if ( section !== MedicalRetirees) {
+            $(MedicalRetirees + ' .description').css('display', 'none');
+            $(MedicalRetirees + ' .views-widget').css('display', 'none');
+          }
+          if ( section !== DentalActive) {
+            $(DentalActive + ' .description').css('display', 'none');
+            $(DentalActive + ' .views-widget').css('display', 'none');
+          }
+          if ( section !== DentalRetirees) {
+            $(DentalRetirees + ' .description').css('display', 'none');
+            $(DentalRetirees + ' .views-widget').css('display', 'none');
+          }
         }
 
-        $('#edit-term-medical-active-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-medical-active-benefit-wrapper .views-widget').css('display', 'none');
-
-        $('#edit-term-medical-preretirees-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-medical-preretirees-benefit-wrapper .views-widget').css('display', 'none');
-
-        $('#edit-term-medical-retirees-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-medical-retirees-benefit-wrapper .views-widget').css('display', 'none');
-
-        $('#edit-term-dental-retirees-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-dental-retirees-benefit-wrapper .views-widget').css('display', 'none');
-      });
-
-      // Show the Dental/Retirees exposed filters
-      $('#edit-term-dental-retirees-benefit-wrapper label').click(function() {
-        if ($('#edit-term-dental-retirees-benefit-wrapper .description').is(':visible')) {
-          $('#edit-term-dental-retirees-benefit-wrapper .description').css('display', 'none');
-          $('#edit-term-dental-retirees-benefit-wrapper .views-widget').css('display', 'none');
-          $('.view-caw-benefit-comparison-tool .view-empty').css('display', 'none');
-          $('#views-exposed-form-caw-benefit-comparison-tool-block .views-submit-button').css('display', 'none');
+        function IsChecked(term) {
+          return $('input[name="' + term + '"]:checked').length;
         }
-        else {
-          $('#edit-term-dental-retirees-benefit-wrapper .description').css('display', 'block');
-          $('#edit-term-dental-retirees-benefit-wrapper .views-widget').css('display', 'block');
-          $('.view-caw-benefit-comparison-tool .view-empty').css('display', 'block');
-          $('#views-exposed-form-caw-benefit-comparison-tool-block .views-submit-button').css('display', 'block');
+        // Are there any checkboxes selected.
+        function AnyChecked() {
+          var selected = 0;
+          // If no checkboxes are selected, false else true.
+          if (IsChecked('term_medical_active_benefit')) {
+            selected = 1;
+          }
+          if (IsChecked('term_medical_preretirees_benefit')) {
+            selected = 1;
+          }
+          if (IsChecked('term_medical_retirees_benefit')) {
+            selected = 1;
+          }
+          if (IsChecked('term_dental_active_benefit')) {
+            selected = 1;
+          }
+
+          return selected;
         }
 
-        $('#edit-term-medical-active-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-medical-active-benefit-wrapper .views-widget').css('display', 'none');
+        // Show and hide the right section for the views exposed filters.
+        function ShowFormFor(section) {
+          $('#' + section + ' .description').css('display', 'block');
+          $('#' + section + ' .views-widget').css('display', 'block');
 
-        $('#edit-term-medical-preretirees-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-medical-preretirees-benefit-wrapper .views-widget').css('display', 'none');
-
-        $('#edit-term-medical-retirees-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-medical-retirees-benefit-wrapper .views-widget').css('display', 'none');
-
-        $('#edit-term-dental-active-benefit-wrapper .description').css('display', 'none');
-        $('#edit-term-dental-active-benefit-wrapper .views-widget').css('display', 'none');
+          if ( section !== MedicalActive) {
+            $(MedicalActive + ' .description').css('display', 'none');
+            $(MedicalActive + ' .views-widget').css('display', 'none');
+          }
+          if ( section !== MedicalPreretirees) {
+            $(MedicalPreretirees + ' .description').css('display', 'none');
+            $(MedicalPreretirees + ' .views-widget').css('display', 'none');
+          }
+          if ( section !== MedicalRetirees) {
+            $(MedicalRetirees + ' .description').css('display', 'none');
+            $(MedicalRetirees + ' .views-widget').css('display', 'none');
+          }
+          if ( section !== DentalActive) {
+            $(DentalActive + ' .description').css('display', 'none');
+            $(DentalActive + ' .views-widget').css('display', 'none');
+          }
+          if ( section !== DentalRetirees) {
+            $(DentalRetirees + ' .description').css('display', 'none');
+            $(DentalRetirees + ' .views-widget').css('display', 'none');
+          }
+        }
       });
     }
   };
