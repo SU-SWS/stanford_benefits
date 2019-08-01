@@ -180,6 +180,7 @@ function stanford_benefits_views_default_views() {
 <div class="vision-plan-wrapper">
 <h2>Vision Plan</h2>
 <hr>
+<p>Compare medical plans available for each of these roles:</p>
 <h3 class="no-spacing">Active Employees</h3>
            Review vision plan for
 <ul>
@@ -193,6 +194,7 @@ function stanford_benefits_views_default_views() {
 <div class="full-plan-costs-wrapper">
 <h2>Full Plan Costs</h2>
 <hr>
+<p>Compare medical plans available for each of these roles:</p>
 <h3 class="no-spacing">Active Employees</h3>
 <ul>
   <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/2019-employee-rates" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review contribution charts</a>
@@ -385,6 +387,7 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Compare plans';
   $handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
+  $handler->display->display_options['exposed_form']['options']['autosubmit_hide'] = FALSE;
   $handler->display->display_options['exposed_form']['options']['bef'] = array(
     'general' => array(
       'input_required' => 1,
@@ -709,6 +712,7 @@ function stanford_benefits_views_default_views() {
 <div class="vision-plan-wrapper">
 <h2>Vision Plan</h2>
 <hr>
+<p>Compare medical plans available for each of these roles:</p>
 <h3 class="no-spacing">Active Employees</h3>
            Review vision plan for
 <ul>
@@ -722,6 +726,7 @@ function stanford_benefits_views_default_views() {
 <div class="full-plan-costs-wrapper">
 <h2>Full Plan Costs</h2>
 <hr>
+<p>Compare medical plans available for each of these roles:</p>
 <h3 class="no-spacing">Active Employees</h3>
 <ul>
   <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/2019-employee-rates" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review contribution charts</a>
