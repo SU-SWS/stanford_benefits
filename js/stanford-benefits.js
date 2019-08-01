@@ -21,17 +21,8 @@
         if (!AnyChecked()) {
           // Hide all the different exposed filters.
           HideAll();
-
           // We need to move some things around for UI beauty.
-          $(MedicalActive).before( $('#medical-plan-header') );
-          $(DentalActive).before( $('#dental-plan-header') );
-          $('.view-header' + ' > p').remove();
-          $('.view-caw-benefit-comparison-tool' + ' .view-header').before( $('.view-caw-benefit-comparison-tool' + ' .view-header' + ' h2.plan-rates-title') );
-          $(MedicalActive + ' .views-widget').before( $(MedicalActive + ' .description') );
-          $(MedicalPreretirees + ' .views-widget').before( $(MedicalPreretirees + ' .description') );
-          $(MedicalRetirees + ' .views-widget').before( $(MedicalRetirees + ' .description') );
-          $(DentalActive + ' .views-widget').before( $(DentalActive + ' .description') );
-          $(DentalRetirees + ' .views-widget').before( $(DentalRetirees + ' .description') );
+          MoveViewHTMLElements();
         }
         else {
           if (IsChecked('term_medical_active_benefit')) {
@@ -50,7 +41,6 @@
             ShowFormFor('term_dental_active_benefit');
           }
         }
-
         // Show the Medical/Active exposed filters
         $(MedicalActive + ' label').click(function() {
           ShowSection(MedicalActive);
@@ -76,6 +66,18 @@
           ShowSection(DentalRetirees);
         });
 
+        // Function to move some things around for UI beauty.
+        function MoveViewHTMLElements() {
+          $(MedicalActive).before( $('#medical-plan-header') );
+          $(DentalActive).before( $('#dental-plan-header') );
+          $('.view-header' + ' > p').remove();
+          $('.view-caw-benefit-comparison-tool' + ' .view-header').before( $('.view-caw-benefit-comparison-tool' + ' .view-header' + ' h2.plan-rates-title') );
+          $(MedicalActive + ' .views-widget').before( $(MedicalActive + ' .description') );
+          $(MedicalPreretirees + ' .views-widget').before( $(MedicalPreretirees + ' .description') );
+          $(MedicalRetirees + ' .views-widget').before( $(MedicalRetirees + ' .description') );
+          $(DentalActive + ' .views-widget').before( $(DentalActive + ' .description') );
+          $(DentalRetirees + ' .views-widget').before( $(DentalRetirees + ' .description') );
+        }
         // Function to hide all the different exposed filters.
         function HideAll() {
           $(MedicalActive + ' .description').css('display', 'none');
