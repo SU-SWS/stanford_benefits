@@ -15,12 +15,13 @@
         var DentalActive = '#edit-term-dental-active-benefit-wrapper';
         var DentalRetirees = '#edit-term-dental-retirees-benefit-wrapper';
 
+        // We need to move some things around for UI beauty.
+        MoveViewHTMLElements();
+
+        // Hide all the different exposed filters.
         // If nothing has been checked, reset the state of the form.
-        if (!AnyChecked()) {
-          // Hide all the different exposed filters.
+        if (AnyChecked() === false) {
           HideAll();
-          // We need to move some things around for UI beauty.
-          MoveViewHTMLElements();
         }
         else {
           if (IsChecked('term_medical_active_benefit')) {
@@ -138,26 +139,25 @@
 
         // Function to tell if anything is check on the exposed fields.
         function IsChecked(term) {
-          return $('input[name="' + term + '"]:checked').length;
+          return $('input[name="' + term + '[]"]:checked').prop("checked");
         }
+
         // Are there any checkboxes selected.
         function AnyChecked() {
-          var selected = 0;
           // If no checkboxes are selected, false else true.
           if (IsChecked('term_medical_active_benefit')) {
-            selected = 1;
+            return true;
           }
           if (IsChecked('term_medical_preretirees_benefit')) {
-            selected = 1;
+            return true;
           }
           if (IsChecked('term_medical_retirees_benefit')) {
-            selected = 1;
+            return true;
           }
           if (IsChecked('term_dental_active_benefit')) {
-            selected = 1;
+            return true;
           }
-
-          return selected;
+          return false;
         }
 
         // Function to show and hide the right section for the views exposed filters.
