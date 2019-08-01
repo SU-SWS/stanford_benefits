@@ -23,6 +23,7 @@ function stanford_benefits_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'CAW Benefit Comparison Tool';
+  $handler->display->display_options['css_class'] = 'caw-benefit-comparison-tool-wrap';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['group_by'] = TRUE;
@@ -150,13 +151,6 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['grouping'] = array(
-    0 => array(
-      'field' => 'title',
-      'rendered' => 1,
-      'rendered_strip' => 0,
-    ),
-  );
   $handler->display->display_options['row_plugin'] = 'ds';
   $handler->display->display_options['row_options']['view_mode'] = 'stanford_view_card';
   $handler->display->display_options['row_options']['load_comments'] = 0;
@@ -172,8 +166,44 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Tool Header';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<h2>2019 Plans & Contribution Rates</h2>';
-  $handler->display->display_options['header']['area']['format'] = 'content_editor_text_format';
+  $handler->display->display_options['header']['area']['content'] = '<h2 class="plan-rates-title">2019 Plans & Contribution Rates</h2><br><br>
+<div id="medical-plan-header">
+<h2 class="medical-plans-title">Medical Plans</h2>
+<hr>
+<p>Compare medical plans available for each of these roles:</p>
+</div>
+<div id="dental-plan-header">
+<h2 class="dental-plans-title">Dental Plans</h2>
+<hr>
+<p>Compare medical plans available for each of these roles:</p>
+</div>
+<div class="vision-plan-wrapper">
+<h2>Vision Plan</h2>
+<hr>
+<h3 class="no-spacing">Active Employees</h3>
+           Review vision plan for
+<ul>
+  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/vision-plan" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review the plan</a></li>
+</ul>
+<h3 class="spacing">Retirees</h3>
+ <ul>
+ <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/retirees/retiree-vision-plan-2016" class="more-link" target="_parent" rel="external">Review the vision plan</a></li>
+ </ul>
+</div>
+<div class="full-plan-costs-wrapper">
+<h2>Full Plan Costs</h2>
+<hr>
+<h3 class="no-spacing">Active Employees</h3>
+<ul>
+  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/2019-employee-rates" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review contribution charts</a>
+  </li>
+</ul>
+<h3 class="spacing">Retirees</h3>
+<ul>
+  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/2019-retiree-rates" name="compare_ret" target="_parent" class="more-link" id="compare_ret" rel="external">Review contribution charts</a></li>
+</ul>
+</div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Relationship: Content: Benefit Type (field_benefit_type) */
   $handler->display->display_options['relationships']['field_benefit_type_tid']['id'] = 'field_benefit_type_tid';
   $handler->display->display_options['relationships']['field_benefit_type_tid']['table'] = 'field_data_field_benefit_type';
@@ -350,7 +380,7 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['tid_2']['vocabulary'] = 'benefit_plan_type';
 
   /* Display: Benefit Comparison Tool */
-  $handler = $view->new_display('block', 'Benefit Comparison Tool', 'block');
+  $handler = $view->new_display('block', 'Benefit Comparison Tool', 'caw_benefit_comparison_tool_block');
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Compare plans';
@@ -665,7 +695,43 @@ function stanford_benefits_views_default_views() {
     t('Select any plan and click on Compare plans to see results'),
     t('Advanced options'),
     t('Tool Header'),
-    t('<h2>2019 Plans & Contribution Rates</h2>'),
+    t('<h2 class="plan-rates-title">2019 Plans & Contribution Rates</h2><br><br>
+<div id="medical-plan-header">
+<h2 class="medical-plans-title">Medical Plans</h2>
+<hr>
+<p>Compare medical plans available for each of these roles:</p>
+</div>
+<div id="dental-plan-header">
+<h2 class="dental-plans-title">Dental Plans</h2>
+<hr>
+<p>Compare medical plans available for each of these roles:</p>
+</div>
+<div class="vision-plan-wrapper">
+<h2>Vision Plan</h2>
+<hr>
+<h3 class="no-spacing">Active Employees</h3>
+           Review vision plan for
+<ul>
+  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/vision-plan" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review the plan</a></li>
+</ul>
+<h3 class="spacing">Retirees</h3>
+ <ul>
+ <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/retirees/retiree-vision-plan-2016" class="more-link" target="_parent" rel="external">Review the vision plan</a></li>
+ </ul>
+</div>
+<div class="full-plan-costs-wrapper">
+<h2>Full Plan Costs</h2>
+<hr>
+<h3 class="no-spacing">Active Employees</h3>
+<ul>
+  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/2019-employee-rates" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review contribution charts</a>
+  </li>
+</ul>
+<h3 class="spacing">Retirees</h3>
+<ul>
+  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/2019-retiree-rates" name="compare_ret" target="_parent" class="more-link" id="compare_ret" rel="external">Review contribution charts</a></li>
+</ul>
+</div>'),
     t('term from field_benefit_type'),
     t('Benefit Type'),
     t('Description'),
