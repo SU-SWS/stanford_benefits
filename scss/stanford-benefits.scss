@@ -1,5 +1,11 @@
 .view-caw-benefit-comparison-tool {
 
+  article.node-dental-benefit {
+    h2:first-child {
+      height: 50px;
+    }
+  }
+
   article {
     h2:first-child {
       height: 100px;
@@ -127,7 +133,7 @@
 
   #dental-plan-header {
     float: left;
-    margin-top: 20px;
+    margin-top: 45px;
   }
 
   .full-plan-costs-wrapper {

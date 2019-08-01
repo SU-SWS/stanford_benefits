@@ -71,7 +71,7 @@
           $(MedicalActive).before( $('#medical-plan-header') );
           $(DentalActive).before( $('#dental-plan-header') );
           $('.view-header' + ' > p').remove();
-          $('.view-caw-benefit-comparison-tool' + ' .view-header').before( $('.view-caw-benefit-comparison-tool' + ' .view-header' + ' h2.plan-rates-title') );
+          $(CompTool + ' .view-header').before( $('.view-caw-benefit-comparison-tool' + ' .view-header' + ' h2.plan-rates-title') );
           $(MedicalActive + ' .views-widget').before( $(MedicalActive + ' .description') );
           $(MedicalPreretirees + ' .views-widget').before( $(MedicalPreretirees + ' .description') );
           $(MedicalRetirees + ' .views-widget').before( $(MedicalRetirees + ' .description') );
@@ -96,9 +96,9 @@
           $(DentalRetirees + ' .description').css('display', 'none');
           $(DentalRetirees + ' .views-widget').css('display', 'none');
 
-          $('.view-caw-benefit-comparison-tool' + ' .view-empty').css('display', 'none');
+          $(CompTool + ' .view-empty').css('display', 'none');
 
-          $('#views-exposed-form-caw-benefit-comparison-tool-block' + ' .views-submit-button').css('display', 'none');
+          $(CompToolBlock + ' .views-submit-button').css('display', 'none');
         }
 
         // Function to show the right section when clicked.
