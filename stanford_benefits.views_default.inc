@@ -23,7 +23,7 @@ function stanford_benefits_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'CAW Benefit Comparison Tool';
-  $handler->display->display_options['css_class'] = 'caw-benefit-comparison-tool-wrap';
+  $handler->display->display_options['css_class'] = 'block';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['group_by'] = TRUE;
