@@ -5,10 +5,8 @@
 
   Drupal.behaviors.stanford_benefits = {
     attach: function (context, settings) {
-      var ActiveSelection = false;
       $( document ).ready(function() {
-        // If no checkboxes are selected hide things.
-
+        // Setup the variables we will use here.
         var CompTool = '.view-caw-benefit-comparison-tool';
         var CompToolBlock = '#views-exposed-form-caw-benefit-comparison-tool-block';
         var MedicalActive = '#edit-term-medical-active-benefit-wrapper';
@@ -42,27 +40,27 @@
           }
         }
         // Show the Medical/Active exposed filters
-        $(MedicalActive + ' label').click(function() {
+        $(MedicalActive + ' label', context).click(function() {
           ShowSection(MedicalActive);
         });
 
         // Show the Medical/Pre-retirees exposed filters
-        $(MedicalPreretirees + ' label').click(function() {
+        $(MedicalPreretirees + ' label', context).click(function() {
           ShowSection(MedicalPreretirees);
         });
 
         // Show the Medical/Retirees exposed filters
-        $(MedicalRetirees + ' label').click(function() {
+        $(MedicalRetirees + ' label', context).click(function() {
           ShowSection(MedicalRetirees);
         });
 
         // Show the Dental/Active exposed filters
-        $(DentalActive + ' label').click(function() {
+        $(DentalActive + ' label', context).click(function() {
           ShowSection(DentalActive);
         });
 
         // Show the Dental/Retirees exposed filters
-        $(DentalRetirees + ' label').click(function() {
+        $(DentalRetirees + ' label', context).click(function() {
           ShowSection(DentalRetirees);
         });
 
@@ -71,7 +69,7 @@
           $(MedicalActive).before( $('#medical-plan-header') );
           $(DentalActive).before( $('#dental-plan-header') );
           $('.view-header' + ' > p').remove();
-          $(CompTool + ' .view-header').before( $('.view-caw-benefit-comparison-tool' + ' .view-header' + ' h2.plan-rates-title') );
+          $(CompTool + ' .view-header').before( $(CompTool + ' .view-header' + ' h2.plan-rates-title') );
           $(MedicalActive + ' .views-widget').before( $(MedicalActive + ' .description') );
           $(MedicalPreretirees + ' .views-widget').before( $(MedicalPreretirees + ' .description') );
           $(MedicalRetirees + ' .views-widget').before( $(MedicalRetirees + ' .description') );
