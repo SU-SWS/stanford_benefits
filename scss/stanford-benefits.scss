@@ -1,5 +1,68 @@
 .view-caw-benefit-comparison-tool {
 
+  article {
+    h2:first-child {
+      height: 100px;
+    }
+
+    .field-name-field-midwives,
+    .field-name-field-pregnancy-termination,
+    .field-name-field-allergy-tests,
+    .field-name-field-allergy-treatment,
+    .field-name-field-dental-treatment,
+    .field-name-field-urgent-care,
+    .field-name-field-hearing-care,
+    .field-name-field-hospital-stay,
+    .field-name-field-skilled-nursing,
+    .field-name-field-physical-therapy,
+    .field-name-field-speech-therapy,
+    .field-name-field-vasectomy,
+    .field-name-field-pap-smears,
+    .field-name-field-immunizations {
+      height: 100px;
+    }
+
+    .field-name-field-full-time-employee-contrib,
+    .field-name-field-part-time-employee-contrib,
+    .field-name-field-chiropractors,
+    .field-name-field-surgery-physician-services,
+    .field-name-field-surgery-facility-charges,
+    .field-name-field-home-health-care,
+    .field-name-field-mail-order-drug-program {
+      height: 150px;
+    }
+
+    .field-name-field-infertility-treatment,
+    .field-name-field-tubal-ligation {
+      height: 200px;
+    }
+
+    .field-name-field-pharmacy-retail,
+    .field-name-field-pre-authorization-require,
+    .field-name-field-out-of-pocket-maximum,
+    .field-name-field-autism {
+      height: 250px;
+    }
+
+    .field-name-field-care-management,
+    .field-name-field-mental-health,
+    .field-name-field-substance-abuse {
+      height: 400px;
+    }
+
+    .field-group-fieldset {
+      margin-top: 40px;
+    }
+
+    .field-name-body {
+      height: 200px;
+    }
+
+    .row-300 {
+      height: 300px;
+    }
+  }
+
   h2.plan-rates-title {
     background-color: #e9edee;
     padding: 20px;
@@ -101,40 +164,6 @@
     float: left;
     line-height: 12px;
     width: auto;
-  }
-
-  .field-name-field-midwives,
-  .field-name-field-pregnancy-termination {
-    height: 100px;
-  }
-
-  .field-name-field-full-time-employee-contrib,
-  .field-name-field-part-time-employee-contrib {
-    height: 150px;
-  }
-
-  .field-name-field-pre-authorization-require,
-  .field-name-field-out-of-pocket-maximum,
-  .field-name-field-autism {
-    height: 250px;
-  }
-
-  .field-name-field-care-management,
-  .field-name-field-mental-health,
-  .field-name-field-substance-abuse {
-    height: 400px;
-  }
-
-  .field-group-fieldset {
-    margin-top: 40px;
-  }
-
-  .field-name-body {
-    height: 200px;
-  }
-
-  .row-300 {
-    height: 300px;
   }
 
   .view-content {

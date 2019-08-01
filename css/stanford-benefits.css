@@ -1,3 +1,55 @@
+.view-caw-benefit-comparison-tool article h2:first-child {
+  height: 100px; }
+
+.view-caw-benefit-comparison-tool article .field-name-field-midwives,
+.view-caw-benefit-comparison-tool article .field-name-field-pregnancy-termination,
+.view-caw-benefit-comparison-tool article .field-name-field-allergy-tests,
+.view-caw-benefit-comparison-tool article .field-name-field-allergy-treatment,
+.view-caw-benefit-comparison-tool article .field-name-field-dental-treatment,
+.view-caw-benefit-comparison-tool article .field-name-field-urgent-care,
+.view-caw-benefit-comparison-tool article .field-name-field-hearing-care,
+.view-caw-benefit-comparison-tool article .field-name-field-hospital-stay,
+.view-caw-benefit-comparison-tool article .field-name-field-skilled-nursing,
+.view-caw-benefit-comparison-tool article .field-name-field-physical-therapy,
+.view-caw-benefit-comparison-tool article .field-name-field-speech-therapy,
+.view-caw-benefit-comparison-tool article .field-name-field-vasectomy,
+.view-caw-benefit-comparison-tool article .field-name-field-pap-smears,
+.view-caw-benefit-comparison-tool article .field-name-field-immunizations {
+  height: 100px; }
+
+.view-caw-benefit-comparison-tool article .field-name-field-full-time-employee-contrib,
+.view-caw-benefit-comparison-tool article .field-name-field-part-time-employee-contrib,
+.view-caw-benefit-comparison-tool article .field-name-field-chiropractors,
+.view-caw-benefit-comparison-tool article .field-name-field-surgery-physician-services,
+.view-caw-benefit-comparison-tool article .field-name-field-surgery-facility-charges,
+.view-caw-benefit-comparison-tool article .field-name-field-home-health-care,
+.view-caw-benefit-comparison-tool article .field-name-field-mail-order-drug-program {
+  height: 150px; }
+
+.view-caw-benefit-comparison-tool article .field-name-field-infertility-treatment,
+.view-caw-benefit-comparison-tool article .field-name-field-tubal-ligation {
+  height: 200px; }
+
+.view-caw-benefit-comparison-tool article .field-name-field-pharmacy-retail,
+.view-caw-benefit-comparison-tool article .field-name-field-pre-authorization-require,
+.view-caw-benefit-comparison-tool article .field-name-field-out-of-pocket-maximum,
+.view-caw-benefit-comparison-tool article .field-name-field-autism {
+  height: 250px; }
+
+.view-caw-benefit-comparison-tool article .field-name-field-care-management,
+.view-caw-benefit-comparison-tool article .field-name-field-mental-health,
+.view-caw-benefit-comparison-tool article .field-name-field-substance-abuse {
+  height: 400px; }
+
+.view-caw-benefit-comparison-tool article .field-group-fieldset {
+  margin-top: 40px; }
+
+.view-caw-benefit-comparison-tool article .field-name-body {
+  height: 200px; }
+
+.view-caw-benefit-comparison-tool article .row-300 {
+  height: 300px; }
+
 .view-caw-benefit-comparison-tool h2.plan-rates-title {
   background-color: #e9edee;
   padding: 20px; }
@@ -90,33 +142,6 @@
   float: left;
   line-height: 12px;
   width: auto; }
-
-.view-caw-benefit-comparison-tool .field-name-field-midwives,
-.view-caw-benefit-comparison-tool .field-name-field-pregnancy-termination {
-  height: 100px; }
-
-.view-caw-benefit-comparison-tool .field-name-field-full-time-employee-contrib,
-.view-caw-benefit-comparison-tool .field-name-field-part-time-employee-contrib {
-  height: 150px; }
-
-.view-caw-benefit-comparison-tool .field-name-field-pre-authorization-require,
-.view-caw-benefit-comparison-tool .field-name-field-out-of-pocket-maximum,
-.view-caw-benefit-comparison-tool .field-name-field-autism {
-  height: 250px; }
-
-.view-caw-benefit-comparison-tool .field-name-field-care-management,
-.view-caw-benefit-comparison-tool .field-name-field-mental-health,
-.view-caw-benefit-comparison-tool .field-name-field-substance-abuse {
-  height: 400px; }
-
-.view-caw-benefit-comparison-tool .field-group-fieldset {
-  margin-top: 40px; }
-
-.view-caw-benefit-comparison-tool .field-name-body {
-  height: 200px; }
-
-.view-caw-benefit-comparison-tool .row-300 {
-  height: 300px; }
 
 .view-caw-benefit-comparison-tool .view-content {
   display: block;

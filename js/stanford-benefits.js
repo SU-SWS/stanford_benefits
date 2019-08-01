@@ -78,6 +78,7 @@
           $(DentalActive + ' .views-widget').before( $(DentalActive + ' .description') );
           $(DentalRetirees + ' .views-widget').before( $(DentalRetirees + ' .description') );
         }
+
         // Function to hide all the different exposed filters.
         function HideAll() {
           $(MedicalActive + ' .description').css('display', 'none');
