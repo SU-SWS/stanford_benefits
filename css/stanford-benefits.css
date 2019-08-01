@@ -1,6 +1,14 @@
-.content .node-benefit h2 {
-  font-size: 18px;
-  height: 50px; }
+.view-caw-benefit-comparison-tool h2.plan-rates-title {
+  background-color: #e9edee;
+  padding: 20px; }
+
+.view-caw-benefit-comparison-tool h3.no-spacing,
+.view-caw-benefit-comparison-tool h3.spacing {
+  font-weight: normal;
+  margin: 10px 0 0; }
+
+.view-caw-benefit-comparison-tool hr {
+  margin: 0 5px; }
 
 .view-caw-benefit-comparison-tool legend {
   font-size: 14px; }
@@ -11,8 +19,63 @@
   overflow: auto;
   width: 800px; }
 
+.view-caw-benefit-comparison-tool #dental-plan-header {
+  float: left; }
+
+.view-caw-benefit-comparison-tool #edit-term-medical-active-benefit-wrapper,
+.view-caw-benefit-comparison-tool #edit-term-medical-preretirees-benefit-wrapper,
+.view-caw-benefit-comparison-tool #edit-term-medical-retirees-benefit-wrapper,
+.view-caw-benefit-comparison-tool #edit-term-dental-active-benefit-wrapper,
+.view-caw-benefit-comparison-tool #edit-term-dental-retirees-benefit-wrapper {
+  float: left;
+  width: 100%; }
+  .view-caw-benefit-comparison-tool #edit-term-medical-active-benefit-wrapper label,
+  .view-caw-benefit-comparison-tool #edit-term-medical-preretirees-benefit-wrapper label,
+  .view-caw-benefit-comparison-tool #edit-term-medical-retirees-benefit-wrapper label,
+  .view-caw-benefit-comparison-tool #edit-term-dental-active-benefit-wrapper label,
+  .view-caw-benefit-comparison-tool #edit-term-dental-retirees-benefit-wrapper label {
+    color: #8c1515;
+    float: left;
+    font-size: 14px; }
+  .view-caw-benefit-comparison-tool #edit-term-medical-active-benefit-wrapper .description,
+  .view-caw-benefit-comparison-tool #edit-term-medical-preretirees-benefit-wrapper .description,
+  .view-caw-benefit-comparison-tool #edit-term-medical-retirees-benefit-wrapper .description,
+  .view-caw-benefit-comparison-tool #edit-term-dental-active-benefit-wrapper .description,
+  .view-caw-benefit-comparison-tool #edit-term-dental-retirees-benefit-wrapper .description {
+    float: left;
+    font-size: 14px;
+    margin-bottom: 10px;
+    width: 100%; }
+  .view-caw-benefit-comparison-tool #edit-term-medical-active-benefit-wrapper .views-widget,
+  .view-caw-benefit-comparison-tool #edit-term-medical-preretirees-benefit-wrapper .views-widget,
+  .view-caw-benefit-comparison-tool #edit-term-medical-retirees-benefit-wrapper .views-widget,
+  .view-caw-benefit-comparison-tool #edit-term-dental-active-benefit-wrapper .views-widget,
+  .view-caw-benefit-comparison-tool #edit-term-dental-retirees-benefit-wrapper .views-widget {
+    float: left;
+    width: 100%; }
+
+.view-caw-benefit-comparison-tool #edit-term-dental-active-benefit-wrapper .form-item,
+.view-caw-benefit-comparison-tool #edit-term-dental-retirees-benefit-wrapper .form-item {
+  float: left;
+  width: 100%; }
+
+.view-caw-benefit-comparison-tool #dental-plan-header {
+  float: left;
+  margin-top: 20px; }
+
+.view-caw-benefit-comparison-tool .full-plan-costs-wrapper {
+  margin-top: 20px; }
+
+.view-caw-benefit-comparison-tool #medical-plan-header {
+  float: left;
+  margin-bottom: 0; }
+
+.view-caw-benefit-comparison-tool #dental {
+  float: left; }
+
 .view-caw-benefit-comparison-tool .bef-toggle {
   float: left;
+  font-size: 12px;
   margin-bottom: 20px; }
 
 .view-caw-benefit-comparison-tool .bef-checkboxes .form-type-bef-checkbox {
@@ -57,7 +120,39 @@
   height: 300px; }
 
 .view-caw-benefit-comparison-tool .view-content {
-  display: none; }
+  display: none;
+  float: left;
+  margin-top: 40px;
+  width: 100%; }
 
-.view-caw-benefit-comparison-tool .views-widget-filter-term_node_tid_depth_join select {
+.view-caw-benefit-comparison-tool .view-empty {
+  float: left;
+  width: 100%; }
+
+.view-caw-benefit-comparison-tool .view-header {
+  float: right;
+  width: 50%; }
+
+.view-caw-benefit-comparison-tool .view-filters {
+  float: left;
+  width: 50%; }
+
+.view-caw-benefit-comparison-tool .vision-plan-wrapper a,
+.view-caw-benefit-comparison-tool .full-plan-costs-wrapper a {
+  font-size: 14px;
+  font-weight: bold; }
+
+.view-caw-benefit-comparison-tool .vision-plan-wrapper p,
+.view-caw-benefit-comparison-tool .full-plan-costs-wrapper p {
+  margin: 0; }
+
+.view-caw-benefit-comparison-tool .vision-plan-wrapper ul,
+.view-caw-benefit-comparison-tool .full-plan-costs-wrapper ul {
+  margin: 0; }
+  .view-caw-benefit-comparison-tool .vision-plan-wrapper ul li,
+  .view-caw-benefit-comparison-tool .full-plan-costs-wrapper ul li {
+    list-style-type: none; }
+
+.view-caw-benefit-comparison-tool .vision-plan-wrapper .views-widget-filter-term_node_tid_depth_join select,
+.view-caw-benefit-comparison-tool .full-plan-costs-wrapper .views-widget-filter-term_node_tid_depth_join select {
   width: 100%; }

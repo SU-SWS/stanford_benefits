@@ -1,9 +1,20 @@
-.content .node-benefit h2 {
-  font-size: 18px;
-  height: 50px;
-}
-
 .view-caw-benefit-comparison-tool {
+
+  h2.plan-rates-title {
+    background-color: #e9edee;
+    padding: 20px;
+  }
+
+  h3.no-spacing,
+  h3.spacing {
+    font-weight: normal;
+    margin: 10px 0 0;
+  }
+
+  hr {
+    margin: 0 5px;
+  }
+
   legend {
     font-size: 14px;
   }
@@ -15,8 +26,64 @@
     width: 800px;
   }
 
+  #dental-plan-header {
+    float: left;
+  }
+
+  #edit-term-medical-active-benefit-wrapper,
+  #edit-term-medical-preretirees-benefit-wrapper,
+  #edit-term-medical-retirees-benefit-wrapper,
+  #edit-term-dental-active-benefit-wrapper,
+  #edit-term-dental-retirees-benefit-wrapper {
+    float: left;
+    width: 100%;
+
+    label {
+      color: #8c1515;
+      float: left;
+      font-size: 14px;
+    }
+
+    .description {
+      float: left;
+      font-size: 14px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    .views-widget {
+      float: left;
+      width: 100%;
+    }
+  }
+
+  #edit-term-dental-active-benefit-wrapper .form-item,
+  #edit-term-dental-retirees-benefit-wrapper .form-item {
+    float: left;
+    width: 100%;
+  }
+
+  #dental-plan-header {
+    float: left;
+    margin-top: 20px;
+  }
+
+  .full-plan-costs-wrapper {
+    margin-top: 20px;
+  }
+
+  #medical-plan-header {
+    float: left;
+    margin-bottom: 0;
+  }
+
+  #dental {
+    float: left;
+  }
+
   .bef-toggle {
     float: left;
+    font-size: 12px;
     margin-bottom: 20px;
   }
 
@@ -73,9 +140,47 @@
 
   .view-content {
     display: none;
+    float: left;
+    margin-top: 40px;
+    width: 100%;
   }
 
-  .views-widget-filter-term_node_tid_depth_join select {
+  .view-empty {
+    float: left;
     width: 100%;
+  }
+
+  .view-header {
+    float: right;
+    width: 50%;
+  }
+
+  .view-filters {
+    float: left;
+    width: 50%;
+  }
+
+  .vision-plan-wrapper,
+  .full-plan-costs-wrapper {
+    a {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      margin: 0;
+
+      li {
+        list-style-type: none;
+      }
+    }
+
+    .views-widget-filter-term_node_tid_depth_join select {
+      width: 100%;
+    }
   }
 }
