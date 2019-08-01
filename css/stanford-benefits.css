@@ -1,5 +1,8 @@
-#content-body {
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2); }
+.main #content-body {
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0; }
+  .main #content-body .block {
+    margin-bottom: 0; }
 
 .view-caw-benefit-comparison-tool article.node-dental-benefit h2:first-child {
   height: 50px; }
@@ -74,6 +77,7 @@
 .view-caw-benefit-comparison-tool table.views-view-grid {
   display: block;
   height: 800px;
+  margin-bottom: 0;
   overflow: auto; }
 
 .view-caw-benefit-comparison-tool #dental-plan-header {
@@ -152,23 +156,25 @@
 .view-caw-benefit-comparison-tool .view-content {
   display: block;
   float: left;
-  margin-top: 40px;
+  margin-top: 20px;
   width: 100%; }
 
 .view-caw-benefit-comparison-tool .view-empty {
   float: left;
+  margin-bottom: 30px;
   padding-left: 2%;
   width: 98%; }
 
 .view-caw-benefit-comparison-tool .view-header {
   float: right;
-  padding-right: 2%;
-  width: 48%; }
+  margin-bottom: 40px;
+  padding: 0 3%;
+  width: 47%; }
 
 .view-caw-benefit-comparison-tool .view-filters {
   float: left;
   padding-left: 2%;
-  width: 48%; }
+  width: 45%; }
 
 .view-caw-benefit-comparison-tool .vision-plan-wrapper a,
 .view-caw-benefit-comparison-tool .full-plan-costs-wrapper a {

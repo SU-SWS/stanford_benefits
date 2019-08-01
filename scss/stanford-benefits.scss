@@ -1,5 +1,10 @@
-#content-body {
+.main #content-body {
   box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+  margin-bottom: 0;
+
+  .block {
+    margin-bottom: 0;
+  }
 }
 
 .view-caw-benefit-comparison-tool {
@@ -94,6 +99,7 @@
   table.views-view-grid {
     display: block;
     height: 800px;
+    margin-bottom: 0;
     overflow: auto;
   }
 
@@ -178,26 +184,28 @@
   .view-content {
     display: block;
     float: left;
-    margin-top: 40px;
+    margin-top: 20px;
     width: 100%;
   }
 
   .view-empty {
     float: left;
+    margin-bottom: 30px;
     padding-left: 2%;
     width: 98%;
   }
 
   .view-header {
     float: right;
-    padding-right: 2%;
-    width: 48%;
+    margin-bottom: 40px;
+    padding: 0 3%;
+    width: 47%;
   }
 
   .view-filters {
     float: left;
     padding-left: 2%;
-    width: 48%;
+    width: 45%;
   }
 
   .vision-plan-wrapper,
