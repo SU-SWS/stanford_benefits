@@ -19,24 +19,8 @@
 
         // If nothing has been checked, reset the state of the form.
         if (!AnyChecked()) {
-          $(MedicalActive + ' .description').css('display', 'none');
-          $(MedicalActive + ' .views-wrapper').css('display', 'none');
-
-          $(MedicalPreretirees + ' .description').css('display', 'none');
-          $(MedicalPreretirees + ' .views-wrapper').css('display', 'none');
-
-          $(MedicalRetirees + ' .description').css('display', 'none');
-          $(MedicalRetirees + ' .views-wrapper').css('display', 'none');
-
-          $(DentalActive + ' .description').css('display', 'none');
-          $(DentalActive + ' .views-wrapper').css('display', 'none');
-
-          $(DentalRetirees + ' .description').css('display', 'none');
-          $(DentalRetirees + ' .views-wrapper').css('display', 'none');
-
-          $('.view-caw-benefit-comparison-tool' + ' .view-empty').css('display', 'none');
-
-          $('#views-exposed-form-caw-benefit-comparison-tool-block' + ' .views-submit-button').css('display', 'none');
+          // Hide all the different exposed filters.
+          HideAll();
 
           // We need to move some things around for UI beauty.
           $(MedicalActive).before( $('#medical-plan-header') );
@@ -92,7 +76,29 @@
           ShowSection(DentalRetirees);
         });
 
-        // Show the right section when clicked.
+        // Function to hide all the different exposed filters.
+        function HideAll() {
+          $(MedicalActive + ' .description').css('display', 'none');
+          $(MedicalActive + ' .views-wrapper').css('display', 'none');
+
+          $(MedicalPreretirees + ' .description').css('display', 'none');
+          $(MedicalPreretirees + ' .views-wrapper').css('display', 'none');
+
+          $(MedicalRetirees + ' .description').css('display', 'none');
+          $(MedicalRetirees + ' .views-wrapper').css('display', 'none');
+
+          $(DentalActive + ' .description').css('display', 'none');
+          $(DentalActive + ' .views-wrapper').css('display', 'none');
+
+          $(DentalRetirees + ' .description').css('display', 'none');
+          $(DentalRetirees + ' .views-wrapper').css('display', 'none');
+
+          $('.view-caw-benefit-comparison-tool' + ' .view-empty').css('display', 'none');
+
+          $('#views-exposed-form-caw-benefit-comparison-tool-block' + ' .views-submit-button').css('display', 'none');
+        }
+
+        // Function to show the right section when clicked.
         function ShowSection(section) {
           if ($(section + ' .description').is(':visible')) {
             $(section + ' .description').css('display', 'none');
@@ -129,6 +135,7 @@
           }
         }
 
+        // Function to tell if anything is check on the exposed fields.
         function IsChecked(term) {
           return $('input[name="' + term + '"]:checked').length;
         }
@@ -152,7 +159,7 @@
           return selected;
         }
 
-        // Show and hide the right section for the views exposed filters.
+        // Function to show and hide the right section for the views exposed filters.
         function ShowFormFor(section) {
           $('#' + section + ' .description').css('display', 'block');
           $('#' + section + ' .views-widget').css('display', 'block');
