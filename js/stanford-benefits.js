@@ -37,8 +37,8 @@
           if (IsChecked('term_dental_active_benefit')) {
             ShowFormFor('term_dental_active_benefit');
           }
-          if (IsChecked('term_dental_active_benefit')) {
-            ShowFormFor('term_dental_active_benefit');
+          if (IsChecked('term_dental_retirees_benefit')) {
+            ShowFormFor('term_dental_retirees_benefit');
           }
         }
         // Show the Medical/Active exposed filters
@@ -81,19 +81,19 @@
         // Function to hide all the different exposed filters.
         function HideAll() {
           $(MedicalActive + ' .description').css('display', 'none');
-          $(MedicalActive + ' .views-wrapper').css('display', 'none');
+          $(MedicalActive + ' .views-widget').css('display', 'none');
 
           $(MedicalPreretirees + ' .description').css('display', 'none');
-          $(MedicalPreretirees + ' .views-wrapper').css('display', 'none');
+          $(MedicalPreretirees + ' .views-widget').css('display', 'none');
 
           $(MedicalRetirees + ' .description').css('display', 'none');
-          $(MedicalRetirees + ' .views-wrapper').css('display', 'none');
+          $(MedicalRetirees + ' .views-widget').css('display', 'none');
 
           $(DentalActive + ' .description').css('display', 'none');
-          $(DentalActive + ' .views-wrapper').css('display', 'none');
+          $(DentalActive + ' .views-widget').css('display', 'none');
 
           $(DentalRetirees + ' .description').css('display', 'none');
-          $(DentalRetirees + ' .views-wrapper').css('display', 'none');
+          $(DentalRetirees + ' .views-widget').css('display', 'none');
 
           $('.view-caw-benefit-comparison-tool' + ' .view-empty').css('display', 'none');
 

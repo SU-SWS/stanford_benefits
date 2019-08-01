@@ -15,9 +15,8 @@
 
 .view-caw-benefit-comparison-tool table.views-view-grid {
   display: block;
-  height: 600px;
-  overflow: auto;
-  width: 800px; }
+  height: 800px;
+  overflow: auto; }
 
 .view-caw-benefit-comparison-tool #dental-plan-header {
   float: left; }
