@@ -19,24 +19,27 @@
 
         // Hide all the different exposed filters.
         // If nothing has been checked, reset the state of the form.
-        if (AnyChecked() === false) {
+
+        //alert(AnyChecked());
+        var anychecked = AnyChecked();
+        if (anychecked == null) {
           HideAll();
         }
         else {
           if (IsChecked('term_medical_active_benefit')) {
-            ShowFormFor('term_medical_active_benefit');
+            ShowSection(MedicalActive);
           }
           if (IsChecked('term_medical_preretirees_benefit')) {
-            ShowFormFor('term_medical_preretirees_benefit');
+            ShowSection(MedicalPreretirees);
           }
           if (IsChecked('term_medical_retirees_benefit')) {
-            ShowFormFor('term_medical_retirees_benefit');
+            ShowSection(MedicalRetirees);
           }
           if (IsChecked('term_dental_active_benefit')) {
-            ShowFormFor('term_dental_active_benefit');
+            ShowSection(DentalActive);
           }
           if (IsChecked('term_dental_retirees_benefit')) {
-            ShowFormFor('term_dental_retirees_benefit');
+            ShowSection(DentalRetirees);
           }
         }
         // Show the Medical/Active exposed filters
@@ -99,7 +102,8 @@
           var medicalretirees = GetCheckboxName(MedicalRetirees);
           var dentalactive = GetCheckboxName(DentalActive);
           var dentalretirees = GetCheckboxName(DentalRetirees);
-          
+
+          // Whatever section we are on, we clear the other sections checkboxes.
           if ( section == medicalactive) {
             UncheckBoxes(medicalpreretirees);
             UncheckBoxes(medicalretirees);
@@ -162,25 +166,17 @@
           $(DentalRetirees + ' .description', context).css('display', 'none');
           $(DentalRetirees + ' .views-widget', context).css('display', 'none');
 
-          $(CompTool + ' .view-empty', context).css('display', 'none');
+          $(CompTool + ' .view-empty').css('display', 'none');
 
           $(SubmitButton, context).css('display', 'none');
         }
 
         // Function to show the right section when clicked.
         function ShowSection(section) {
-          if ($(section + ' .description', context).is(':visible')) {
-            $(section + ' .description', context).css('display', 'none');
-            $(section + ' .views-widget', context).css('display', 'none');
-            $(CompTool + ' .view-empty', context).css('display', 'none');
-            $(SubmitButton, context).css('display', 'none');
-          }
-          else {
-            $(section + ' .description', context).css('display', 'block');
-            $(section + ' .views-widget', context).css('display', 'block');
-            $(CompTool + ' .view-empty', context).css('display', 'block');
-            $(SubmitButton, context).css('display', 'block');
-          }
+          $(section + ' .description', context).css('display', 'block');
+          $(section + ' .views-widget', context).css('display', 'block');
+          $(CompTool + ' .view-empty').css('display', 'block');
+          $(SubmitButton, context).css('display', 'block');
 
           if ( section !== MedicalActive) {
             $(MedicalActive + ' .description', context).css('display', 'none');
@@ -208,18 +204,17 @@
         function AnyChecked() {
           // If no checkboxes are selected, false else true.
           if (IsChecked('term_medical_active_benefit')) {
-            return true;
+            return IsChecked('term_medical_active_benefit');
           }
           if (IsChecked('term_medical_preretirees_benefit')) {
-            return true;
+            return IsChecked('term_medical_preretirees_benefit');
           }
           if (IsChecked('term_medical_retirees_benefit')) {
-            return true;
+            return IsChecked('term_medical_retirees_benefit');
           }
           if (IsChecked('term_dental_active_benefit')) {
-            return true;
+            return IsChecked('term_dental_active_benefit');
           }
-          return false;
         }
 
         // Function to show and hide the right section for the views exposed filters.

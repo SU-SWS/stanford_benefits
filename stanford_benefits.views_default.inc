@@ -107,50 +107,11 @@ function stanford_benefits_views_default_views() {
         ),
       ),
     ),
-    'tid_3' => array(
-      'bef_format' => 'bef',
-      'more_options' => array(
-        'bef_select_all_none' => 1,
-        'bef_collapsible' => 0,
-        'autosubmit' => 0,
-        'is_secondary' => 0,
-        'any_label' => '',
-        'bef_filter_description' => 'Active employees may select one of two offered dental plans.',
-        'tokens' => array(
-          'available' => array(
-            0 => 'global_types',
-            1 => 'vocabulary',
-          ),
-        ),
-        'rewrite' => array(
-          'filter_rewrite_values' => '',
-        ),
-      ),
-    ),
-    'tid_4' => array(
-      'bef_format' => 'bef_links',
-      'more_options' => array(
-        'bef_select_all_none' => FALSE,
-        'bef_collapsible' => 0,
-        'autosubmit' => 0,
-        'is_secondary' => 0,
-        'any_label' => '',
-        'bef_filter_description' => 'Stanford offers one dental plan for all eligible retirees.',
-        'tokens' => array(
-          'available' => array(
-            0 => 'global_types',
-            1 => 'vocabulary',
-          ),
-        ),
-        'rewrite' => array(
-          'filter_rewrite_values' => '',
-        ),
-      ),
-    ),
   );
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_options']['columns'] = '5';
   $handler->display->display_options['row_plugin'] = 'ds';
   $handler->display->display_options['row_options']['view_mode'] = 'stanford_view_card';
   $handler->display->display_options['row_options']['load_comments'] = 0;
@@ -393,7 +354,7 @@ function stanford_benefits_views_default_views() {
       'input_required' => 1,
       'text_input_required' => array(
         'text_input_required' => array(
-          'value' => 'Select any filter and click on Apply to see results',
+          'value' => 'Select any plan and click on Compare plans to see results',
           'format' => 'content_editor_text_format',
         ),
       ),
@@ -744,7 +705,6 @@ function stanford_benefits_views_default_views() {
     t('SELECT THE PLAN(S) TO COMPARE:'),
     t('Has taxonomy term'),
     t('Benefit Comparison Tool'),
-    t('Select any filter and click on Apply to see results'),
     t('Active Employees'),
     t('Early retirees under 65'),
     t('Retirees'),
