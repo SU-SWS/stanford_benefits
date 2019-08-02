@@ -1,14 +1,13 @@
 (function ($) {
-/**
- * Drupal attach behaviour.
- */
+  /**
+   * Drupal attach behaviour.
+   */
   Drupal.behaviors.stanford_benefits = {
     attach: function (context, settings) {
       $( document).ready(function() {
         // Setup the variables we will use here.
         var CompTool = '.view-caw-benefit-comparison-tool';
         var SubmitButton = '#edit-submit-caw-benefit-comparison-tool';
-        var CompToolBlock = '#views-exposed-form-caw-benefit-comparison-tool-block';
         var MedicalActive = '#edit-term-medical-active-benefit-wrapper';
         var MedicalPreretirees = '#edit-term-medical-preretirees-benefit-wrapper';
         var MedicalRetirees = '#edit-term-medical-retirees-benefit-wrapper';
@@ -43,27 +42,95 @@
         // Show the Medical/Active exposed filters
         $(MedicalActive + ' label:first-child', context).click(function() {
           ShowSection(MedicalActive);
+          var checkboxname = GetCheckboxName(MedicalActive);
+          ClearOtherBoxes(checkboxname);
         });
 
         // Show the Medical/Pre-retirees exposed filters
         $(MedicalPreretirees + ' label:first-child', context).click(function() {
           ShowSection(MedicalPreretirees);
+          var checkboxname = GetCheckboxName(MedicalPreretirees);
+          ClearOtherBoxes(checkboxname);
         });
 
         // Show the Medical/Retirees exposed filters
         $(MedicalRetirees + ' label:first-child', context).click(function() {
           ShowSection(MedicalRetirees);
+          var checkboxname = GetCheckboxName(MedicalRetirees);
+          ClearOtherBoxes(checkboxname);
         });
 
         // Show the Dental/Active exposed filters
         $(DentalActive + ' label:first-child', context).click(function() {
           ShowSection(DentalActive);
+          var checkboxname = GetCheckboxName(DentalActive);
+          ClearOtherBoxes(checkboxname);
         });
 
         // Show the Dental/Retirees exposed filters
         $(DentalRetirees + ' label:first-child', context).click(function() {
           ShowSection(DentalRetirees);
+          var checkboxname = GetCheckboxName(DentalRetirees);
+          ClearOtherBoxes(checkboxname);
         });
+
+        function GetCheckboxName(term) {
+          var re = /\-/gi;
+          var tmp = term.replace('#edit-', '');
+          var underscoreme = tmp.replace('-wrapper', '');
+          var underscores = underscoreme.replace(re, '_');
+          return underscores;
+        }
+
+        // Function to tell if anything is check on the exposed fields.
+        function IsChecked(term) {
+          return $('input[name="' + term + '[]"]:checked').length;
+        }
+
+        // Function to tell if anything is check on the exposed fields.
+        function UncheckBoxes(name) {
+          $('input[name="' + name + '[]"]:checked').prop('checked', false);
+        }
+
+        // Function to uncheck all checkboxes other than the section passed.
+        function ClearOtherBoxes(section) {
+          var medicalactive = GetCheckboxName(MedicalActive);
+          var medicalpreretirees = GetCheckboxName(MedicalPreretirees);
+          var medicalretirees = GetCheckboxName(MedicalRetirees);
+          var dentalactive = GetCheckboxName(DentalActive);
+          var dentalretirees = GetCheckboxName(DentalRetirees);
+          
+          if ( section == medicalactive) {
+            UncheckBoxes(medicalpreretirees);
+            UncheckBoxes(medicalretirees);
+            UncheckBoxes(dentalactive);
+            UncheckBoxes(dentalretirees);
+          }
+          if ( section == medicalpreretirees) {
+            UncheckBoxes(medicalactive);
+            UncheckBoxes(medicalretirees);
+            UncheckBoxes(dentalactive);
+            UncheckBoxes(dentalretirees);
+          }
+          if ( section == medicalretirees) {
+            UncheckBoxes(medicalactive);
+            UncheckBoxes(medicalpreretirees);
+            UncheckBoxes(dentalactive);
+            UncheckBoxes(dentalretirees);
+          }
+          if ( section == dentalactive) {
+            UncheckBoxes(medicalactive);
+            UncheckBoxes(medicalpreretirees);
+            UncheckBoxes(medicalretirees);
+            UncheckBoxes(dentalretirees);
+          }
+          if ( section == dentalretirees) {
+            UncheckBoxes(medicalactive);
+            UncheckBoxes(medicalpreretirees);
+            UncheckBoxes(medicalretirees);
+            UncheckBoxes(dentalactive);
+          }
+        }
 
         // Function to move some things around for UI beauty.
         function MoveViewHTMLElements() {
@@ -135,19 +202,6 @@
             $(DentalRetirees + ' .description', context).css('display', 'none');
             $(DentalRetirees + ' .views-widget', context).css('display', 'none');
           }
-        }
-
-        function IsSectionChecked(term) {
-          var re = /\-/gi;
-          var tmp = term.replace('#edit-', '');
-          var underscoreme = tmp.replace('-wrapper', '');
-          var underscores = underscoreme.replace(re, '_');
-          return IsChecked(underscores);
-        }
-
-        // Function to tell if anything is check on the exposed fields.
-        function IsChecked(term) {
-          return $('input[name="' + term + '[]"]:checked').length;
         }
 
         // Are there any checkboxes selected.
