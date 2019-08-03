@@ -83,6 +83,10 @@
   height: 800px;
   margin-bottom: 0;
   overflow: auto; }
+  .view-caw-benefit-comparison-tool table.views-view-grid tbody {
+    display: table;
+    width: 100%;
+    height: 100%; }
 
 .view-caw-benefit-comparison-tool #dental-plan-header {
   float: left; }
