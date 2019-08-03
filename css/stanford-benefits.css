@@ -8,7 +8,8 @@
   height: 50px; }
 
 .view-caw-benefit-comparison-tool article h2:first-child {
-  height: 100px; }
+  font-size: 16px;
+  height: 50px; }
 
 .view-caw-benefit-comparison-tool article .field-name-field-midwives,
 .view-caw-benefit-comparison-tool article .field-name-field-pregnancy-termination,
@@ -56,6 +57,9 @@
 .view-caw-benefit-comparison-tool article .field-name-body {
   height: 200px; }
 
+.view-caw-benefit-comparison-tool article .fieldset-wrapper {
+  font-size: 12px; }
+
 .view-caw-benefit-comparison-tool article .row-300 {
   height: 300px; }
 
@@ -97,7 +101,7 @@
   .view-caw-benefit-comparison-tool #edit-term-dental-retirees-benefit-wrapper label {
     color: #8c1515;
     float: left;
-    font-size: 14px; }
+    font-size: 12px; }
   .view-caw-benefit-comparison-tool #edit-term-medical-active-benefit-wrapper .description,
   .view-caw-benefit-comparison-tool #edit-term-medical-preretirees-benefit-wrapper .description,
   .view-caw-benefit-comparison-tool #edit-term-medical-retirees-benefit-wrapper .description,

@@ -446,7 +446,7 @@ function stanford_benefits_views_default_views() {
       'bef_format' => 'bef',
       'more_options' => array(
         'bef_select_all_none' => 0,
-        'bef_collapsible' => 0,
+        'bef_collapsible' => 1,
         'autosubmit' => 0,
         'is_secondary' => 0,
         'any_label' => '',

@@ -16,7 +16,8 @@
 
   article {
     h2:first-child {
-      height: 100px;
+      font-size: 16px;
+      height: 50px;
     }
 
     .field-name-field-midwives,
@@ -72,6 +73,10 @@
       height: 200px;
     }
 
+    .fieldset-wrapper {
+      font-size: 12px;
+    }
+
     .row-300 {
       height: 300px;
     }
@@ -118,7 +123,7 @@
     label {
       color: #8c1515;
       float: left;
-      font-size: 14px;
+      font-size: 12px;
     }
 
     .description {
