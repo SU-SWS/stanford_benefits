@@ -165,7 +165,7 @@ function stanford_benefits_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Ratings - National Committee For Quality Assurance (NCQA)',
+    'label' => 'Ratings (NCQA)',
     'weight' => '0',
     'children' => array(
       0 => 'field_overall_accredition_status',
@@ -177,11 +177,11 @@ function stanford_benefits_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Ratings - National Committee For Quality Assurance (NCQA)',
+      'label' => 'Ratings (NCQA)',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-criteria field-group-fieldset',
-        'description' => 'Up to four stars are given for each of the following criteria:',
+        'description' => 'National Committee For Quality Assurance (NCQA)<br>Up to four stars are given for each of the following criteria:',
       ),
       'formatter' => 'collapsible',
     ),
@@ -1066,6 +1066,7 @@ function stanford_benefits_field_group_info() {
   t('Preventive Care');
   t('Preventive Type of Care');
   t('Preventive Type of Care	');
+  t('Ratings (NCQA)');
   t('Ratings - National Committee For Quality Assurance (NCQA)');
 
   return $field_groups;

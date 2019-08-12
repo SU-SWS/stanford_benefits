@@ -10,26 +10,37 @@
 .view-caw-benefit-comparison-tool {
   article.node-dental-benefit {
     h2:first-child {
-      background: white;
-      height: 65px;
-      padding-bottom: 20px;
+      background-color: #e9edee;
+      box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+      font-size: 17px;
+      height: 100px;
+      padding: 0.5em 0.5em 20px;
       position: -webkit-sticky; /* Safari */
       position: sticky;
       top: 0;
       z-index: 100;
+
+      a {
+        font-weight: bold;
+      }
     }
   }
 
   article {
     h2:first-child {
-      background: white;
-      font-size: 15px;
-      height: 65px;
-      padding-bottom: 20px;
+      background-color: #e9edee;
+      box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+      font-size: 17px;
+      height: 100px;
+      padding: 0.5em 0.5em 20px;
       position: -webkit-sticky; /* Safari */
       position: sticky;
       top: 0;
       z-index: 100;
+
+      a {
+        font-weight: bold;
+      }
     }
 
     .field-group-fieldset {
@@ -38,8 +49,13 @@
 
     .fieldset-wrapper {
       font-size: 13px;
+      line-height: 1.3em;
       .fieldset-description {
         height: 110px
+      }
+
+      .field-label {
+        padding-top: 20px;
       }
 
       .field-name-field-overall-accredition-status {
@@ -162,6 +178,16 @@
     float: left;
     margin-top: 20px;
     width: 100%;
+
+    article {
+      .content {
+        padding: 0.5em;
+      }
+    }
+
+    td {
+      padding: 0;
+    }
   }
 
   .view-empty {
@@ -182,6 +208,14 @@
     float: left;
     padding-left: 2%;
     width: 45%;
+  }
+
+  .views-exposed-form,
+  .view-header {
+    h2 {
+      background-color: #d7ddde;
+      padding: 20px;
+    }
   }
 
   .vision-plan-wrapper,
