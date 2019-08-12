@@ -45,7 +45,7 @@ function stanford_benefits_field_group_info() {
       ),
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_basics|node|benefit|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -84,7 +84,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_basics|node|benefit|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -118,7 +118,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_basics|node|dental_benefit|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -153,7 +153,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_basics|node|dental_benefit|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -186,7 +186,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_criteria|node|benefit|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -219,7 +219,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_criteria|node|benefit|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -252,7 +252,7 @@ function stanford_benefits_field_group_info() {
       ),
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_maternity|node|benefit|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -287,7 +287,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_maternity|node|benefit|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -316,7 +316,7 @@ function stanford_benefits_field_group_info() {
       ),
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_mental_health|node|benefit|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -347,7 +347,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_mental_health|node|benefit|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -375,7 +375,7 @@ function stanford_benefits_field_group_info() {
       ),
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_orthodontic_services|node|dental_benefit|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -405,7 +405,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_orthodontic_services|node|dental_benefit|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -440,7 +440,7 @@ function stanford_benefits_field_group_info() {
       ),
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_other_serv_a_d|node|benefit|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -476,7 +476,7 @@ function stanford_benefits_field_group_info() {
       ),
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_other_serv_e_n|node|benefit|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -513,7 +513,7 @@ function stanford_benefits_field_group_info() {
       ),
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_other_serv_o_z|node|benefit|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -550,7 +550,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_other_services_a_d|node|benefit|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -581,7 +581,7 @@ function stanford_benefits_field_group_info() {
       ),
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_other_services_a_e|node|dental_benefit|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -614,7 +614,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_other_services_a_e|node|dental_benefit|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -652,7 +652,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_other_services_e_n|node|benefit|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -685,7 +685,7 @@ function stanford_benefits_field_group_info() {
       ),
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_other_services_f_o|node|dental_benefit|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -720,7 +720,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_other_services_f_o|node|dental_benefit|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -759,7 +759,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_other_services_o_z|node|benefit|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -791,7 +791,7 @@ function stanford_benefits_field_group_info() {
       ),
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_other_services_p_z|node|dental_benefit|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -825,7 +825,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_other_services_p_z|node|dental_benefit|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -854,7 +854,7 @@ function stanford_benefits_field_group_info() {
       ),
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_prescription_drugs|node|benefit|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -885,7 +885,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_prescription_drugs|node|benefit|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -918,7 +918,7 @@ function stanford_benefits_field_group_info() {
       ),
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_preventive_care|node|benefit|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -953,7 +953,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_preventive_care|node|benefit|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -984,7 +984,7 @@ function stanford_benefits_field_group_info() {
       ),
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_preventive_care|node|dental_benefit|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1017,7 +1017,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_preventive_car|node|dental_benefit|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1047,7 +1047,7 @@ function stanford_benefits_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_ratings|node|benefit|form'] = $field_group;
 
   // Translatables
   // Included for use with string extractors like potx.
