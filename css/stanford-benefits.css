@@ -16,7 +16,7 @@
   top: 0;
   z-index: 100; }
   .view-caw-benefit-comparison-tool article.node-dental-benefit h2:first-child a {
-    font-weight: bold; }
+    font-weight: 600; }
 
 .view-caw-benefit-comparison-tool article h2:first-child {
   background-color: #e9edee;
@@ -30,7 +30,7 @@
   top: 0;
   z-index: 100; }
   .view-caw-benefit-comparison-tool article h2:first-child a {
-    font-weight: bold; }
+    font-weight: 600; }
 
 .view-caw-benefit-comparison-tool article .field-group-fieldset {
   margin-top: 40px; }
