@@ -5,63 +5,35 @@
     margin-bottom: 0; }
 
 .view-caw-benefit-comparison-tool article.node-dental-benefit h2:first-child {
-  height: 50px; }
+  background: white;
+  height: 65px;
+  padding-bottom: 20px;
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 100; }
 
 .view-caw-benefit-comparison-tool article h2:first-child {
-  font-size: 16px;
-  height: 50px; }
-
-.view-caw-benefit-comparison-tool article .field-name-field-midwives,
-.view-caw-benefit-comparison-tool article .field-name-field-pregnancy-termination,
-.view-caw-benefit-comparison-tool article .field-name-field-allergy-tests,
-.view-caw-benefit-comparison-tool article .field-name-field-allergy-treatment,
-.view-caw-benefit-comparison-tool article .field-name-field-dental-treatment,
-.view-caw-benefit-comparison-tool article .field-name-field-urgent-care,
-.view-caw-benefit-comparison-tool article .field-name-field-hearing-care,
-.view-caw-benefit-comparison-tool article .field-name-field-hospital-stay,
-.view-caw-benefit-comparison-tool article .field-name-field-skilled-nursing,
-.view-caw-benefit-comparison-tool article .field-name-field-physical-therapy,
-.view-caw-benefit-comparison-tool article .field-name-field-speech-therapy,
-.view-caw-benefit-comparison-tool article .field-name-field-vasectomy,
-.view-caw-benefit-comparison-tool article .field-name-field-pap-smears,
-.view-caw-benefit-comparison-tool article .field-name-field-immunizations {
-  height: 100px; }
-
-.view-caw-benefit-comparison-tool article .field-name-field-full-time-employee-contrib,
-.view-caw-benefit-comparison-tool article .field-name-field-part-time-employee-contrib,
-.view-caw-benefit-comparison-tool article .field-name-field-chiropractors,
-.view-caw-benefit-comparison-tool article .field-name-field-surgery-physician-services,
-.view-caw-benefit-comparison-tool article .field-name-field-surgery-facility-charges,
-.view-caw-benefit-comparison-tool article .field-name-field-home-health-care,
-.view-caw-benefit-comparison-tool article .field-name-field-mail-order-drug-program {
-  height: 150px; }
-
-.view-caw-benefit-comparison-tool article .field-name-field-infertility-treatment,
-.view-caw-benefit-comparison-tool article .field-name-field-tubal-ligation {
-  height: 200px; }
-
-.view-caw-benefit-comparison-tool article .field-name-field-pharmacy-retail,
-.view-caw-benefit-comparison-tool article .field-name-field-pre-authorization-require,
-.view-caw-benefit-comparison-tool article .field-name-field-out-of-pocket-maximum,
-.view-caw-benefit-comparison-tool article .field-name-field-autism {
-  height: 250px; }
-
-.view-caw-benefit-comparison-tool article .field-name-field-care-management,
-.view-caw-benefit-comparison-tool article .field-name-field-mental-health,
-.view-caw-benefit-comparison-tool article .field-name-field-substance-abuse {
-  height: 400px; }
+  background: white;
+  font-size: 15px;
+  height: 65px;
+  padding-bottom: 20px;
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 100; }
 
 .view-caw-benefit-comparison-tool article .field-group-fieldset {
   margin-top: 40px; }
 
-.view-caw-benefit-comparison-tool article .field-name-body {
-  height: 200px; }
-
 .view-caw-benefit-comparison-tool article .fieldset-wrapper {
-  font-size: 12px; }
-
-.view-caw-benefit-comparison-tool article .row-300 {
-  height: 300px; }
+  font-size: 13px; }
+  .view-caw-benefit-comparison-tool article .fieldset-wrapper .fieldset-description {
+    height: 110px; }
+  .view-caw-benefit-comparison-tool article .fieldset-wrapper .field-name-field-overall-accredition-status {
+    height: 60px; }
 
 .view-caw-benefit-comparison-tool h2.plan-rates-title {
   background-color: #e9edee;
@@ -76,7 +48,7 @@
   margin: 0 5px; }
 
 .view-caw-benefit-comparison-tool legend {
-  font-size: 14px; }
+  font-size: 15px; }
 
 .view-caw-benefit-comparison-tool table.views-view-grid {
   display: block;
@@ -112,7 +84,7 @@
   .view-caw-benefit-comparison-tool #edit-term-dental-active-benefit-wrapper .description,
   .view-caw-benefit-comparison-tool #edit-term-dental-retirees-benefit-wrapper .description {
     float: left;
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 10px;
     width: 100%; }
   .view-caw-benefit-comparison-tool #edit-term-medical-active-benefit-wrapper .views-widget,
@@ -144,7 +116,7 @@
 
 .view-caw-benefit-comparison-tool .bef-toggle {
   float: left;
-  font-size: 12px;
+  font-size: 11px;
   margin-bottom: 20px; }
 
 .view-caw-benefit-comparison-tool .bef-checkboxes .form-type-bef-checkbox {
@@ -186,7 +158,7 @@
 
 .view-caw-benefit-comparison-tool .vision-plan-wrapper a,
 .view-caw-benefit-comparison-tool .full-plan-costs-wrapper a {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold; }
 
 .view-caw-benefit-comparison-tool .vision-plan-wrapper p,

@@ -10,75 +10,41 @@
 .view-caw-benefit-comparison-tool {
   article.node-dental-benefit {
     h2:first-child {
-      height: 50px;
+      background: white;
+      height: 65px;
+      padding-bottom: 20px;
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
   }
 
   article {
     h2:first-child {
-      font-size: 16px;
-      height: 50px;
-    }
-
-    .field-name-field-midwives,
-    .field-name-field-pregnancy-termination,
-    .field-name-field-allergy-tests,
-    .field-name-field-allergy-treatment,
-    .field-name-field-dental-treatment,
-    .field-name-field-urgent-care,
-    .field-name-field-hearing-care,
-    .field-name-field-hospital-stay,
-    .field-name-field-skilled-nursing,
-    .field-name-field-physical-therapy,
-    .field-name-field-speech-therapy,
-    .field-name-field-vasectomy,
-    .field-name-field-pap-smears,
-    .field-name-field-immunizations {
-      height: 100px;
-    }
-
-    .field-name-field-full-time-employee-contrib,
-    .field-name-field-part-time-employee-contrib,
-    .field-name-field-chiropractors,
-    .field-name-field-surgery-physician-services,
-    .field-name-field-surgery-facility-charges,
-    .field-name-field-home-health-care,
-    .field-name-field-mail-order-drug-program {
-      height: 150px;
-    }
-
-    .field-name-field-infertility-treatment,
-    .field-name-field-tubal-ligation {
-      height: 200px;
-    }
-
-    .field-name-field-pharmacy-retail,
-    .field-name-field-pre-authorization-require,
-    .field-name-field-out-of-pocket-maximum,
-    .field-name-field-autism {
-      height: 250px;
-    }
-
-    .field-name-field-care-management,
-    .field-name-field-mental-health,
-    .field-name-field-substance-abuse {
-      height: 400px;
+      background: white;
+      font-size: 15px;
+      height: 65px;
+      padding-bottom: 20px;
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .field-group-fieldset {
       margin-top: 40px;
     }
 
-    .field-name-body {
-      height: 200px;
-    }
-
     .fieldset-wrapper {
-      font-size: 12px;
-    }
+      font-size: 13px;
+      .fieldset-description {
+        height: 110px
+      }
 
-    .row-300 {
-      height: 300px;
+      .field-name-field-overall-accredition-status {
+        height: 60px;
+      }
     }
   }
 
@@ -98,7 +64,7 @@
   }
 
   legend {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   table.views-view-grid {
@@ -133,7 +99,7 @@
 
     .description {
       float: left;
-      font-size: 14px;
+      font-size: 13px;
       margin-bottom: 10px;
       width: 100%;
     }
@@ -170,7 +136,7 @@
 
   .bef-toggle {
     float: left;
-    font-size: 12px;
+    font-size: 11px;
     margin-bottom: 20px;
   }
 
@@ -221,7 +187,7 @@
   .vision-plan-wrapper,
   .full-plan-costs-wrapper {
     a {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: bold;
     }
 

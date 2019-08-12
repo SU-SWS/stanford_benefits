@@ -4,7 +4,7 @@
    */
   Drupal.behaviors.stanford_benefits = {
     attach: function (context, settings) {
-      $( document).ready(function() {
+      $(document).ready(function( settings) {
         // Setup the variables we will use here.
         var CompTool = '.view-caw-benefit-comparison-tool';
         var SubmitButton = '#edit-submit-caw-benefit-comparison-tool';
@@ -14,6 +14,8 @@
         var DentalActive = '#edit-term-dental-active-benefit-wrapper';
         var DentalRetirees = '#edit-term-dental-retirees-benefit-wrapper';
 
+        // We need to make sure all the results look good in each row.
+        EqualHeightResults();
         // We need to move some things around for UI beauty.
         MoveViewHTMLElements();
 
@@ -77,6 +79,31 @@
           ClearOtherBoxes(checkboxname);
         });
 
+        // Function to set all fields in a row to the same height.
+        function EqualHeightResults() {
+          var fields = [];
+
+          $('article .fieldset-wrapper > div').each(function(i, obj) {
+            fields.push(i, $(this).attr('class'));
+          });
+
+          var classes = fields.filter(function(elem, index, self) {
+            return index === self.indexOf(elem);
+          });
+
+          $.each(classes , function(index, val) {
+            if (val.length > 1) {
+              var start_pos = val.indexOf(' ') + 1;
+              var end_pos = val.indexOf(' ',start_pos);
+              var classname = val.substring(start_pos,end_pos);
+              if (classname.length > 1) {
+                equalHeightByContainer('.' + classname);
+              }
+            }
+          });
+        }
+
+        // Function to get the name of the checkbox from id.
         function GetCheckboxName(term) {
           var re = /\-/gi;
           var tmp = term.replace('#edit-', '');
