@@ -101,6 +101,16 @@
               }
             }
           });
+
+          // Fix field groups to be the same height to fix weirdness.
+          equalHeightByContainer('.group-other-serv-a-d span.fieldset-legend');
+          equalHeightByContainer('.group-other-serv-a-e span.fieldset-legend');
+          equalHeightByContainer('.group-other-serv-e-n span.fieldset-legend');
+          equalHeightByContainer('.group-other-serv-f-o span.fieldset-legend');
+          equalHeightByContainer('.group-other-serv-o-z span.fieldset-legend');
+          equalHeightByContainer('.group-other-serv-p-z span.fieldset-legend');
+          equalHeightByContainer('.group-preventive-care span.fieldset-legend');
+          equalHeightByContainer('.group-orthodontic-services span.fieldset-legend');
         }
 
         // Function to get the name of the checkbox from id.

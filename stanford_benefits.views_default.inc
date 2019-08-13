@@ -26,7 +26,6 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['css_class'] = 'block';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['group_by'] = TRUE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -515,7 +514,6 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth']['expose']['reduce'] = TRUE;
   $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
   $handler->display->display_options['filters']['term_node_tid_depth']['vocabulary'] = 'benefit_plan_type';
-  $handler->display->display_options['filters']['term_node_tid_depth']['hierarchy'] = 1;
   $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '1';
   /* Filter criterion: Medical/Pre-Retirees benefit plan selection */
   $handler->display->display_options['filters']['term_node_tid_depth_1']['id'] = 'term_node_tid_depth_1';
@@ -584,7 +582,6 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth_2']['expose']['reduce'] = TRUE;
   $handler->display->display_options['filters']['term_node_tid_depth_2']['type'] = 'select';
   $handler->display->display_options['filters']['term_node_tid_depth_2']['vocabulary'] = 'benefit_plan_type';
-  $handler->display->display_options['filters']['term_node_tid_depth_2']['hierarchy'] = 1;
   $handler->display->display_options['filters']['term_node_tid_depth_2']['depth'] = '1';
   /* Filter criterion: Dental/Active benefit plan selection */
   $handler->display->display_options['filters']['term_node_tid_depth_3']['id'] = 'term_node_tid_depth_3';
@@ -617,7 +614,6 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth_3']['expose']['reduce'] = TRUE;
   $handler->display->display_options['filters']['term_node_tid_depth_3']['type'] = 'select';
   $handler->display->display_options['filters']['term_node_tid_depth_3']['vocabulary'] = 'benefit_plan_type';
-  $handler->display->display_options['filters']['term_node_tid_depth_3']['hierarchy'] = 1;
   $handler->display->display_options['filters']['term_node_tid_depth_3']['depth'] = '1';
   /* Filter criterion: Dental/Retirees benefit plan */
   $handler->display->display_options['filters']['term_node_tid_depth_4']['id'] = 'term_node_tid_depth_4';
@@ -649,7 +645,6 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth_4']['expose']['reduce'] = TRUE;
   $handler->display->display_options['filters']['term_node_tid_depth_4']['type'] = 'select';
   $handler->display->display_options['filters']['term_node_tid_depth_4']['vocabulary'] = 'benefit_plan_type';
-  $handler->display->display_options['filters']['term_node_tid_depth_4']['hierarchy'] = 1;
   $handler->display->display_options['filters']['term_node_tid_depth_4']['depth'] = '1';
   $translatables['caw_benefit_comparison_tool'] = array(
     t('Master'),

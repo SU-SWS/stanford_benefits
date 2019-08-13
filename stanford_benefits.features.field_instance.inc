@@ -4606,7 +4606,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_cleanings',
     'label' => 'Cleanings',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -4804,7 +4804,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_d_x_rays',
     'label' => 'X-rays',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -5134,7 +5134,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_fluoride_treatments',
     'label' => 'Fluoride treatments',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -6060,7 +6060,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_retainers',
     'label' => 'Retainers',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -6192,7 +6192,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_routine_exams',
     'label' => 'Routine exams',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -6258,7 +6258,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_sealants',
     'label' => 'Sealants',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
