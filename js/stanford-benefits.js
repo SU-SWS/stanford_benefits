@@ -103,6 +103,11 @@
           });
 
           // Fix field groups to be the same height to fix weirdness.
+          equalHeightByContainer('.fieldset-description');
+          equalHeightByContainer('.field-name-field-overall-accredition-status .field-label');
+          equalHeightByContainer('.group-basics span.fieldset-legend');
+          equalHeightByContainer('.group-maternity span.fieldset-legend');
+          equalHeightByContainer('.group-mental-health span.fieldset-legend');
           equalHeightByContainer('.group-other-serv-a-d span.fieldset-legend');
           equalHeightByContainer('.group-other-serv-a-e span.fieldset-legend');
           equalHeightByContainer('.group-other-serv-e-n span.fieldset-legend');
