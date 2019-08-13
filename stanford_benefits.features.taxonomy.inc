@@ -13,7 +13,7 @@ function stanford_benefits_taxonomy_default_vocabularies() {
       'name' => 'Benefit Plan Type',
       'machine_name' => 'benefit_plan_type',
       'description' => 'The benefit plan type type for the benefit.',
-      'hierarchy' => 2,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(

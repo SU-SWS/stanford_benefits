@@ -486,11 +486,11 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
   $handler->display->display_options['filters']['term_node_tid_depth']['ui_name'] = 'Medical/Active benefit plan selection';
   $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
-    994 => '994',
-    995 => '995',
-    992 => '992',
-    991 => '991',
-    993 => '993',
+    956 => '956',
+    957 => '957',
+    958 => '958',
+    959 => '959',
+    960 => '960',
   );
   $handler->display->display_options['filters']['term_node_tid_depth']['exposed'] = TRUE;
   $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator_id'] = 'term_node_tid_depth_op';
@@ -521,10 +521,10 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth_1']['field'] = 'term_node_tid_depth';
   $handler->display->display_options['filters']['term_node_tid_depth_1']['ui_name'] = 'Medical/Pre-Retirees benefit plan selection';
   $handler->display->display_options['filters']['term_node_tid_depth_1']['value'] = array(
-    998 => '998',
-    999 => '999',
-    996 => '996',
-    997 => '997',
+    962 => '962',
+    963 => '963',
+    964 => '964',
+    965 => '965',
   );
   $handler->display->display_options['filters']['term_node_tid_depth_1']['exposed'] = TRUE;
   $handler->display->display_options['filters']['term_node_tid_depth_1']['expose']['operator_id'] = 'term_node_tid_depth_1_op';
@@ -555,10 +555,10 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth_2']['field'] = 'term_node_tid_depth';
   $handler->display->display_options['filters']['term_node_tid_depth_2']['ui_name'] = 'Medical/Retirees benefit plan selection';
   $handler->display->display_options['filters']['term_node_tid_depth_2']['value'] = array(
-    982 => '982',
-    983 => '983',
-    980 => '980',
-    979 => '979',
+    968 => '968',
+    969 => '969',
+    971 => '971',
+    972 => '972',
   );
   $handler->display->display_options['filters']['term_node_tid_depth_2']['exposed'] = TRUE;
   $handler->display->display_options['filters']['term_node_tid_depth_2']['expose']['operator_id'] = 'term_node_tid_depth_2_op';
@@ -589,8 +589,8 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth_3']['field'] = 'term_node_tid_depth';
   $handler->display->display_options['filters']['term_node_tid_depth_3']['ui_name'] = 'Dental/Active benefit plan selection';
   $handler->display->display_options['filters']['term_node_tid_depth_3']['value'] = array(
-    988 => '988',
-    986 => '986',
+    975 => '975',
+    976 => '976',
   );
   $handler->display->display_options['filters']['term_node_tid_depth_3']['exposed'] = TRUE;
   $handler->display->display_options['filters']['term_node_tid_depth_3']['expose']['operator_id'] = 'term_node_tid_depth_3_op';
@@ -621,7 +621,7 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth_4']['field'] = 'term_node_tid_depth';
   $handler->display->display_options['filters']['term_node_tid_depth_4']['ui_name'] = 'Dental/Retirees benefit plan';
   $handler->display->display_options['filters']['term_node_tid_depth_4']['value'] = array(
-    990 => '990',
+    978 => '978',
   );
   $handler->display->display_options['filters']['term_node_tid_depth_4']['exposed'] = TRUE;
   $handler->display->display_options['filters']['term_node_tid_depth_4']['expose']['operator_id'] = 'term_node_tid_depth_4_op';
