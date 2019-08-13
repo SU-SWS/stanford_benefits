@@ -171,6 +171,15 @@
   width: 100%; }
   .view-caw-benefit-comparison-tool .view-content article .content {
     padding: 0.5em; }
+  .view-caw-benefit-comparison-tool .view-content article .contextual-links-wrapper {
+    float: right;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 100; }
+    .view-caw-benefit-comparison-tool .view-content article .contextual-links-wrapper ul li {
+      list-style-type: none; }
   .view-caw-benefit-comparison-tool .view-content td {
     padding: 0; }
 
