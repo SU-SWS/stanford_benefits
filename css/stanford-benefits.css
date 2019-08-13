@@ -1,8 +1,29 @@
+.node-type-benefit article,
+.node-type-dental-benefit article {
+  padding: 1em; }
+  .node-type-benefit article fieldset,
+  .node-type-dental-benefit article fieldset {
+    margin-bottom: 2em; }
+
 .main #content-body {
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
   margin-bottom: 0; }
   .main #content-body .block {
     margin-bottom: 0; }
+    .main #content-body .block .field-name-field-overall-accredition-status .field-label,
+    .main #content-body .block .field-name-field-overall-accredition-status .field-items,
+    .main #content-body .block .field-name-field-access-services .field-label,
+    .main #content-body .block .field-name-field-access-services .field-items,
+    .main #content-body .block .field-name-field-qualified-providers .field-label,
+    .main #content-body .block .field-name-field-qualified-providers .field-items,
+    .main #content-body .block .field-name-field-staying-healthy .field-label,
+    .main #content-body .block .field-name-field-staying-healthy .field-items,
+    .main #content-body .block .field-name-field-getting-better .field-label,
+    .main #content-body .block .field-name-field-getting-better .field-items,
+    .main #content-body .block .field-name-field-living-with-illness .field-label,
+    .main #content-body .block .field-name-field-living-with-illness .field-items {
+      float: left;
+      width: 100%; }
 
 .view-caw-benefit-comparison-tool article.node-dental-benefit h2:first-child {
   background-color: #e9edee;

@@ -1,9 +1,33 @@
+.node-type-benefit,
+.node-type-dental-benefit {
+  article {
+    padding: 1em;
+
+    fieldset {
+      margin-bottom: 2em;
+    }
+  }
+}
+
 .main #content-body {
   box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
   margin-bottom: 0;
 
   .block {
     margin-bottom: 0;
+
+    .field-name-field-overall-accredition-status,
+    .field-name-field-access-services,
+    .field-name-field-qualified-providers,
+    .field-name-field-staying-healthy,
+    .field-name-field-getting-better,
+    .field-name-field-living-with-illness {
+      .field-label,
+      .field-items {
+        float: left;
+        width: 100%;
+      }
+    }
   }
 }
 
