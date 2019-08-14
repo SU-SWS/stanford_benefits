@@ -112,7 +112,6 @@
           });
 
           // Fix field groups to be the same height to fix weirdness.
-
           equalHeightByContainer('.fieldset-description');
           equalHeightByContainer('.field-name-field-overall-accredition-status .field-label');
 
