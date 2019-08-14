@@ -21,8 +21,6 @@
 
         // Hide all the different exposed filters.
         // If nothing has been checked, reset the state of the form.
-
-        //alert(AnyChecked());
         var anychecked = AnyChecked();
         if (anychecked == null) {
           HideAll();
@@ -44,6 +42,7 @@
             ShowSection(DentalRetirees);
           }
         }
+
         // Show the Medical/Active exposed filters
         $(MedicalActive + ' label:first-child', context).click(function() {
           ShowSection(MedicalActive);
@@ -79,6 +78,16 @@
           ClearOtherBoxes(checkboxname);
         });
 
+        // Function to show and hide the field group when the legend is clicked fix for BEF.
+        function ShowHideFieldGroup(name) {
+          if ($(name + ' .fieldset-wrapper').is(':visible')) {
+            $(name + ' .fieldset-wrapper').css('display', 'none');
+          }
+          else {
+            $(name + ' .fieldset-wrapper').css('display', 'block');
+          }
+        }
+
         // Function to set all fields in a row to the same height.
         function EqualHeightResults() {
           var fields = [];
@@ -103,19 +112,109 @@
           });
 
           // Fix field groups to be the same height to fix weirdness.
+
           equalHeightByContainer('.fieldset-description');
           equalHeightByContainer('.field-name-field-overall-accredition-status .field-label');
+
+          equalHeightByContainer('.group-criteria span.fieldset-legend');
+          SetCollapsible('.group-criteria');
+          $('.group-criteria a.collapse-field-group').click(function(e) {
+            e.preventDefault();
+            ShowHideFieldGroup('.group-criteria');
+          });
+
           equalHeightByContainer('.group-basics span.fieldset-legend');
+          SetCollapsible('.group-basics');
+          $('.group-basics a.collapse-field-group').click(function(e) {
+            e.preventDefault();
+            ShowHideFieldGroup('.group-basics');
+          });
+
           equalHeightByContainer('.group-maternity span.fieldset-legend');
+          SetCollapsible('.group-maternity');
+          $('.group-maternity a.collapse-field-group').click(function(e) {
+            e.preventDefault();
+            ShowHideFieldGroup('.group-maternity');
+          });
+
           equalHeightByContainer('.group-mental-health span.fieldset-legend');
+          SetCollapsible('.group-mental-health');
+          $('.group-mental-health a.collapse-field-group').click(function(e) {
+            e.preventDefault();
+            ShowHideFieldGroup('.group-mental-health');
+          });
+
           equalHeightByContainer('.group-other-serv-a-d span.fieldset-legend');
-          equalHeightByContainer('.group-other-serv-a-e span.fieldset-legend');
+          SetCollapsible('.group-other-serv-a-d');
+          $('.group-other-serv-a-d a.collapse-field-group').click(function(e) {
+            e.preventDefault();
+            ShowHideFieldGroup('.group-other-serv-a-d');
+          });
+
+          equalHeightByContainer('.group-other-services-a-e span.fieldset-legend');
+          SetCollapsible('.group-other-services-a-e');
+          $('.group-other-services-a-e a.collapse-field-group').click(function(e) {
+            e.preventDefault();
+            ShowHideFieldGroup('.group-other-services-a-e');
+          });
+
           equalHeightByContainer('.group-other-serv-e-n span.fieldset-legend');
-          equalHeightByContainer('.group-other-serv-f-o span.fieldset-legend');
+          SetCollapsible('.group-other-serv-e-n');
+          $('.group-other-serv-e-n a.collapse-field-group').click(function(e) {
+            e.preventDefault();
+            ShowHideFieldGroup('.group-other-serv-e-n');
+          });
+
+          equalHeightByContainer('.group-other-services-f-o span.fieldset-legend');
+          SetCollapsible('.group-other-services-f-o');
+          $('.group-other-services-f-o a.collapse-field-group').click(function(e) {
+            e.preventDefault();
+            ShowHideFieldGroup('.group-other-services-f-o');
+          });
+
           equalHeightByContainer('.group-other-serv-o-z span.fieldset-legend');
-          equalHeightByContainer('.group-other-serv-p-z span.fieldset-legend');
+          SetCollapsible('.group-other-serv-o-z');
+          $('.group-other-serv-o-z a.collapse-field-group').click(function(e) {
+            e.preventDefault();
+            ShowHideFieldGroup('.group-other-serv-o-z');
+          });
+
+          equalHeightByContainer('.group-other-services-p-z span.fieldset-legend');
+          SetCollapsible('.group-other-services-p-z');
+          $('.group-other-services-p-z a.collapse-field-group').click(function(e) {
+            e.preventDefault();
+            ShowHideFieldGroup('.group-other-services-p-z');
+          });
+
           equalHeightByContainer('.group-preventive-care span.fieldset-legend');
+          SetCollapsible('.group-preventive-care');
+          $('.group-preventive-care a.collapse-field-group').click(function(e) {
+            e.preventDefault();
+            ShowHideFieldGroup('.group-preventive-care');
+          });
+
+          equalHeightByContainer('.group-prescription-drugs span.fieldset-legend');
+          SetCollapsible('.group-prescription-drugs');
+          $('.group-prescription-drugs a.collapse-field-group').click(function(e) {
+            e.preventDefault();
+            ShowHideFieldGroup('.group-prescription-drugs');
+          });
+
           equalHeightByContainer('.group-orthodontic-services span.fieldset-legend');
+          SetCollapsible('.group-orthodontic-services');
+          $('.group-orthodontic-services a.collapse-field-group').click(function(e) {
+            e.preventDefault();
+            ShowHideFieldGroup('.group-orthodontic-services');
+          });
+        }
+
+        // Function to fix the issue with collapsible field groups with BEF.
+        function SetCollapsible(fieldset) {
+          $(fieldset + ' span.fieldset-legend').each(function(i, obj) {
+            var legend = $(this).html();
+            $(this).html('<a class="fieldset-title collapse-field-group" href=""><span class="fieldset-legend-prefix element-invisible">Hide</span>' + legend);
+          });
+          $(fieldset).addClass('collapse-processed');
         }
 
         // Function to get the name of the checkbox from id.
