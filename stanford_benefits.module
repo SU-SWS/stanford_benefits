@@ -18,7 +18,9 @@ function stanford_benefits_preprocess_page(&$vars) {
   if (isset($vars['node'])) {
     if (($arg1 == "4013") || ($vars['node']->type == 'benefit') || ($vars['node']->type == 'dental_benefit')) {
       drupal_add_css(drupal_get_path("module", "stanford_benefits") . "/css/stanford-benefits.css");
-      drupal_add_js(drupal_get_path("module", "stanford_benefits") . "/js/stanford-benefits.js");
+      if ($arg1 == "4013") {
+        drupal_add_js(drupal_get_path("module", "stanford_benefits") . "/js/stanford-benefits.js");
+      }
     }
   }
 }
