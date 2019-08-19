@@ -91,6 +91,14 @@
     width: 100%;
     height: 100%; }
 
+.view-caw-benefit-comparison-tool #edit-field-plan-year-value-wrapper {
+  width: 100%; }
+  .view-caw-benefit-comparison-tool #edit-field-plan-year-value-wrapper input {
+    display: none; }
+    .view-caw-benefit-comparison-tool #edit-field-plan-year-value-wrapper input:checked + label {
+      background: #8c1515;
+      color: #fff; }
+
 .view-caw-benefit-comparison-tool #dental-plan-header {
   float: left; }
 

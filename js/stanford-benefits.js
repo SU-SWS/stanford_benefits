@@ -13,6 +13,12 @@
         var MedicalRetirees = '#edit-term-medical-retirees-benefit-wrapper';
         var DentalActive = '#edit-term-dental-active-benefit-wrapper';
         var DentalRetirees = '#edit-term-dental-retirees-benefit-wrapper';
+        var DateLinksWrapper = '#edit-field-plan-year-value-wrapper';
+        var DateLinks = '#edit-field-plan-year-value label';
+
+        // We need to add the btn btn-arrow-right classes to the year links.
+        $(DateLinks, context).addClass('btn btn-arrow-right');
+        $('#edit-field-plan-year-value-wrapper', context).css('display', 'none');
 
         // We need to make sure all the results look good in each row.
         EqualHeightResults();
@@ -41,6 +47,11 @@
           if (IsChecked('term_dental_retirees_benefit')) {
             ShowSection(DentalRetirees);
           }
+        }
+
+        // If we have results to show, scroll to that content.
+        if ( $('.view-content').is(':visible') ) {
+          $('html, body').animate({ scrollTop: $('.views-submit-button').offset().top }, 'slow');
         }
 
         // Show the Medical/Active exposed filters
@@ -278,9 +289,9 @@
 
         // Function to move some things around for UI beauty.
         function MoveViewHTMLElements() {
-          $(MedicalActive).before( $("#medical-plan-header") );
-          $(DentalActive).before( $("#dental-plan-header") );
-          $('.view-header' + ' > p', context).remove();
+          $(MedicalActive).before( $('#medical-plan-header') );
+          $(DentalActive).before( $('#dental-plan-header') );
+          $('.view-header > p', context).remove();
           $(CompTool + ' .view-header').before( $(CompTool + ' .view-header' + ' h2.plan-rates-title') );
           $(MedicalActive + ' .views-widget', context).before( $(MedicalActive + ' .description') );
           $(MedicalPreretirees + ' .views-widget', context).before( $(MedicalPreretirees + ' .description') );
@@ -306,7 +317,9 @@
           $(DentalRetirees + ' .description', context).css('display', 'none');
           $(DentalRetirees + ' .views-widget', context).css('display', 'none');
 
+          $(CompTool + ' .view-content').css('display', 'none');
           $(CompTool + ' .view-empty').css('display', 'none');
+          $(DateLinksWrapper).css('display', 'none');
 
           $(SubmitButton, context).css('display', 'none');
         }
@@ -317,6 +330,20 @@
           $(section + ' .views-widget', context).css('display', 'block');
           $(CompTool + ' .view-empty').css('display', 'block');
           $(SubmitButton, context).css('display', 'block');
+
+          // Show the year options under the correct section for better UI experience.
+          if ( (section === MedicalActive)
+            || (section === MedicalPreretirees)
+            || (section === MedicalRetirees) )
+            $(CompTool + ' .medical-plans-title + p').after( $(DateLinksWrapper) );
+          $(DateLinksWrapper).css('display', 'block');
+
+          // Show the year options under the correct section for better UI experience.
+          if ( (section === DentalActive)
+            || (section === DentalRetirees) ) {
+            $(CompTool + ' .dental-plans-title + p').after($(DateLinksWrapper));
+            $('#edit-field-plan-year-value-wrapper', context).css('display', 'block');
+          }
 
           if ( section !== MedicalActive) {
             $(MedicalActive + ' .description', context).css('display', 'none');
@@ -354,33 +381,6 @@
           }
           if (IsChecked('term_dental_active_benefit')) {
             return IsChecked('term_dental_active_benefit');
-          }
-        }
-
-        // Function to show and hide the right section for the views exposed filters.
-        function ShowFormFor(section) {
-          $('#' + section + ' .description', context).css('display', 'block');
-          $('#' + section + ' .views-widget', context).css('display', 'block');
-
-          if ( section !== MedicalActive) {
-            $(MedicalActive + ' .description', context).css('display', 'none');
-            $(MedicalActive + ' .views-widget', context).css('display', 'none');
-          }
-          if ( section !== MedicalPreretirees) {
-            $(MedicalPreretirees + ' .description', context).css('display', 'none');
-            $(MedicalPreretirees + ' .views-widget', context).css('display', 'none');
-          }
-          if ( section !== MedicalRetirees) {
-            $(MedicalRetirees + ' .description', context).css('display', 'none');
-            $(MedicalRetirees + ' .views-widget', context).css('display', 'none');
-          }
-          if ( section !== DentalActive) {
-            $(DentalActive + ' .description', context).css('display', 'none');
-            $(DentalActive + ' .views-widget', context).css('display', 'none');
-          }
-          if ( section !== DentalRetirees) {
-            $(DentalRetirees + ' .description', context).css('display', 'none');
-            $(DentalRetirees + ' .views-widget', context).css('display', 'none');
           }
         }
       });

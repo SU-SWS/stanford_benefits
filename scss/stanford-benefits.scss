@@ -119,6 +119,20 @@
     }
   }
 
+  #edit-field-plan-year-value-wrapper {
+    width: 100%;
+
+    input {
+      display: none;
+      &:checked {
+        & + label {
+          background: #8c1515;
+          color: #fff;
+        }
+      }
+    }
+  }
+
   #dental-plan-header {
     float: left;
   }
