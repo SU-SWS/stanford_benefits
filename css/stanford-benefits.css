@@ -23,6 +23,7 @@
     .main #content-body .block .field-name-field-living-with-illness .field-label,
     .main #content-body .block .field-name-field-living-with-illness .field-items {
       float: left;
+      margin-top: 0;
       width: 100%; }
 
 .view-caw-benefit-comparison-tool article.node-dental-benefit h2:first-child {
@@ -90,6 +91,8 @@
     display: table;
     width: 100%;
     height: 100%; }
+    .view-caw-benefit-comparison-tool table.views-view-grid tbody td.col-2.col-last {
+      width: 50%; }
 
 .view-caw-benefit-comparison-tool #edit-field-plan-year-value-wrapper {
   width: 100%; }
@@ -116,7 +119,7 @@
   .view-caw-benefit-comparison-tool #edit-term-dental-retirees-benefit-wrapper label {
     color: #8c1515;
     float: left;
-    font-size: 12px; }
+    font-size: 13px; }
   .view-caw-benefit-comparison-tool #edit-term-medical-active-benefit-wrapper .description,
   .view-caw-benefit-comparison-tool #edit-term-medical-preretirees-benefit-wrapper .description,
   .view-caw-benefit-comparison-tool #edit-term-medical-retirees-benefit-wrapper .description,
@@ -211,7 +214,8 @@
 .view-caw-benefit-comparison-tool .views-exposed-form h2,
 .view-caw-benefit-comparison-tool .view-header h2 {
   background-color: #d7ddde;
-  padding: 20px; }
+  margin-bottom: 5px;
+  padding: 10px; }
 
 .view-caw-benefit-comparison-tool .vision-plan-wrapper a,
 .view-caw-benefit-comparison-tool .full-plan-costs-wrapper a {
