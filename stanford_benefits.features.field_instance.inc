@@ -538,7 +538,7 @@ function stanford_benefits_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -561,7 +561,7 @@ function stanford_benefits_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -3140,6 +3140,44 @@ function stanford_benefits_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-benefit-field_plan_year'.
+  $field_instances['node-benefit-field_plan_year'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_plan_year',
+    'label' => 'Plan Year',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-benefit-field_pre_authorization_require'.
   $field_instances['node-benefit-field_pre_authorization_require'] = array(
     'bundle' => 'benefit',
@@ -4495,7 +4533,7 @@ function stanford_benefits_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4518,7 +4556,7 @@ function stanford_benefits_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -5976,6 +6014,44 @@ function stanford_benefits_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-dental_benefit-field_plan_year'.
+  $field_instances['node-dental_benefit-field_plan_year'] = array(
+    'bundle' => 'dental_benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_plan_year',
+    'label' => 'Plan Year',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-dental_benefit-field_prescription_drugs'.
   $field_instances['node-dental_benefit-field_prescription_drugs'] = array(
     'bundle' => 'dental_benefit',
@@ -6659,6 +6735,7 @@ function stanford_benefits_field_default_field_instances() {
   t('Physical Therapy');
   t('Physical exams for adults');
   t('Physical exams for children');
+  t('Plan Year');
   t('Please enter the Full-Time Employee * Contribution Per Pay Period');
   t('Please enter the Part-Time Employee * Contribution Per Pay Period');
   t('Pre-Authorization Requirement');

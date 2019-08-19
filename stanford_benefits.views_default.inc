@@ -130,17 +130,14 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h2 class="plan-rates-title">2019 Plans & Contribution Rates</h2><br><br>
 <div id="medical-plan-header">
 <h2 class="medical-plans-title">Medical Plans</h2>
-<hr>
 <p>Compare medical plans available for each of these roles:</p>
 </div>
 <div id="dental-plan-header">
 <h2 class="dental-plans-title">Dental Plans</h2>
-<hr>
 <p>Compare medical plans available for each of these roles:</p>
 </div>
 <div class="vision-plan-wrapper">
 <h2>Vision Plan</h2>
-<hr>
 <p>Compare medical plans available for each of these roles:</p>
 <h3 class="no-spacing">Active Employees</h3>
            Review vision plan for
@@ -154,7 +151,6 @@ function stanford_benefits_views_default_views() {
 </div>
 <div class="full-plan-costs-wrapper">
 <h2>Full Plan Costs</h2>
-<hr>
 <p>Compare medical plans available for each of these roles:</p>
 <h3 class="no-spacing">Active Employees</h3>
 <ul>
@@ -341,8 +337,8 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['tid_2']['type'] = 'select';
   $handler->display->display_options['filters']['tid_2']['vocabulary'] = 'benefit_plan_type';
 
-  /* Display: Benefit Comparison Tool */
-  $handler = $view->new_display('block', 'Benefit Comparison Tool', 'caw_benefit_comparison_tool_block');
+  /* Display: Benefit Comparison Tool - Current Year */
+  $handler = $view->new_display('block', 'Benefit Comparison Tool - Current Year', 'caw_benefit_comparison_tool_block');
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Compare plans';
@@ -360,6 +356,25 @@ function stanford_benefits_views_default_views() {
       'allow_secondary' => 0,
       'secondary_label' => 'Advanced options',
       'secondary_collapse_override' => '0',
+    ),
+    'field_plan_year_value' => array(
+      'bef_format' => 'bef',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'autosubmit' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
     ),
     'term_node_tid_depth' => array(
       'bef_format' => 'bef',
@@ -480,6 +495,34 @@ function stanford_benefits_views_default_views() {
     'benefit' => 'benefit',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Plan Year (field_plan_year) */
+  $handler->display->display_options['filters']['field_plan_year_value']['id'] = 'field_plan_year_value';
+  $handler->display->display_options['filters']['field_plan_year_value']['table'] = 'field_data_field_plan_year';
+  $handler->display->display_options['filters']['field_plan_year_value']['field'] = 'field_plan_year_value';
+  $handler->display->display_options['filters']['field_plan_year_value']['value'] = array(
+    2019 => '2019',
+    2020 => '2020',
+  );
+  $handler->display->display_options['filters']['field_plan_year_value']['group'] = 1;
+  $handler->display->display_options['filters']['field_plan_year_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_plan_year_value']['expose']['operator_id'] = 'field_plan_year_value_op';
+  $handler->display->display_options['filters']['field_plan_year_value']['expose']['label'] = 'Select a plan year:';
+  $handler->display->display_options['filters']['field_plan_year_value']['expose']['operator'] = 'field_plan_year_value_op';
+  $handler->display->display_options['filters']['field_plan_year_value']['expose']['identifier'] = 'field_plan_year_value';
+  $handler->display->display_options['filters']['field_plan_year_value']['expose']['required'] = TRUE;
+  $handler->display->display_options['filters']['field_plan_year_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    11 => 0,
+    9 => 0,
+    7 => 0,
+    5 => 0,
+    17 => 0,
+    13 => 0,
+    15 => 0,
+    18 => 0,
+  );
+  $handler->display->display_options['filters']['field_plan_year_value']['expose']['reduce'] = TRUE;
   /* Filter criterion: Medical/Active benefit plan selection */
   $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
@@ -492,6 +535,7 @@ function stanford_benefits_views_default_views() {
     959 => '959',
     960 => '960',
   );
+  $handler->display->display_options['filters']['term_node_tid_depth']['group'] = 1;
   $handler->display->display_options['filters']['term_node_tid_depth']['exposed'] = TRUE;
   $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator_id'] = 'term_node_tid_depth_op';
   $handler->display->display_options['filters']['term_node_tid_depth']['expose']['label'] = 'Active Employees';
@@ -526,6 +570,7 @@ function stanford_benefits_views_default_views() {
     964 => '964',
     965 => '965',
   );
+  $handler->display->display_options['filters']['term_node_tid_depth_1']['group'] = 1;
   $handler->display->display_options['filters']['term_node_tid_depth_1']['exposed'] = TRUE;
   $handler->display->display_options['filters']['term_node_tid_depth_1']['expose']['operator_id'] = 'term_node_tid_depth_1_op';
   $handler->display->display_options['filters']['term_node_tid_depth_1']['expose']['label'] = 'Early retirees under 65';
@@ -560,6 +605,7 @@ function stanford_benefits_views_default_views() {
     971 => '971',
     972 => '972',
   );
+  $handler->display->display_options['filters']['term_node_tid_depth_2']['group'] = 1;
   $handler->display->display_options['filters']['term_node_tid_depth_2']['exposed'] = TRUE;
   $handler->display->display_options['filters']['term_node_tid_depth_2']['expose']['operator_id'] = 'term_node_tid_depth_2_op';
   $handler->display->display_options['filters']['term_node_tid_depth_2']['expose']['label'] = 'Retirees';
@@ -592,6 +638,7 @@ function stanford_benefits_views_default_views() {
     975 => '975',
     976 => '976',
   );
+  $handler->display->display_options['filters']['term_node_tid_depth_3']['group'] = 1;
   $handler->display->display_options['filters']['term_node_tid_depth_3']['exposed'] = TRUE;
   $handler->display->display_options['filters']['term_node_tid_depth_3']['expose']['operator_id'] = 'term_node_tid_depth_3_op';
   $handler->display->display_options['filters']['term_node_tid_depth_3']['expose']['label'] = 'Active Employees';
@@ -623,6 +670,7 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth_4']['value'] = array(
     978 => '978',
   );
+  $handler->display->display_options['filters']['term_node_tid_depth_4']['group'] = 1;
   $handler->display->display_options['filters']['term_node_tid_depth_4']['exposed'] = TRUE;
   $handler->display->display_options['filters']['term_node_tid_depth_4']['expose']['operator_id'] = 'term_node_tid_depth_4_op';
   $handler->display->display_options['filters']['term_node_tid_depth_4']['expose']['label'] = 'Retirees';
@@ -661,17 +709,14 @@ function stanford_benefits_views_default_views() {
     t('<h2 class="plan-rates-title">2019 Plans & Contribution Rates</h2><br><br>
 <div id="medical-plan-header">
 <h2 class="medical-plans-title">Medical Plans</h2>
-<hr>
 <p>Compare medical plans available for each of these roles:</p>
 </div>
 <div id="dental-plan-header">
 <h2 class="dental-plans-title">Dental Plans</h2>
-<hr>
 <p>Compare medical plans available for each of these roles:</p>
 </div>
 <div class="vision-plan-wrapper">
 <h2>Vision Plan</h2>
-<hr>
 <p>Compare medical plans available for each of these roles:</p>
 <h3 class="no-spacing">Active Employees</h3>
            Review vision plan for
@@ -685,7 +730,6 @@ function stanford_benefits_views_default_views() {
 </div>
 <div class="full-plan-costs-wrapper">
 <h2>Full Plan Costs</h2>
-<hr>
 <p>Compare medical plans available for each of these roles:</p>
 <h3 class="no-spacing">Active Employees</h3>
 <ul>
@@ -703,7 +747,8 @@ function stanford_benefits_views_default_views() {
     t('Full-Time Employee * Contribution Per Pay Period'),
     t('SELECT THE PLAN(S) TO COMPARE:'),
     t('Has taxonomy term'),
-    t('Benefit Comparison Tool'),
+    t('Benefit Comparison Tool - Current Year'),
+    t('Select a plan year:'),
     t('Active Employees'),
     t('Early retirees under 65'),
     t('Retirees'),
