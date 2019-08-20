@@ -334,15 +334,16 @@
           // Show the year options under the correct section for better UI experience.
           if ( (section === MedicalActive)
             || (section === MedicalPreretirees)
-            || (section === MedicalRetirees) )
-            $(CompTool + ' .medical-plans-title + p').after( $(DateLinksWrapper) );
-          $(DateLinksWrapper).css('display', 'block');
+            || (section === MedicalRetirees) ) {
+            $(CompTool + ' .medical-plans-title + p').after($(DateLinksWrapper));
+            $(DateLinksWrapper).css('display', 'block');
+          }
 
           // Show the year options under the correct section for better UI experience.
           if ( (section === DentalActive)
             || (section === DentalRetirees) ) {
             $(CompTool + ' .dental-plans-title + p').after($(DateLinksWrapper));
-            $('#edit-field-plan-year-value-wrapper', context).css('display', 'block');
+            $(DateLinksWrapper).css('display', 'block');
           }
 
           if ( section !== MedicalActive) {
