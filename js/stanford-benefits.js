@@ -21,7 +21,7 @@
         $('#edit-field-plan-year-value-wrapper', context).css('display', 'none');
 
         // Remove the links from the h2's. Last second request.
-        $("h2").find("a").each(function(){
+        $("article h2").find("a").each(function(){
           var linkText = $(this).text();
           $(this).before(linkText);
           $(this).remove();
