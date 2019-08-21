@@ -79,6 +79,11 @@
 .view-caw-benefit-comparison-tool hr {
   margin: 0 5px; }
 
+.view-caw-benefit-comparison-tool input.form-submit {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  font-size: 1.1em; }
+
 .view-caw-benefit-comparison-tool legend {
   font-size: 15px; }
 
