@@ -20,6 +20,13 @@
         $(DateLinks, context).addClass('btn btn-arrow-right');
         $('#edit-field-plan-year-value-wrapper', context).css('display', 'none');
 
+        // Remove the links from the h2's. Last second request.
+        $("h2").find("a").each(function(){
+          var linkText = $(this).text();
+          $(this).before(linkText);
+          $(this).remove();
+        });
+
         // We need to make sure all the results look good in each row.
         EqualHeightResults();
         // We need to move some things around for UI beauty.
