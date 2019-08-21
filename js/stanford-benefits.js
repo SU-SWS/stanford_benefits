@@ -100,9 +100,11 @@
         function ShowHideFieldGroup(name) {
           if ($(name + ' .fieldset-wrapper').is(':visible')) {
             $(name + ' .fieldset-wrapper').css('display', 'none');
+            $(name).addClass('collapsed');
           }
           else {
             $(name + ' .fieldset-wrapper').css('display', 'block');
+            $(name).removeClass('collapsed');
           }
         }
 
@@ -231,6 +233,7 @@
             var legend = $(this).html();
             $(this).html('<a class="fieldset-title collapse-field-group" href=""><span class="fieldset-legend-prefix element-invisible">Hide</span>' + legend);
           });
+
           $(fieldset).addClass('collapse-processed');
         }
 
