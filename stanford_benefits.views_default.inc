@@ -142,11 +142,11 @@ function stanford_benefits_views_default_views() {
 <h3 class="no-spacing">Active Employees</h3>
            Review vision plan for
 <ul>
-  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/vision-plan" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review the plan</a></li>
+  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/vision-plan-[field_su_plan_year]" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review the plan</a></li>
 </ul>
 <h3 class="spacing">Retirees</h3>
  <ul>
- <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/retirees/retiree-vision-plan-2016" class="more-link" target="_parent" rel="external">Review the vision plan</a></li>
+ <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/retirees/retiree-vision-plan-[field_su_plan_year]" class="more-link" target="_parent" rel="external">Review the vision plan</a></li>
  </ul>
 </div>
 <div class="full-plan-costs-wrapper">
@@ -154,20 +154,16 @@ function stanford_benefits_views_default_views() {
 <p>Compare medical plans available for each of these roles:</p>
 <h3 class="no-spacing">Active Employees</h3>
 <ul>
-  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/2019-employee-rates" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review contribution charts</a>
+  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/[field_su_plan_year]-employee-rates" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review contribution charts</a>
   </li>
 </ul>
 <h3 class="spacing">Retirees</h3>
 <ul>
-  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/2019-retiree-rates" name="compare_ret" target="_parent" class="more-link" id="compare_ret" rel="external">Review contribution charts</a></li>
+  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/[field_su_plan_year]-retiree-rates" name="compare_ret" target="_parent" class="more-link" id="compare_ret" rel="external">Review contribution charts</a></li>
 </ul>
 </div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
-  /* Relationship: Broken/missing handler */
-  $handler->display->display_options['relationships']['field_benefit_type_tid']['id'] = 'field_benefit_type_tid';
-  $handler->display->display_options['relationships']['field_benefit_type_tid']['table'] = 'field_data_field_benefit_type';
-  $handler->display->display_options['relationships']['field_benefit_type_tid']['field'] = 'field_benefit_type_tid';
-  $handler->display->display_options['relationships']['field_benefit_type_tid']['required'] = TRUE;
+  $handler->display->display_options['header']['area']['tokenize'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -207,6 +203,13 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['fields']['field_su_full_time_emp_cont']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_su_full_time_emp_cont']['alter']['preserve_tags'] = '<p> <br>';
   $handler->display->display_options['fields']['field_su_full_time_emp_cont']['element_type'] = 'div';
+  /* Field: Content: Plan Year */
+  $handler->display->display_options['fields']['field_su_plan_year']['id'] = 'field_su_plan_year';
+  $handler->display->display_options['fields']['field_su_plan_year']['table'] = 'field_data_field_su_plan_year';
+  $handler->display->display_options['fields']['field_su_plan_year']['field'] = 'field_su_plan_year';
+  $handler->display->display_options['fields']['field_su_plan_year']['label'] = '';
+  $handler->display->display_options['fields']['field_su_plan_year']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_su_plan_year']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
@@ -233,11 +236,11 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
   $handler->display->display_options['filters']['tid']['ui_name'] = 'Medical/Active benefit plan selection';
   $handler->display->display_options['filters']['tid']['value'] = array(
-    994 => '994',
-    995 => '995',
-    992 => '992',
-    991 => '991',
-    993 => '993',
+    956 => '956',
+    957 => '957',
+    958 => '958',
+    959 => '959',
+    960 => '960',
   );
   $handler->display->display_options['filters']['tid']['group'] = 1;
   $handler->display->display_options['filters']['tid']['exposed'] = TRUE;
@@ -262,16 +265,17 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['tid']['expose']['reduce'] = TRUE;
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'benefit_plan_type';
+  $handler->display->display_options['filters']['tid']['hierarchy'] = 1;
   /* Filter criterion: Medical/Pre-retiree benefit plan selection */
   $handler->display->display_options['filters']['tid_1']['id'] = 'tid_1';
   $handler->display->display_options['filters']['tid_1']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid_1']['field'] = 'tid';
   $handler->display->display_options['filters']['tid_1']['ui_name'] = 'Medical/Pre-retiree benefit plan selection';
   $handler->display->display_options['filters']['tid_1']['value'] = array(
-    998 => '998',
-    999 => '999',
-    996 => '996',
-    997 => '997',
+    962 => '962',
+    963 => '963',
+    964 => '964',
+    965 => '965',
   );
   $handler->display->display_options['filters']['tid_1']['group'] = 1;
   $handler->display->display_options['filters']['tid_1']['exposed'] = TRUE;
@@ -303,16 +307,17 @@ function stanford_benefits_views_default_views() {
   );
   $handler->display->display_options['filters']['tid_1']['type'] = 'select';
   $handler->display->display_options['filters']['tid_1']['vocabulary'] = 'benefit_plan_type';
+  $handler->display->display_options['filters']['tid_1']['hierarchy'] = 1;
   /* Filter criterion: Medical/Retiree benefit plan selection */
   $handler->display->display_options['filters']['tid_2']['id'] = 'tid_2';
   $handler->display->display_options['filters']['tid_2']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid_2']['field'] = 'tid';
   $handler->display->display_options['filters']['tid_2']['ui_name'] = 'Medical/Retiree benefit plan selection';
   $handler->display->display_options['filters']['tid_2']['value'] = array(
-    982 => '982',
-    983 => '983',
-    980 => '980',
-    979 => '979',
+    968 => '968',
+    969 => '969',
+    971 => '971',
+    972 => '972',
   );
   $handler->display->display_options['filters']['tid_2']['group'] = 1;
   $handler->display->display_options['filters']['tid_2']['exposed'] = TRUE;
@@ -336,9 +341,48 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['tid_2']['expose']['reduce'] = TRUE;
   $handler->display->display_options['filters']['tid_2']['type'] = 'select';
   $handler->display->display_options['filters']['tid_2']['vocabulary'] = 'benefit_plan_type';
+  $handler->display->display_options['filters']['tid_2']['hierarchy'] = 1;
+  /* Filter criterion: Dental/Active benefit plan selection */
+  $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['ui_name'] = 'Dental/Active benefit plan selection';
+  $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
+    975 => '975',
+    976 => '976',
+  );
+  $handler->display->display_options['filters']['term_node_tid_depth']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator_id'] = 'term_node_tid_depth_op';
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['label'] = 'Active employees ';
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['description'] = 'Active employees may select one of two offered dental plans.';
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator'] = 'term_node_tid_depth_op';
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['identifier'] = 'term_dental_active_benefit';
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    11 => 0,
+    9 => 0,
+    7 => 0,
+    5 => 0,
+    17 => 0,
+    13 => 0,
+    15 => 0,
+    18 => 0,
+  );
+  $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
+  $handler->display->display_options['filters']['term_node_tid_depth']['vocabulary'] = 'benefit_plan_type';
+  $handler->display->display_options['filters']['term_node_tid_depth']['hierarchy'] = 1;
+  $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '1';
+  /* Filter criterion: Content: Plan Year (field_su_plan_year) */
+  $handler->display->display_options['filters']['field_su_plan_year_value']['id'] = 'field_su_plan_year_value';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['table'] = 'field_data_field_su_plan_year';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['field'] = 'field_su_plan_year_value';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['value'] = array(
+    2019 => '2019',
+  );
 
-  /* Display: Benefit Comparison Tool - Current Year */
-  $handler = $view->new_display('block', 'Benefit Comparison Tool - Current Year', 'caw_benefit_comparison_tool_block');
+  /* Display: Benefit Comparison Tool */
+  $handler = $view->new_display('block', 'Benefit Comparison Tool', 'caw_benefit_comparison_tool_block');
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Compare plans';
@@ -356,25 +400,6 @@ function stanford_benefits_views_default_views() {
       'allow_secondary' => 0,
       'secondary_label' => 'Advanced options',
       'secondary_collapse_override' => '0',
-    ),
-    'field_plan_year_value' => array(
-      'bef_format' => 'bef',
-      'more_options' => array(
-        'bef_select_all_none' => FALSE,
-        'bef_collapsible' => 0,
-        'autosubmit' => 0,
-        'is_secondary' => 0,
-        'any_label' => '',
-        'bef_filter_description' => '',
-        'tokens' => array(
-          'available' => array(
-            0 => 'global_types',
-          ),
-        ),
-        'rewrite' => array(
-          'filter_rewrite_values' => '',
-        ),
-      ),
     ),
     'term_node_tid_depth' => array(
       'bef_format' => 'bef',
@@ -469,6 +494,25 @@ function stanford_benefits_views_default_views() {
           'available' => array(
             0 => 'global_types',
             1 => 'vocabulary',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+    'field_su_plan_year_value' => array(
+      'bef_format' => 'bef_links',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'autosubmit' => 1,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
           ),
         ),
         'rewrite' => array(
@@ -676,10 +720,10 @@ function stanford_benefits_views_default_views() {
   );
   $handler->display->display_options['filters']['field_su_plan_year_value']['group'] = 1;
   $handler->display->display_options['filters']['field_su_plan_year_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['operator_id'] = 'field_plan_year_value_op';
-  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['label'] = 'Select a plan year:';
-  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['operator'] = 'field_plan_year_value_op';
-  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['identifier'] = 'field_plan_year_value';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['operator_id'] = 'field_su_plan_year_value_op';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['label'] = 'Please select a plan year.';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['operator'] = 'field_su_plan_year_value_op';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['identifier'] = 'field_su_plan_year_value';
   $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['required'] = TRUE;
   $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['remember_roles'] = array(
     2 => '2',
@@ -721,11 +765,11 @@ function stanford_benefits_views_default_views() {
 <h3 class="no-spacing">Active Employees</h3>
            Review vision plan for
 <ul>
-  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/vision-plan" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review the plan</a></li>
+  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/vision-plan-[field_su_plan_year]" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review the plan</a></li>
 </ul>
 <h3 class="spacing">Retirees</h3>
  <ul>
- <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/retirees/retiree-vision-plan-2016" class="more-link" target="_parent" rel="external">Review the vision plan</a></li>
+ <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/retirees/retiree-vision-plan-[field_su_plan_year]" class="more-link" target="_parent" rel="external">Review the vision plan</a></li>
  </ul>
 </div>
 <div class="full-plan-costs-wrapper">
@@ -733,27 +777,27 @@ function stanford_benefits_views_default_views() {
 <p>Compare medical plans available for each of these roles:</p>
 <h3 class="no-spacing">Active Employees</h3>
 <ul>
-  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/2019-employee-rates" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review contribution charts</a>
+  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/[field_su_plan_year]-employee-rates" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review contribution charts</a>
   </li>
 </ul>
 <h3 class="spacing">Retirees</h3>
 <ul>
-  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/2019-retiree-rates" name="compare_ret" target="_parent" class="more-link" id="compare_ret" rel="external">Review contribution charts</a></li>
+  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/[field_su_plan_year]-retiree-rates" name="compare_ret" target="_parent" class="more-link" id="compare_ret" rel="external">Review contribution charts</a></li>
 </ul>
 </div>'),
-    t('field_benefit_type_tid'),
     t('Benefit Type'),
     t('Description'),
     t('Full-Time Employee * Contribution Per Pay Period'),
     t('SELECT THE PLAN(S) TO COMPARE:'),
     t('Has taxonomy term'),
-    t('Benefit Comparison Tool - Current Year'),
+    t('Active employees '),
+    t('Active employees may select one of two offered dental plans.'),
+    t('Benefit Comparison Tool'),
     t('Active Employees'),
     t('Early retirees under 65'),
     t('Retirees'),
-    t('Active employees may select one of two offered dental plans.'),
     t('Stanford offers one dental plan for all eligible retirees.'),
-    t('Select a plan year:'),
+    t('Please select a plan year.'),
   );
   $export['caw_benefit_comparison_tool'] = $view;
 
