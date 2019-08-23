@@ -163,25 +163,11 @@ function stanford_benefits_views_default_views() {
 </ul>
 </div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
-  /* Relationship: Content: Benefit Type (field_benefit_type) */
+  /* Relationship: Broken/missing handler */
   $handler->display->display_options['relationships']['field_benefit_type_tid']['id'] = 'field_benefit_type_tid';
   $handler->display->display_options['relationships']['field_benefit_type_tid']['table'] = 'field_data_field_benefit_type';
   $handler->display->display_options['relationships']['field_benefit_type_tid']['field'] = 'field_benefit_type_tid';
   $handler->display->display_options['relationships']['field_benefit_type_tid']['required'] = TRUE;
-  /* Field: Content: Benefit Type */
-  $handler->display->display_options['fields']['field_benefit_type']['id'] = 'field_benefit_type';
-  $handler->display->display_options['fields']['field_benefit_type']['table'] = 'field_data_field_benefit_type';
-  $handler->display->display_options['fields']['field_benefit_type']['field'] = 'field_benefit_type';
-  $handler->display->display_options['fields']['field_benefit_type']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_benefit_type']['type'] = 'entityreference_entity_view';
-  $handler->display->display_options['fields']['field_benefit_type']['settings'] = array(
-    'view_mode' => 'default',
-    'links' => 1,
-    'use_content_language' => 1,
-  );
-  $handler->display->display_options['fields']['field_benefit_type']['group_columns'] = array(
-    'bundle' => 'bundle',
-  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -192,21 +178,35 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Benefit Type */
+  $handler->display->display_options['fields']['field_su_benefit_type']['id'] = 'field_su_benefit_type';
+  $handler->display->display_options['fields']['field_su_benefit_type']['table'] = 'field_data_field_su_benefit_type';
+  $handler->display->display_options['fields']['field_su_benefit_type']['field'] = 'field_su_benefit_type';
+  $handler->display->display_options['fields']['field_su_benefit_type']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_su_benefit_type']['type'] = 'entityreference_entity_view';
+  $handler->display->display_options['fields']['field_su_benefit_type']['settings'] = array(
+    'view_mode' => 'default',
+    'links' => 1,
+    'use_content_language' => 1,
+  );
+  $handler->display->display_options['fields']['field_su_benefit_type']['group_columns'] = array(
+    'bundle' => 'bundle',
+  );
   /* Field: Content: Description */
-  $handler->display->display_options['fields']['field_s_benefit_description']['id'] = 'field_s_benefit_description';
-  $handler->display->display_options['fields']['field_s_benefit_description']['table'] = 'field_data_field_s_benefit_description';
-  $handler->display->display_options['fields']['field_s_benefit_description']['field'] = 'field_s_benefit_description';
-  $handler->display->display_options['fields']['field_s_benefit_description']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_s_benefit_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_su_benefit_description']['id'] = 'field_su_benefit_description';
+  $handler->display->display_options['fields']['field_su_benefit_description']['table'] = 'field_data_field_su_benefit_description';
+  $handler->display->display_options['fields']['field_su_benefit_description']['field'] = 'field_su_benefit_description';
+  $handler->display->display_options['fields']['field_su_benefit_description']['element_type'] = 'div';
+  $handler->display->display_options['fields']['field_su_benefit_description']['element_label_colon'] = FALSE;
   /* Field: Content: Full-Time Employee * Contribution Per Pay Period */
-  $handler->display->display_options['fields']['field_full_time_employee_contrib']['id'] = 'field_full_time_employee_contrib';
-  $handler->display->display_options['fields']['field_full_time_employee_contrib']['table'] = 'field_data_field_full_time_employee_contrib';
-  $handler->display->display_options['fields']['field_full_time_employee_contrib']['field'] = 'field_full_time_employee_contrib';
-  $handler->display->display_options['fields']['field_full_time_employee_contrib']['alter']['trim_whitespace'] = TRUE;
-  $handler->display->display_options['fields']['field_full_time_employee_contrib']['alter']['nl2br'] = TRUE;
-  $handler->display->display_options['fields']['field_full_time_employee_contrib']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['field_full_time_employee_contrib']['alter']['preserve_tags'] = '<p> <br>';
-  $handler->display->display_options['fields']['field_full_time_employee_contrib']['element_type'] = 'div';
+  $handler->display->display_options['fields']['field_su_full_time_emp_cont']['id'] = 'field_su_full_time_emp_cont';
+  $handler->display->display_options['fields']['field_su_full_time_emp_cont']['table'] = 'field_data_field_su_full_time_emp_cont';
+  $handler->display->display_options['fields']['field_su_full_time_emp_cont']['field'] = 'field_su_full_time_emp_cont';
+  $handler->display->display_options['fields']['field_su_full_time_emp_cont']['alter']['trim_whitespace'] = TRUE;
+  $handler->display->display_options['fields']['field_su_full_time_emp_cont']['alter']['nl2br'] = TRUE;
+  $handler->display->display_options['fields']['field_su_full_time_emp_cont']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_su_full_time_emp_cont']['alter']['preserve_tags'] = '<p> <br>';
+  $handler->display->display_options['fields']['field_su_full_time_emp_cont']['element_type'] = 'div';
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
@@ -495,34 +495,6 @@ function stanford_benefits_views_default_views() {
     'benefit' => 'benefit',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Plan Year (field_plan_year) */
-  $handler->display->display_options['filters']['field_plan_year_value']['id'] = 'field_plan_year_value';
-  $handler->display->display_options['filters']['field_plan_year_value']['table'] = 'field_data_field_plan_year';
-  $handler->display->display_options['filters']['field_plan_year_value']['field'] = 'field_plan_year_value';
-  $handler->display->display_options['filters']['field_plan_year_value']['value'] = array(
-    2019 => '2019',
-    2020 => '2020',
-  );
-  $handler->display->display_options['filters']['field_plan_year_value']['group'] = 1;
-  $handler->display->display_options['filters']['field_plan_year_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_plan_year_value']['expose']['operator_id'] = 'field_plan_year_value_op';
-  $handler->display->display_options['filters']['field_plan_year_value']['expose']['label'] = 'Select a plan year:';
-  $handler->display->display_options['filters']['field_plan_year_value']['expose']['operator'] = 'field_plan_year_value_op';
-  $handler->display->display_options['filters']['field_plan_year_value']['expose']['identifier'] = 'field_plan_year_value';
-  $handler->display->display_options['filters']['field_plan_year_value']['expose']['required'] = TRUE;
-  $handler->display->display_options['filters']['field_plan_year_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    11 => 0,
-    9 => 0,
-    7 => 0,
-    5 => 0,
-    17 => 0,
-    13 => 0,
-    15 => 0,
-    18 => 0,
-  );
-  $handler->display->display_options['filters']['field_plan_year_value']['expose']['reduce'] = TRUE;
   /* Filter criterion: Medical/Active benefit plan selection */
   $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
@@ -694,6 +666,34 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth_4']['type'] = 'select';
   $handler->display->display_options['filters']['term_node_tid_depth_4']['vocabulary'] = 'benefit_plan_type';
   $handler->display->display_options['filters']['term_node_tid_depth_4']['depth'] = '1';
+  /* Filter criterion: Content: Plan Year (field_su_plan_year) */
+  $handler->display->display_options['filters']['field_su_plan_year_value']['id'] = 'field_su_plan_year_value';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['table'] = 'field_data_field_su_plan_year';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['field'] = 'field_su_plan_year_value';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['value'] = array(
+    2019 => '2019',
+    2020 => '2020',
+  );
+  $handler->display->display_options['filters']['field_su_plan_year_value']['group'] = 1;
+  $handler->display->display_options['filters']['field_su_plan_year_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['operator_id'] = 'field_plan_year_value_op';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['label'] = 'Select a plan year:';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['operator'] = 'field_plan_year_value_op';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['identifier'] = 'field_plan_year_value';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['required'] = TRUE;
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    11 => 0,
+    9 => 0,
+    7 => 0,
+    5 => 0,
+    17 => 0,
+    13 => 0,
+    15 => 0,
+    18 => 0,
+  );
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['reduce'] = TRUE;
   $translatables['caw_benefit_comparison_tool'] = array(
     t('Master'),
     t('CAW Benefit Comparison Tool'),
@@ -741,19 +741,19 @@ function stanford_benefits_views_default_views() {
   <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/2019-retiree-rates" name="compare_ret" target="_parent" class="more-link" id="compare_ret" rel="external">Review contribution charts</a></li>
 </ul>
 </div>'),
-    t('term from field_benefit_type'),
+    t('field_benefit_type_tid'),
     t('Benefit Type'),
     t('Description'),
     t('Full-Time Employee * Contribution Per Pay Period'),
     t('SELECT THE PLAN(S) TO COMPARE:'),
     t('Has taxonomy term'),
     t('Benefit Comparison Tool - Current Year'),
-    t('Select a plan year:'),
     t('Active Employees'),
     t('Early retirees under 65'),
     t('Retirees'),
     t('Active employees may select one of two offered dental plans.'),
     t('Stanford offers one dental plan for all eligible retirees.'),
+    t('Select a plan year:'),
   );
   $export['caw_benefit_comparison_tool'] = $view;
 
