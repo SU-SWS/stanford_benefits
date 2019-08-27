@@ -132,17 +132,24 @@
     }
   }
 
-  #edit-field-plan-year-value-wrapper {
-    width: 100%;
+  #edit-field-su-plan-year-value-wrapper {
+    background: #e9edee;
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+    margin: 20px 0;
+    padding: 10px;
 
-    input {
-      display: none;
-      &:checked {
-        & + label {
-          background: #8c1515;
-          color: #fff;
-        }
+    a {
+      display: inline-block;
+      float: left;
+      margin-right: 10px;
+
+      &.active {
+        background: #000;
       }
+    }
+
+    label {
+      font-weight: normal;
     }
   }
 

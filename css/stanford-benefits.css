@@ -101,13 +101,19 @@
     .view-caw-benefit-comparison-tool table.views-view-grid tbody td.col-2.col-last {
       width: 50%; }
 
-.view-caw-benefit-comparison-tool #edit-field-plan-year-value-wrapper {
-  width: 100%; }
-  .view-caw-benefit-comparison-tool #edit-field-plan-year-value-wrapper input {
-    display: none; }
-    .view-caw-benefit-comparison-tool #edit-field-plan-year-value-wrapper input:checked + label {
-      background: #8c1515;
-      color: #fff; }
+.view-caw-benefit-comparison-tool #edit-field-su-plan-year-value-wrapper {
+  background: #e9edee;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+  padding: 10px; }
+  .view-caw-benefit-comparison-tool #edit-field-su-plan-year-value-wrapper a {
+    display: inline-block;
+    float: left;
+    margin-right: 10px; }
+    .view-caw-benefit-comparison-tool #edit-field-su-plan-year-value-wrapper a.active {
+      background: #000; }
+  .view-caw-benefit-comparison-tool #edit-field-su-plan-year-value-wrapper label {
+    font-weight: normal; }
 
 .view-caw-benefit-comparison-tool #dental-plan-header {
   float: left; }

@@ -14,11 +14,10 @@
         var DentalActive = '#edit-term-dental-active-benefit-wrapper';
         var DentalRetirees = '#edit-term-dental-retirees-benefit-wrapper';
         var DateLinksWrapper = '#edit-field-plan-year-value-wrapper';
-        var DateLinks = '#edit-field-plan-year-value label';
+        var DateLinks = '.form-item-field-su-plan-year-value a';
 
         // We need to add the btn btn-arrow-right classes to the year links.
-        $(DateLinks, context).addClass('btn btn-arrow-right');
-        $('#edit-field-plan-year-value-wrapper', context).css('display', 'none');
+        $(DateLinks, context).addClass('btn');
 
         // Remove the links from the h2's. Last second request.
         $("article h2").find("a").each(function(){
@@ -55,6 +54,14 @@
             ShowSection(DentalRetirees);
           }
         }
+
+        // When a date is selected we show the sections after setting the date.
+        $(DateLinks, context).click(function() {
+          // We need to set a timeout so the ajax has time to change the dates on the view before showing.
+          setTimeout(function(){
+            ShowDateSections();
+          }, 5000);
+        });
 
         // If we have results to show, scroll to that content.
         if ( $('.view-content').is(':visible') ) {
@@ -96,15 +103,61 @@
           ClearOtherBoxes(checkboxname);
         });
 
-        // Function to show and hide the field group when the legend is clicked fix for BEF.
-        function ShowHideFieldGroup(name) {
-          if ($(name + ' .fieldset-wrapper').is(':visible')) {
-            $(name + ' .fieldset-wrapper').css('display', 'none');
-            $(name).addClass('collapsed');
+        // Are there any checkboxes selected.
+        function AnyChecked() {
+          // If no checkboxes are selected, false else true.
+          if (IsChecked('term_medical_active_benefit')) {
+            return IsChecked('term_medical_active_benefit');
           }
-          else {
-            $(name + ' .fieldset-wrapper').css('display', 'block');
-            $(name).removeClass('collapsed');
+          if (IsChecked('term_medical_preretirees_benefit')) {
+            return IsChecked('term_medical_preretirees_benefit');
+          }
+          if (IsChecked('term_medical_retirees_benefit')) {
+            return IsChecked('term_medical_retirees_benefit');
+          }
+          if (IsChecked('term_dental_active_benefit')) {
+            return IsChecked('term_dental_active_benefit');
+          }
+        }
+
+        // Function to uncheck all checkboxes other than the section passed.
+        function ClearOtherBoxes(section) {
+          var medicalactive = GetCheckboxName(MedicalActive);
+          var medicalpreretirees = GetCheckboxName(MedicalPreretirees);
+          var medicalretirees = GetCheckboxName(MedicalRetirees);
+          var dentalactive = GetCheckboxName(DentalActive);
+          var dentalretirees = GetCheckboxName(DentalRetirees);
+
+          // Whatever section we are on, we clear the other sections checkboxes.
+          if ( section == medicalactive) {
+            UncheckBoxes(medicalpreretirees);
+            UncheckBoxes(medicalretirees);
+            UncheckBoxes(dentalactive);
+            UncheckBoxes(dentalretirees);
+          }
+          if ( section == medicalpreretirees) {
+            UncheckBoxes(medicalactive);
+            UncheckBoxes(medicalretirees);
+            UncheckBoxes(dentalactive);
+            UncheckBoxes(dentalretirees);
+          }
+          if ( section == medicalretirees) {
+            UncheckBoxes(medicalactive);
+            UncheckBoxes(medicalpreretirees);
+            UncheckBoxes(dentalactive);
+            UncheckBoxes(dentalretirees);
+          }
+          if ( section == dentalactive) {
+            UncheckBoxes(medicalactive);
+            UncheckBoxes(medicalpreretirees);
+            UncheckBoxes(medicalretirees);
+            UncheckBoxes(dentalretirees);
+          }
+          if ( section == dentalretirees) {
+            UncheckBoxes(medicalactive);
+            UncheckBoxes(medicalpreretirees);
+            UncheckBoxes(medicalretirees);
+            UncheckBoxes(dentalactive);
           }
         }
 
@@ -227,16 +280,6 @@
           });
         }
 
-        // Function to fix the issue with collapsible field groups with BEF.
-        function SetCollapsible(fieldset) {
-          $(fieldset + ' span.fieldset-legend').each(function(i, obj) {
-            var legend = $(this).html();
-            $(this).html('<a class="fieldset-title collapse-field-group" href=""><span class="fieldset-legend-prefix element-invisible">Hide</span>' + legend);
-          });
-
-          $(fieldset).addClass('collapse-processed');
-        }
-
         // Function to get the name of the checkbox from id.
         function GetCheckboxName(term) {
           var re = /\-/gi;
@@ -246,55 +289,56 @@
           return underscores;
         }
 
+        // Function to hide all the different exposed filters.
+        function HideAll() {
+          // If the date has not been selected, Hide everything but the date selector.
+          if ( IsDateSet() ) {
+            $('.plan-rates-title', context).html('Plans & Contribution Rates');
+            $('#edit-field-su-plan-year-value-2019 a').removeClass('active');
+            $('.view-header', context).hide();
+            $('#medical-plan-header', context).hide();
+            $('#dental-plan-header', context).hide();
+            $(MedicalActive, context).hide();
+            $(MedicalPreretirees, context).hide();
+            $(MedicalRetirees, context).hide();
+            $(DentalActive, context).hide();
+            $(DentalRetirees, context).hide();
+          }
+
+          $(MedicalActive + ' .description', context).hide();
+          $(MedicalActive + ' .views-widget', context).hide();
+
+          $(MedicalPreretirees + ' .description', context).hide();
+          $(MedicalPreretirees + ' .views-widget', context).hide();
+
+          $(MedicalRetirees + ' .description', context).hide();
+          $(MedicalRetirees + ' .views-widget', context).hide();
+
+          $(DentalActive + ' .description', context).hide();
+          $(DentalActive + ' .views-widget', context).hide();
+
+          $(DentalRetirees + ' .description', context).hide();
+          $(DentalRetirees + ' .views-widget', context).hide();
+
+          $(CompTool + ' .view-content').hide();
+          $(CompTool + ' .view-empty').hide();
+          $(DateLinksWrapper).hide();
+
+          $(SubmitButton, context).hide();
+        }
+
         // Function to tell if anything is check on the exposed fields.
         function IsChecked(term) {
           return $('input[name="' + term + '[]"]:checked').length;
         }
 
-        // Function to tell if anything is check on the exposed fields.
-        function UncheckBoxes(name) {
-          $('input[name="' + name + '[]"]:checked').prop('checked', false);
-        }
-
-        // Function to uncheck all checkboxes other than the section passed.
-        function ClearOtherBoxes(section) {
-          var medicalactive = GetCheckboxName(MedicalActive);
-          var medicalpreretirees = GetCheckboxName(MedicalPreretirees);
-          var medicalretirees = GetCheckboxName(MedicalRetirees);
-          var dentalactive = GetCheckboxName(DentalActive);
-          var dentalretirees = GetCheckboxName(DentalRetirees);
-
-          // Whatever section we are on, we clear the other sections checkboxes.
-          if ( section == medicalactive) {
-            UncheckBoxes(medicalpreretirees);
-            UncheckBoxes(medicalretirees);
-            UncheckBoxes(dentalactive);
-            UncheckBoxes(dentalretirees);
-          }
-          if ( section == medicalpreretirees) {
-            UncheckBoxes(medicalactive);
-            UncheckBoxes(medicalretirees);
-            UncheckBoxes(dentalactive);
-            UncheckBoxes(dentalretirees);
-          }
-          if ( section == medicalretirees) {
-            UncheckBoxes(medicalactive);
-            UncheckBoxes(medicalpreretirees);
-            UncheckBoxes(dentalactive);
-            UncheckBoxes(dentalretirees);
-          }
-          if ( section == dentalactive) {
-            UncheckBoxes(medicalactive);
-            UncheckBoxes(medicalpreretirees);
-            UncheckBoxes(medicalretirees);
-            UncheckBoxes(dentalretirees);
-          }
-          if ( section == dentalretirees) {
-            UncheckBoxes(medicalactive);
-            UncheckBoxes(medicalpreretirees);
-            UncheckBoxes(medicalretirees);
-            UncheckBoxes(dentalactive);
-          }
+        // Function to return TRUE/FALSE if date is set for the plans.
+        function IsDateSet() {
+          var tmp = 0;
+          $('.view-header a[href*="[field_su_plan_year]"]', context).each(function() {
+            tmp++;
+          });
+          return tmp;
         }
 
         // Function to move some things around for UI beauty.
@@ -310,89 +354,87 @@
           $(DentalRetirees + ' .views-widget', context).before( $(DentalRetirees + ' .description') );
         }
 
-        // Function to hide all the different exposed filters.
-        function HideAll() {
-          $(MedicalActive + ' .description', context).css('display', 'none');
-          $(MedicalActive + ' .views-widget', context).css('display', 'none');
+        // Function to fix the issue with collapsible field groups with BEF.
+        function SetCollapsible(fieldset) {
+          $(fieldset + ' span.fieldset-legend').each(function(i, obj) {
+            var legend = $(this).html();
+            $(this).html('<a class="fieldset-title collapse-field-group" href=""><span class="fieldset-legend-prefix element-invisible">Hide</span>' + legend);
+          });
 
-          $(MedicalPreretirees + ' .description', context).css('display', 'none');
-          $(MedicalPreretirees + ' .views-widget', context).css('display', 'none');
+          $(fieldset).addClass('collapse-processed');
+        }
 
-          $(MedicalRetirees + ' .description', context).css('display', 'none');
-          $(MedicalRetirees + ' .views-widget', context).css('display', 'none');
+        // Function to show the sections once the plan date is chosen.
+        function ShowDateSections() {
+          $('.view-header', context).show();
+          $('#medical-plan-header', context).show();
+          $('#dental-plan-header', context).show();
+          $(MedicalActive, context).show();
+          $(MedicalPreretirees, context).show();
+          $(MedicalRetirees, context).show();
+          $(DentalActive, context).show();
+          $(DentalRetirees, context).show();
+        }
 
-          $(DentalActive + ' .description', context).css('display', 'none');
-          $(DentalActive + ' .views-widget', context).css('display', 'none');
-
-          $(DentalRetirees + ' .description', context).css('display', 'none');
-          $(DentalRetirees + ' .views-widget', context).css('display', 'none');
-
-          $(CompTool + ' .view-content').css('display', 'none');
-          $(CompTool + ' .view-empty').css('display', 'none');
-          $(DateLinksWrapper).css('display', 'none');
-
-          $(SubmitButton, context).css('display', 'none');
+        // Function to show and hide the field group when the legend is clicked fix for BEF.
+        function ShowHideFieldGroup(name) {
+          if ($(name + ' .fieldset-wrapper').is(':visible')) {
+            $(name + ' .fieldset-wrapper').hide();
+            $(name).addClass('collapsed');
+          }
+          else {
+            $(name + ' .fieldset-wrapper').show();
+            $(name).removeClass('collapsed');
+          }
         }
 
         // Function to show the right section when clicked.
         function ShowSection(section) {
-          $(section + ' .description', context).css('display', 'block');
-          $(section + ' .views-widget', context).css('display', 'block');
-          $(CompTool + ' .view-empty').css('display', 'block');
-          $(SubmitButton, context).css('display', 'block');
+          $(section + ' .description', context).show();
+          $(section + ' .views-widget', context).show();
+          $(CompTool + ' .view-empty').show();
+          $(SubmitButton, context).show();
 
           // Show the year options under the correct section for better UI experience.
           if ( (section === MedicalActive)
             || (section === MedicalPreretirees)
             || (section === MedicalRetirees) ) {
             $(CompTool + ' .medical-plans-title + p').after($(DateLinksWrapper));
-            $(DateLinksWrapper).css('display', 'block');
+            $(DateLinksWrapper).show();
           }
 
           // Show the year options under the correct section for better UI experience.
           if ( (section === DentalActive)
             || (section === DentalRetirees) ) {
             $(CompTool + ' .dental-plans-title + p').after($(DateLinksWrapper));
-            $(DateLinksWrapper).css('display', 'block');
+            $(DateLinksWrapper).show();
           }
 
           if ( section !== MedicalActive) {
-            $(MedicalActive + ' .description', context).css('display', 'none');
-            $(MedicalActive + ' .views-widget', context).css('display', 'none');
+            $(MedicalActive + ' .description', context).hide();
+            $(MedicalActive + ' .views-widget', context).hide();
           }
           if ( section !== MedicalPreretirees) {
-            $(MedicalPreretirees + ' .description', context).css('display', 'none');
-            $(MedicalPreretirees + ' .views-widget', context).css('display', 'none');
+            $(MedicalPreretirees + ' .description', context).hide();
+            $(MedicalPreretirees + ' .views-widget', context).hide();
           }
           if ( section !== MedicalRetirees) {
-            $(MedicalRetirees + ' .description', context).css('display', 'none');
-            $(MedicalRetirees + ' .views-widget', context).css('display', 'none');
+            $(MedicalRetirees + ' .description', context).hide();
+            $(MedicalRetirees + ' .views-widget', context).hide();
           }
           if ( section !== DentalActive) {
-            $(DentalActive + ' .description', context).css('display', 'none');
-            $(DentalActive + ' .views-widget', context).css('display', 'none');
+            $(DentalActive + ' .description', context).hide();
+            $(DentalActive + ' .views-widget', context).hide();
           }
           if ( section !== DentalRetirees) {
-            $(DentalRetirees + ' .description', context).css('display', 'none');
-            $(DentalRetirees + ' .views-widget', context).css('display', 'none');
+            $(DentalRetirees + ' .description', context).hide();
+            $(DentalRetirees + ' .views-widget', context).hide();
           }
         }
 
-        // Are there any checkboxes selected.
-        function AnyChecked() {
-          // If no checkboxes are selected, false else true.
-          if (IsChecked('term_medical_active_benefit')) {
-            return IsChecked('term_medical_active_benefit');
-          }
-          if (IsChecked('term_medical_preretirees_benefit')) {
-            return IsChecked('term_medical_preretirees_benefit');
-          }
-          if (IsChecked('term_medical_retirees_benefit')) {
-            return IsChecked('term_medical_retirees_benefit');
-          }
-          if (IsChecked('term_dental_active_benefit')) {
-            return IsChecked('term_dental_active_benefit');
-          }
+        // Function to tell if anything is check on the exposed fields.
+        function UncheckBoxes(name) {
+          $('input[name="' + name + '[]"]:checked').prop('checked', false);
         }
       });
     }
