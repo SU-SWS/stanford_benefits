@@ -65,7 +65,7 @@
 
         // If we have results to show, scroll to that content.
         if ( $('.view-content').is(':visible') ) {
-          $('html, body').animate({ scrollTop: $('.views-submit-button').offset().top }, 'slow');
+          $('html, body').animate({ scrollTop: $('#edit-field-su-plan-year-value-wrapper').offset().top }, 'fast');
         }
 
         // Show the Medical/Active exposed filters
