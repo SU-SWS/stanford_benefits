@@ -86,8 +86,8 @@ function stanford_benefits_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-benefit-field_su_access_servs'.
-  $field_instances['node-benefit-field_su_access_servs'] = array(
+  // Exported field_instance: 'node-benefit-field_su_access_serv'.
+  $field_instances['node-benefit-field_su_access_serv'] = array(
     'bundle' => 'benefit',
     'default_value' => array(
       0 => array(
@@ -116,7 +116,7 @@ function stanford_benefits_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_su_access_servs',
+    'field_name' => 'field_su_access_serv',
     'label' => 'Access & Services',
     'required' => 1,
     'settings' => array(

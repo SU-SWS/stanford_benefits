@@ -10,13 +10,13 @@
 function stanford_benefits_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_su_access_servs'.
-  $field_bases['field_su_access_servs'] = array(
+  // Exported field_base: 'field_su_access_serv'.
+  $field_bases['field_su_access_serv'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_su_access_servs',
+    'field_name' => 'field_su_access_serv',
     'indexes' => array(
       'value' => array(
         0 => 'value',
