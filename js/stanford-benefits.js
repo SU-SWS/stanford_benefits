@@ -16,11 +16,11 @@
         var DateLinksWrapper = '#edit-field-plan-year-value-wrapper';
         var DateLinks = '.form-item-field-su-plan-year-value a';
 
-        // We need to add the btn btn-arrow-right classes to the year links.
+        // We need to add the btn classe to the year links.
         $(DateLinks, context).addClass('btn');
 
         // Remove the links from the h2's. Last second request.
-        $("article h2").find("a").each(function(){
+        $('article h2').find('a').each(function(){
           var linkText = $(this).text();
           $(this).before(linkText);
           $(this).remove();
@@ -28,6 +28,7 @@
 
         // We need to make sure all the results look good in each row.
         EqualHeightResults();
+
         // We need to move some things around for UI beauty.
         MoveViewHTMLElements();
 
@@ -117,6 +118,9 @@
           }
           if (IsChecked('term_dental_active_benefit')) {
             return IsChecked('term_dental_active_benefit');
+          }
+          if (IsChecked('term_dental_retirees_benefit')) {
+            return IsChecked('term_dental_retirees_benefit');
           }
         }
 
@@ -394,21 +398,6 @@
           $(section + ' .views-widget', context).show();
           $(CompTool + ' .view-empty').show();
           $(SubmitButton, context).show();
-
-          // Show the year options under the correct section for better UI experience.
-          if ( (section === MedicalActive)
-            || (section === MedicalPreretirees)
-            || (section === MedicalRetirees) ) {
-            $(CompTool + ' .medical-plans-title + p').after($(DateLinksWrapper));
-            $(DateLinksWrapper).show();
-          }
-
-          // Show the year options under the correct section for better UI experience.
-          if ( (section === DentalActive)
-            || (section === DentalRetirees) ) {
-            $(CompTool + ' .dental-plans-title + p').after($(DateLinksWrapper));
-            $(DateLinksWrapper).show();
-          }
 
           if ( section !== MedicalActive) {
             $(MedicalActive + ' .description', context).hide();
