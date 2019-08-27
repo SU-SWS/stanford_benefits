@@ -127,7 +127,7 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Tool Header';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<h2 class="plan-rates-title">2019 Plans & Contribution Rates</h2><br><br>
+  $handler->display->display_options['header']['area']['content'] = '<h2 class="plan-rates-title">[field_su_plan_year] Plans & Contribution Rates</h2><br><br>
 <div id="medical-plan-header">
 <h2 class="medical-plans-title">Medical Plans</h2>
 <p>Compare medical plans available for each of these roles:</p>
@@ -721,7 +721,7 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['field_su_plan_year_value']['group'] = 1;
   $handler->display->display_options['filters']['field_su_plan_year_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['operator_id'] = 'field_su_plan_year_value_op';
-  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['label'] = 'Please select a plan year.';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['label'] = 'Please select a benefit plan year.';
   $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['operator'] = 'field_su_plan_year_value_op';
   $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['identifier'] = 'field_su_plan_year_value';
   $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['required'] = TRUE;
@@ -750,7 +750,7 @@ function stanford_benefits_views_default_views() {
     t('Select any plan and click on Compare plans to see results'),
     t('Advanced options'),
     t('Tool Header'),
-    t('<h2 class="plan-rates-title">2019 Plans & Contribution Rates</h2><br><br>
+    t('<h2 class="plan-rates-title">[field_su_plan_year] Plans & Contribution Rates</h2><br><br>
 <div id="medical-plan-header">
 <h2 class="medical-plans-title">Medical Plans</h2>
 <p>Compare medical plans available for each of these roles:</p>
@@ -797,7 +797,7 @@ function stanford_benefits_views_default_views() {
     t('Early retirees under 65'),
     t('Retirees'),
     t('Stanford offers one dental plan for all eligible retirees.'),
-    t('Please select a plan year.'),
+    t('Please select a benefit plan year.'),
   );
   $export['caw_benefit_comparison_tool'] = $view;
 
