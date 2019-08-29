@@ -71,6 +71,7 @@
 
 .view-caw-benefit-comparison-tool h2.plan-rates-title {
   background-color: #e9edee;
+  margin-bottom: 120px;
   padding: 20px; }
 
 .view-caw-benefit-comparison-tool h3.no-spacing,
@@ -105,7 +106,11 @@
   background: #e9edee;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
   margin: 20px 0;
-  padding: 10px; }
+  padding: 10px;
+  position: absolute;
+  top: 70px;
+  width: 95%;
+  z-index: 999; }
   .view-caw-benefit-comparison-tool #edit-field-su-plan-year-value-wrapper a {
     display: inline-block;
     float: left;

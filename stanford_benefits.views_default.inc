@@ -210,10 +210,10 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['fields']['field_su_plan_year']['label'] = '';
   $handler->display->display_options['fields']['field_su_plan_year']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_su_plan_year']['element_label_colon'] = FALSE;
-  /* Sort criterion: Content: Title */
-  $handler->display->display_options['sorts']['title']['id'] = 'title';
-  $handler->display->display_options['sorts']['title']['table'] = 'node';
-  $handler->display->display_options['sorts']['title']['field'] = 'title';
+  /* Sort criterion: Content: Updated date */
+  $handler->display->display_options['sorts']['changed']['id'] = 'changed';
+  $handler->display->display_options['sorts']['changed']['table'] = 'node';
+  $handler->display->display_options['sorts']['changed']['field'] = 'changed';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -539,6 +539,34 @@ function stanford_benefits_views_default_views() {
     'benefit' => 'benefit',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Plan Year (field_su_plan_year) */
+  $handler->display->display_options['filters']['field_su_plan_year_value']['id'] = 'field_su_plan_year_value';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['table'] = 'field_data_field_su_plan_year';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['field'] = 'field_su_plan_year_value';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['value'] = array(
+    2019 => '2019',
+    2020 => '2020',
+  );
+  $handler->display->display_options['filters']['field_su_plan_year_value']['group'] = 1;
+  $handler->display->display_options['filters']['field_su_plan_year_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['operator_id'] = 'field_su_plan_year_value_op';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['label'] = 'Please select a benefit plan year.';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['operator'] = 'field_su_plan_year_value_op';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['identifier'] = 'field_su_plan_year_value';
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['required'] = TRUE;
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    11 => 0,
+    9 => 0,
+    7 => 0,
+    5 => 0,
+    17 => 0,
+    13 => 0,
+    15 => 0,
+    18 => 0,
+  );
+  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['reduce'] = TRUE;
   /* Filter criterion: Medical/Active benefit plan selection */
   $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
@@ -710,34 +738,6 @@ function stanford_benefits_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth_4']['type'] = 'select';
   $handler->display->display_options['filters']['term_node_tid_depth_4']['vocabulary'] = 'benefit_plan_type';
   $handler->display->display_options['filters']['term_node_tid_depth_4']['depth'] = '1';
-  /* Filter criterion: Content: Plan Year (field_su_plan_year) */
-  $handler->display->display_options['filters']['field_su_plan_year_value']['id'] = 'field_su_plan_year_value';
-  $handler->display->display_options['filters']['field_su_plan_year_value']['table'] = 'field_data_field_su_plan_year';
-  $handler->display->display_options['filters']['field_su_plan_year_value']['field'] = 'field_su_plan_year_value';
-  $handler->display->display_options['filters']['field_su_plan_year_value']['value'] = array(
-    2019 => '2019',
-    2020 => '2020',
-  );
-  $handler->display->display_options['filters']['field_su_plan_year_value']['group'] = 1;
-  $handler->display->display_options['filters']['field_su_plan_year_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['operator_id'] = 'field_su_plan_year_value_op';
-  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['label'] = 'Please select a benefit plan year.';
-  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['operator'] = 'field_su_plan_year_value_op';
-  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['identifier'] = 'field_su_plan_year_value';
-  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['required'] = TRUE;
-  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    11 => 0,
-    9 => 0,
-    7 => 0,
-    5 => 0,
-    17 => 0,
-    13 => 0,
-    15 => 0,
-    18 => 0,
-  );
-  $handler->display->display_options['filters']['field_su_plan_year_value']['expose']['reduce'] = TRUE;
   $translatables['caw_benefit_comparison_tool'] = array(
     t('Master'),
     t('CAW Benefit Comparison Tool'),
@@ -793,11 +793,11 @@ function stanford_benefits_views_default_views() {
     t('Active employees '),
     t('Active employees may select one of two offered dental plans.'),
     t('Benefit Comparison Tool'),
+    t('Please select a benefit plan year.'),
     t('Active Employees'),
     t('Early retirees under 65'),
     t('Retirees'),
     t('Stanford offers one dental plan for all eligible retirees.'),
-    t('Please select a benefit plan year.'),
   );
   $export['caw_benefit_comparison_tool'] = $view;
 

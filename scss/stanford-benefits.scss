@@ -93,6 +93,7 @@
 
   h2.plan-rates-title {
     background-color: #e9edee;
+    margin-bottom: 120px;
     padding: 20px;
   }
 
@@ -137,6 +138,10 @@
     box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
     margin: 20px 0;
     padding: 10px;
+    position: absolute;
+    top: 70px;
+    width: 95%;
+    z-index: 999;
 
     a {
       display: inline-block;
