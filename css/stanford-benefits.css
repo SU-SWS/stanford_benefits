@@ -26,6 +26,9 @@
       margin-top: 0;
       width: 100%; }
 
+body.not-logged-in #edit-field-su-plan-year-value-wrapper {
+  top: 400px; }
+
 .view-caw-benefit-comparison-tool article.node-dental-benefit h2:first-child {
   background-color: #e9edee;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
@@ -109,7 +112,7 @@
   padding: 10px;
   position: absolute;
   top: 70px;
-  width: 95%;
+  width: auto;
   z-index: 999; }
   .view-caw-benefit-comparison-tool #edit-field-su-plan-year-value-wrapper a {
     display: inline-block;
