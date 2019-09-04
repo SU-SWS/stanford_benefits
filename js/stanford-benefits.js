@@ -7,6 +7,7 @@
       $(document).ready(function( settings) {
         // Setup the variables we will use here.
         var CompTool = '.view-caw-benefit-comparison-tool';
+        var SubmitWrapper = '.views-exposed-widget.views-submit-button';
         var SubmitButton = '#edit-submit-caw-benefit-comparison-tool';
         var MedicalActive = '#edit-term-medical-active-benefit-wrapper';
         var MedicalPreretirees = '#edit-term-medical-preretirees-benefit-wrapper';
@@ -15,6 +16,7 @@
         var DentalRetirees = '#edit-term-dental-retirees-benefit-wrapper';
         var DateLinksWrapper = '#edit-field-plan-year-value-wrapper';
         var DateLinks = '.form-item-field-su-plan-year-value a';
+        var Results = '.view-caw-benefit-comparison-tool .view-content';
 
         // We need to add the btn classe to the year links.
         $(DateLinks, context).addClass('btn');
@@ -66,7 +68,7 @@
 
         // If we have results to show, scroll to that content.
         if ( $('.view-content').is(':visible') ) {
-          $('html, body').animate({ scrollTop: $('#edit-field-su-plan-year-value-wrapper').offset().top }, 'fast');
+          $('html, body').animate({ scrollTop: $(Results).offset().top }, 'slow');
         }
 
         // Show the Medical/Active exposed filters
@@ -397,6 +399,7 @@
           $(section + ' .description', context).show();
           $(section + ' .views-widget', context).show();
           $(CompTool + ' .view-empty').show();
+          $(section + ' .views-widget').after($(SubmitWrapper));
           $(SubmitButton, context).show();
 
           if ( section !== MedicalActive) {
