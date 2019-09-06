@@ -165,7 +165,7 @@ function stanford_benefits_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Ratings (NCQA)',
+    'label' => 'Rates',
     'weight' => '1',
     'children' => array(
       0 => 'field_su_access_serv',
@@ -177,7 +177,7 @@ function stanford_benefits_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Ratings (NCQA)',
+      'label' => 'Rates',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-criteria field-group-fieldset',
@@ -1066,7 +1066,7 @@ function stanford_benefits_field_group_info() {
   t('Preventive Care');
   t('Preventive Type of Care');
   t('Preventive Type of Care	');
-  t('Ratings (NCQA)');
+  t('Rates');
   t('Ratings - National Committee For Quality Assurance (NCQA)');
 
   return $field_groups;
