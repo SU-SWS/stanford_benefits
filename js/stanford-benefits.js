@@ -43,12 +43,18 @@
         else {
           if (IsChecked('term_medical_active_benefit')) {
             ShowSection(MedicalActive);
+            // We want to hide the NCQA from Active employees.
+            $('.group-criteria', context).hide();
           }
           if (IsChecked('term_medical_preretirees_benefit')) {
             ShowSection(MedicalPreretirees);
+            // We want to show the NCQA for Preretirees.
+            $('.group-criteria', context).show();
           }
           if (IsChecked('term_medical_retirees_benefit')) {
             ShowSection(MedicalRetirees);
+            // We want to show the NCQA for Retirees.
+            $('.group-criteria', context).show();
           }
           if (IsChecked('term_dental_active_benefit')) {
             ShowSection(DentalActive);
