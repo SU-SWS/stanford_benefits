@@ -199,7 +199,6 @@ body.not-logged-in #edit-field-su-plan-year-value-wrapper {
 .view-caw-benefit-comparison-tool .view-content {
   display: block;
   float: left;
-  margin-top: 20px;
   width: 100%; }
   .view-caw-benefit-comparison-tool .view-content article .content {
     padding: 0.5em; }
@@ -257,3 +256,12 @@ body.not-logged-in #edit-field-su-plan-year-value-wrapper {
 .view-caw-benefit-comparison-tool .vision-plan-wrapper .views-widget-filter-term_node_tid_depth_join select,
 .view-caw-benefit-comparison-tool .full-plan-costs-wrapper .views-widget-filter-term_node_tid_depth_join select {
   width: 100%; }
+
+.view-caw-benefit-comparison-tool .view-footer {
+  background-color: #dff0d8;
+  color: #000;
+  float: left;
+  font-weight: 600;
+  padding: 5px;
+  text-align: center;
+  width: 99%; }

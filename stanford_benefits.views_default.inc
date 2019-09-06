@@ -164,6 +164,12 @@ function stanford_benefits_views_default_views() {
 </div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['header']['area']['tokenize'] = TRUE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<b>You can scroll in the results box to see all the benefit categories available.</b>';
+  $handler->display->display_options['footer']['area']['format'] = 'content_editor_text_format';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -785,6 +791,7 @@ function stanford_benefits_views_default_views() {
   <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/[field_su_plan_year]-retiree-rates" name="compare_ret" target="_parent" class="more-link" id="compare_ret" rel="external">Review contribution charts</a></li>
 </ul>
 </div>'),
+    t('<b>You can scroll in the results box to see all the benefit categories available.</b>'),
     t('Benefit Type'),
     t('Description'),
     t('Full-Time Employee * Contribution Per Pay Period'),

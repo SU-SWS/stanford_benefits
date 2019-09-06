@@ -243,7 +243,6 @@ body.not-logged-in #edit-field-su-plan-year-value-wrapper {
   .view-content {
     display: block;
     float: left;
-    margin-top: 20px;
     width: 100%;
 
     article {
@@ -320,5 +319,15 @@ body.not-logged-in #edit-field-su-plan-year-value-wrapper {
     .views-widget-filter-term_node_tid_depth_join select {
       width: 100%;
     }
+  }
+
+  .view-footer {
+    background-color: #dff0d8;
+    color: #000;
+    float: left;
+    font-weight: 600;
+    padding: 5px;
+    text-align: center;
+    width: 99%;
   }
 }

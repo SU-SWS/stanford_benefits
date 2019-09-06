@@ -17,6 +17,7 @@
         var DateLinksWrapper = '#edit-field-plan-year-value-wrapper';
         var DateLinks = '.form-item-field-su-plan-year-value a';
         var Results = '.view-caw-benefit-comparison-tool .view-content';
+        var Footer = '.view-footer';
 
         // We need to add the btn classe to the year links.
         $(DateLinks, context).addClass('btn');
@@ -74,7 +75,7 @@
 
         // If we have results to show, scroll to that content.
         if ( $('.view-content').is(':visible') ) {
-          $('html, body').animate({ scrollTop: $(Results).offset().top }, 'slow');
+          $('html, body').animate({ scrollTop: $(DentalRetirees).offset().top }, 'slow');
         }
 
         // Show the Medical/Active exposed filters
@@ -333,6 +334,7 @@
           $(DentalRetirees + ' .views-widget', context).hide();
 
           $(CompTool + ' .view-content').hide();
+          $(Footer).hide();
           $(CompTool + ' .view-empty').hide();
           $(DateLinksWrapper).hide();
 
@@ -364,6 +366,7 @@
           $(MedicalRetirees + ' .views-widget', context).before( $(MedicalRetirees + ' .description') );
           $(DentalActive + ' .views-widget', context).before( $(DentalActive + ' .description') );
           $(DentalRetirees + ' .views-widget', context).before( $(DentalRetirees + ' .description') );
+          $('.view-content', context).before( $(Footer) );
         }
 
         // Function to fix the issue with collapsible field groups with BEF.
