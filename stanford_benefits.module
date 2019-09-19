@@ -17,10 +17,10 @@ function stanford_benefits_preprocess_page(&$vars) {
   $arg1 = arg(1);
   if (isset($vars['node'])) {
     // If we are on the comparison page or on one of the benefit nodes.
-    if (($arg1 == "4013") || ($vars['node']->type == 'benefit') || ($vars['node']->type == 'dental_benefit')) {
+    if (($arg1 == "4013") || ($arg1 == "10871") || ($vars['node']->type == 'benefit') || ($vars['node']->type == 'dental_benefit')) {
       drupal_add_css(drupal_get_path("module", "stanford_benefits") . "/css/stanford-benefits.css");
       // We only need to load css for starrating and js on the page with the view.
-      if ($arg1 == "4013") {
+      if (($arg1 == "4013") || ($arg1 == "10871")) {
         // We need to load the starrating modules css in the view because we lose it.
         drupal_add_css(drupal_get_path("module", "starrating") . "/icons/star.css");
         drupal_add_js(drupal_get_path("module", "stanford_benefits") . "/js/stanford-benefits.js");
