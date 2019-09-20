@@ -11,20 +11,19 @@ include_once 'stanford_benefits.features.inc';
  */
 
 /**
- * Implements hook_preprocess_HOOK().
+ * Implements hook_views_pre_render().
  */
-function stanford_benefits_preprocess_page(&$vars) {
-  $arg1 = arg(1);
-  if (isset($vars['node'])) {
-    // If we are on the comparison page or on one of the benefit nodes.
-    if (($arg1 == "4013") || ($arg1 == "10871")  || ($arg1 == "10866") || ($vars['node']->type == 'benefit') || ($vars['node']->type == 'dental_benefit')) {
-      drupal_add_css(drupal_get_path("module", "stanford_benefits") . "/css/stanford-benefits.css");
-      // We only need to load css for starrating and js on the page with the view.
-      if (($arg1 == "4013") || ($arg1 == "10871") || ($arg1 == "10866")) {
-        // We need to load the starrating modules css in the view because we lose it.
-        drupal_add_css(drupal_get_path("module", "starrating") . "/icons/star.css");
-        drupal_add_js(drupal_get_path("module", "stanford_benefits") . "/js/stanford-benefits.js");
-      }
-    }
+function stanford_benefits_views_pre_render(&$view) {
+  // Only pull in the css if it the news grid view is in use.
+  $valid = array(
+    'caw_benefit_comparison_tool',
+  );
+
+  // Add the css for the news_grid view.
+  if (in_array($view->name, $valid)) {
+    drupal_add_css(drupal_get_path("module", "stanford_benefits") . "/css/stanford-benefits.css");
+    // We need to load the starrating modules css in the view because we lose it.
+    drupal_add_css(drupal_get_path("module", "starrating") . "/icons/star.css");
+    drupal_add_js(drupal_get_path("module", "stanford_benefits") . "/js/stanford-benefits.js");
   }
 }
