@@ -52,7 +52,7 @@ are the steps needed to get the module configured for production.
   - tag: ```Benefits-Rewards-Sidebar```
   - description: ```The context for the benefit comparison tool.```
   - Conditions->path: ```benefits-rewards/health/medical-life/medical-plans/comparison-tool-new```
-  - Reactions->blocks: ```View: CAW Benefit Comparison Tool: Benefit Comparison Tool``` 
+  - Reactions->blocks (body): ```View: CAW Benefit Comparison Tool: Benefit Comparison Tool``` 
 
 Troubleshooting
 ---
