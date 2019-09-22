@@ -51,6 +51,8 @@ are the steps needed to get the module configured for production.
 - Set the view block title to ```<none>```
 - Flush all caches
 - Edit the menu settings for the page and create the proper menu links if needed.
+- Edit the different exposed filters here: ```admin/structure/views/view/caw_benefit_comparison_tool/edit/caw_benefit_comparison_tool_block```
+  - Make sure that the correct terms are selected for each vocabulary filter.
 - Import Medical/Dental Benefits from dev for 2019/2020.
 
 Troubleshooting
