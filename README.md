@@ -17,7 +17,35 @@ Installation Playbook
 The Stanford Benefits module is has some custom settings that need to be applied for the it to work correctly. Here 
 are the steps needed to get the module configured for production.
 
-1)
+1) ```drush @anc.cardinalatwork-up en stanford_benefits -y```
+2) Go to: https://up.cardinalatwork.stanford.edu/admin/structure/taxonomy_manager/voc/benefit_plan_type 
+3) Add these terms:
+```Medical Plans
+   -Active employees
+   --Kaiser Permanente HMO (California)
+   --Stanford Health Care Alliance
+   --EPO Plan
+   --Healthcare + Savings Plan
+   --ACA Basic High Deductible Health Plan
+   -Early retirees under 65
+   --Kaiser Permanente HMO (California)
+   --Stanford Health Care Alliance
+   --Healthcare + Savings Plan
+   --EPO Plan
+   -Retirees
+   --MEDICARE ADVANTAGE PLANS
+   ---Kaiser Permanente Senior Advantage
+   ---Health Net Seniority Plus
+   --MEDICARE SUPPLEMENT PLANS
+   ---Blue Shield Retiree PPO
+   ---Health Net Medicare COB
+   Dental Plans
+   -Active employees
+   --Delta Dental Basic PPO Plan
+   --Delta Dental Enhanced PPO Plan
+   -Retirees
+   --Delta Dental PPO Plan
+```
 
 Troubleshooting
 ---
