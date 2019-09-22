@@ -17,9 +17,9 @@ Installation Playbook
 The Stanford Benefits module is has some custom settings that need to be applied for the it to work correctly. Here 
 are the steps needed to get the module configured for production.
 
-1) ```drush @anc.cardinalatwork-up en stanford_benefits -y```
-2) Go to: https://up.cardinalatwork.stanford.edu/admin/structure/taxonomy_manager/voc/benefit_plan_type 
-3) Add these terms:
+- ```drush @anc.cardinalatwork-up en stanford_benefits -y```
+- Go to: https://up.cardinalatwork.stanford.edu/admin/structure/taxonomy_manager/voc/benefit_plan_type 
+- Add these terms: 
 ```Medical Plans
    -Active employees
    --Kaiser Permanente HMO (California)
@@ -45,7 +45,14 @@ are the steps needed to get the module configured for production.
    --Delta Dental Enhanced PPO Plan
    -Retirees
    --Delta Dental PPO Plan
-```
+   ```
+- Move the Medical Plans up above the Dental Plans in the Taxonomy Manager by using the up arrow button on hover.
+- Create a context to show the view block on the page: ```benefits-rewards/health/medical-life/medical-plans/comparison-tool-new```
+  - name: ```benefit_comparison_tool```
+  - tag: ```Benefits-Rewards-Sidebar```
+  - description: ```The context for the benefit comparison tool.```
+  - Conditions->path: ```benefits-rewards/health/medical-life/medical-plans/comparison-tool-new```
+  - Reactions->blocks: ```View: CAW Benefit Comparison Tool: Benefit Comparison Tool``` 
 
 Troubleshooting
 ---
