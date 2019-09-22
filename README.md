@@ -50,6 +50,7 @@ are the steps needed to get the module configured for production.
 - Make sure the context path is pointing to ```benefits-rewards/health/medical-life/medical-plans/comparison-tool-new``` page.
 - Set the view block title to ```<none>```
 - Flush all caches
+- Edit the menu settings for the page and create the proper menu links if needed.
 - Import Medical/Dental Benefits from dev for 2019/2020.
 
 Troubleshooting
