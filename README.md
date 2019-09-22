@@ -48,6 +48,9 @@ are the steps needed to get the module configured for production.
    ```
 - Move the Medical Plans up above the Dental Plans in the Taxonomy Manager by using the up arrow button on hover.
 - Make sure the context path is pointing to ```benefits-rewards/health/medical-life/medical-plans/comparison-tool-new``` page.
+- Set the view block title to ```<none>```
+- Flush all caches
+- Import Medical/Dental Benefits from dev for 2019/2020.
 
 Troubleshooting
 ---
