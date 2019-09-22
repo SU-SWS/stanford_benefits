@@ -19,7 +19,7 @@ function stanford_benefits_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'benefits-rewards/health/medical-life/medical-plans/comparison-tool' => 'benefits-rewards/health/medical-life/medical-plans/comparison-tool',
+        'benefits-rewards/health/medical-life/medical-plans/comparison-tool-new' => 'benefits-rewards/health/medical-life/medical-plans/comparison-tool-new',
       ),
     ),
   );
