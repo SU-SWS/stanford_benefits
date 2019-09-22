@@ -47,7 +47,7 @@ are the steps needed to get the module configured for production.
    --Delta Dental PPO Plan
    ```
 - Move the Medical Plans up above the Dental Plans in the Taxonomy Manager by using the up arrow button on hover.
-- Change the context path to point to the ```benefits-rewards/health/medical-life/medical-plans/comparison-tool-new``` page.
+- Make sure the context path is pointing to ```benefits-rewards/health/medical-life/medical-plans/comparison-tool-new``` page.
 
 Troubleshooting
 ---
