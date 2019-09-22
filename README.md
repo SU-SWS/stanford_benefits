@@ -18,7 +18,7 @@ The Stanford Benefits module is has some custom settings that need to be applied
 are the steps needed to get the module configured for production.
 
 - ```drush @anc.cardinalatwork-up en stanford_benefits -y```
-- Go to: https://up.cardinalatwork.stanford.edu/admin/structure/taxonomy_manager/voc/benefit_plan_type 
+- Go to: ```admin/structure/taxonomy_manager/voc/benefit_plan_type```
 - Add these terms: 
 ```Medical Plans
    -Active employees
