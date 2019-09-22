@@ -11,6 +11,14 @@ Description
 The Stanford Benefits module is used to compare different employee benefits side by side and maintain the different
 in the Medical Benefits and Dental Benefits content types.
 
+Installation Playbook
+---
+
+The Stanford Benefits module is has some custom settings that need to be applied for the it to work correctly. Here 
+are the steps needed to get the module configured for production.
+
+1)
+
 Troubleshooting
 ---
 
