@@ -1,5 +1,5 @@
 # [Stanford Benefits](https://github.com/SU-SWS/stanford_benefits)
-##### Version: 7.x-1.x
+##### Version: 7.x-1.0-alpha1
 
 Maintainers: [minorwm](https://github.com/minorwm)
 

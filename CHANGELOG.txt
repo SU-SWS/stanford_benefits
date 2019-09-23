@@ -1,0 +1,7 @@
+Stanford Benefits x.x-x.x, xxxx-xx-xx
+---------------------------------
+
+Stanford Benefits 7.x-1.0-alpha1, 2019-09-23
+---------------------------------
+- Initial alpha release 
+
