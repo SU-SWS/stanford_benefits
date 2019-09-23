@@ -134,24 +134,19 @@ function stanford_benefits_views_default_views() {
 </div>
 <div id="dental-plan-header">
 <h2 class="dental-plans-title">Dental Plans</h2>
-<p>Compare medical plans available for each of these roles:</p>
+<p>Compare dental plans available for each of these roles:</p>
 </div>
 <div class="vision-plan-wrapper">
 <h2>Vision Plan</h2>
-<p>Compare medical plans available for each of these roles:</p>
-<h3 class="no-spacing">Active Employees</h3>
-           Review vision plan for
+<p>Compare vision plans available for each of these roles:</p>
 <ul>
-  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/vision-plan-[field_su_plan_year]" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review the plan</a></li>
-</ul>
-<h3 class="spacing">Retirees</h3>
- <ul>
- <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/retirees/retiree-vision-plan-[field_su_plan_year]" class="more-link" target="_parent" rel="external">Review the vision plan</a></li>
+  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/vision-plan-[field_su_plan_year]" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Active Employees</a></li>
+<li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/retirees/retiree-vision-plan-[field_su_plan_year]" class="more-link" target="_parent" rel="external">Retirees</a></li>
  </ul>
 </div>
 <div class="full-plan-costs-wrapper">
 <h2>Full Plan Costs</h2>
-<p>Compare medical plans available for each of these roles:</p>
+<p>Compare the premium costs for each of these roles:</p>
 <h3 class="no-spacing">Active Employees</h3>
 <ul>
   <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/[field_su_plan_year]-employee-rates" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review contribution charts</a>
@@ -763,24 +758,19 @@ function stanford_benefits_views_default_views() {
 </div>
 <div id="dental-plan-header">
 <h2 class="dental-plans-title">Dental Plans</h2>
-<p>Compare medical plans available for each of these roles:</p>
+<p>Compare dental plans available for each of these roles:</p>
 </div>
 <div class="vision-plan-wrapper">
 <h2>Vision Plan</h2>
-<p>Compare medical plans available for each of these roles:</p>
-<h3 class="no-spacing">Active Employees</h3>
-           Review vision plan for
+<p>Compare vision plans available for each of these roles:</p>
 <ul>
-  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/vision-plan-[field_su_plan_year]" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review the plan</a></li>
-</ul>
-<h3 class="spacing">Retirees</h3>
- <ul>
- <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/retirees/retiree-vision-plan-[field_su_plan_year]" class="more-link" target="_parent" rel="external">Review the vision plan</a></li>
+  <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/vision-plan-[field_su_plan_year]" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Active Employees</a></li>
+<li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/retirees/retiree-vision-plan-[field_su_plan_year]" class="more-link" target="_parent" rel="external">Retirees</a></li>
  </ul>
 </div>
 <div class="full-plan-costs-wrapper">
 <h2>Full Plan Costs</h2>
-<p>Compare medical plans available for each of these roles:</p>
+<p>Compare the premium costs for each of these roles:</p>
 <h3 class="no-spacing">Active Employees</h3>
 <ul>
   <li><a href="https://cardinalatwork.stanford.edu/benefits-rewards/health/change-your-benefits/open-enrollment/[field_su_plan_year]-employee-rates" name="compare_active" target="_parent" class="more-link" id="compare_active" rel="external">Review contribution charts</a>

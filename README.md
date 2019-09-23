@@ -11,6 +11,50 @@ Description
 The Stanford Benefits module is used to compare different employee benefits side by side and maintain the different
 in the Medical Benefits and Dental Benefits content types.
 
+Installation Playbook
+---
+
+The Stanford Benefits module is has some custom settings that need to be applied for the it to work correctly. Here 
+are the steps needed to get the module configured for production.
+
+- ```drush @anc.cardinalatwork-up en stanford_benefits -y```
+- Go to: ```admin/structure/taxonomy_manager/voc/benefit_plan_type```
+- Add these terms: 
+```Medical Plans
+   -Active employees
+   --Kaiser Permanente HMO (California)
+   --Stanford Health Care Alliance
+   --EPO Plan
+   --Healthcare + Savings Plan
+   --ACA Basic High Deductible Health Plan
+   -Early retirees under 65
+   --Kaiser Permanente HMO (California)
+   --Stanford Health Care Alliance
+   --Healthcare + Savings Plan
+   --EPO Plan
+   -Retirees
+   --MEDICARE ADVANTAGE PLANS
+   ---Kaiser Permanente Senior Advantage
+   ---Health Net Seniority Plus
+   --MEDICARE SUPPLEMENT PLANS
+   ---Blue Shield Retiree PPO
+   ---Health Net Medicare COB
+   Dental Plans
+   -Active employees
+   --Delta Dental Basic PPO Plan
+   --Delta Dental Enhanced PPO Plan
+   -Retirees
+   --Delta Dental PPO Plan
+   ```
+- Move the Medical Plans up above the Dental Plans in the Taxonomy Manager by using the up arrow button on hover.
+- Make sure the context path is pointing to ```benefits-rewards/health/medical-life/medical-plans/comparison-tool-new``` page.
+- Set the view block title to ```<none>```
+- Flush all caches
+- Edit the menu settings for the page and create the proper menu links if needed.
+- Edit the different exposed filters here: ```admin/structure/views/view/caw_benefit_comparison_tool/edit/caw_benefit_comparison_tool_block```
+  - Make sure that the correct terms are selected for each vocabulary filter.
+- Import Medical/Dental Benefits from dev for 2019/2020.
+
 Troubleshooting
 ---
 
