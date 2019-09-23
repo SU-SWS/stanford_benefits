@@ -118,7 +118,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_access_serv',
     'label' => 'Access & Services',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1587,7 +1587,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_getting_better',
     'label' => 'Getting Better',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -2094,7 +2094,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_living_with_illness',
     'label' => 'Living With Illness',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -2795,7 +2795,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_overall_accred_status',
     'label' => 'Overall Accredition Status',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -3606,7 +3606,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_qualified_providers',
     'label' => 'Qualified Providers',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -3783,7 +3783,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_staying_healthy',
     'label' => 'Staying Healthy',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
