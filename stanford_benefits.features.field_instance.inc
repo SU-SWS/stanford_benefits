@@ -42,7 +42,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'body',
     'label' => 'Overview',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -155,7 +155,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_acupuncture',
     'label' => 'Acupuncture',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -221,7 +221,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_allergy_tests',
     'label' => 'Allergy Tests',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -287,7 +287,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_allergy_treatment',
     'label' => 'Allergy Treatment',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -353,7 +353,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_ambulance_charges',
     'label' => 'Ambulance charges',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -419,7 +419,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_autism',
     'label' => 'Autism',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -485,7 +485,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_babys_first_exam',
     'label' => 'Baby\'s First Exam',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -551,7 +551,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_benefit_description',
     'label' => 'Description',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -721,7 +721,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_birthing_centers',
     'label' => 'Birthing Centers',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -787,7 +787,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_care_management',
     'label' => 'Care Management',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -919,7 +919,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_chiropractors',
     'label' => 'Chiropractors',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -985,7 +985,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_christian_science',
     'label' => 'Christian Science Practitioners',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -1051,7 +1051,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_coinsurance',
     'label' => 'Coinsurance',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -1117,7 +1117,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_cosmetic_surgery',
     'label' => 'Cosmetic Surgery',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -1183,7 +1183,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_deductible',
     'label' => 'Deductible',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -1249,7 +1249,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_dental_treatment',
     'label' => 'Dental Treatment',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -1315,7 +1315,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_doctor_delivery_charge',
     'label' => 'Doctor Delivery Charge',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -1381,7 +1381,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_durable_medical_equip',
     'label' => 'Durable Medical Equipment',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -1447,7 +1447,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_emergency_room',
     'label' => 'Emergency Room',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -1513,7 +1513,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_full_time_emp_cont',
     'label' => 'Full-Time Employee * Contribution Per Pay Period',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -1624,7 +1624,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_hearing_care',
     'label' => 'Hearing Care',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -1690,7 +1690,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_home_health_care',
     'label' => 'Home Health Care',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -1756,7 +1756,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_hospice_care',
     'label' => 'Hospice Care',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -1822,7 +1822,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_hospital_stay',
     'label' => 'Hospital Stay',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -1888,7 +1888,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_immunizations',
     'label' => 'Immunizations',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -1954,7 +1954,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_infertility_treatment',
     'label' => 'Infertility Treatment',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -2020,7 +2020,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_laboratory_charges',
     'label' => 'Laboratory Charges',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -2131,7 +2131,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_mail_order_drug_prog',
     'label' => 'Mail order drug program',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -2197,7 +2197,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_mammograms',
     'label' => 'Mammograms',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -2329,7 +2329,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_mental_health',
     'label' => 'Mental Health',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -2395,7 +2395,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_midwives',
     'label' => 'Midwives',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -2461,7 +2461,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_mri',
     'label' => 'Magnetic resonance imaging - MRI',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -2527,7 +2527,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_occupational_therapy',
     'label' => 'Occupational Therapy',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -2593,7 +2593,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_office_co_pay',
     'label' => 'Office co-pay',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -2659,7 +2659,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_organ_transplants',
     'label' => 'Organ Transplants',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -2725,7 +2725,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_out_of_pocket_max',
     'label' => 'Out-of-Pocket Maximum',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -2834,7 +2834,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_overall_lifetime_max',
     'label' => 'Overall Lifetime Maximum',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -2900,7 +2900,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_pap_smears',
     'label' => 'Pap smears',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -2966,7 +2966,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_pe_for_children',
     'label' => 'Physical exams for children',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -3032,7 +3032,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_pharmacy_retail',
     'label' => 'Pharmacy (Retail)',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -3098,7 +3098,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_phy_exams_for_adults',
     'label' => 'Physical exams for adults',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -3164,7 +3164,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_physical_therapy',
     'label' => 'Physical Therapy',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -3268,7 +3268,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_pre_auth_require',
     'label' => 'Pre-Authorization Requirement',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -3334,7 +3334,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_pregnancy_termination',
     'label' => 'Pregnancy Termination',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -3400,7 +3400,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_prenatal_visits',
     'label' => 'Prenatal Visits',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -3466,7 +3466,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_prostate_specific',
     'label' => 'Prostate Specific Antigen test - PSA',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -3532,7 +3532,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_pt_employee_contrib',
     'label' => 'Part-Time Employee * Contribution Per Pay Period',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -3643,7 +3643,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_skilled_nursing',
     'label' => 'Skilled Nursing',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -3709,7 +3709,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_speech_therapy',
     'label' => 'Speech Therapy',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -3820,7 +3820,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_substance_abuse',
     'label' => 'Substance Abuse',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -3886,7 +3886,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_surg_facility_charges',
     'label' => 'Surgery : Facility Charges',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -3952,7 +3952,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_surg_physician_serv',
     'label' => 'Surgery : Physician Services',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -4018,7 +4018,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_tubal_ligation',
     'label' => 'Tubal Ligation',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -4084,7 +4084,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_urgent_care',
     'label' => 'Urgent Care',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -4150,7 +4150,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_vasectomy',
     'label' => 'Vasectomy',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -4216,7 +4216,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_vision_care',
     'label' => 'Vision care',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -4282,7 +4282,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_well_woman_visits',
     'label' => 'Well-woman visits',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -4348,7 +4348,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_x_rays',
     'label' => 'X-rays',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -4414,7 +4414,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_anesthesia',
     'label' => 'Anesthesia',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -4480,7 +4480,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_annual_maximum',
     'label' => 'Annual maximum',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -4584,7 +4584,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_bridges',
     'label' => 'Bridges',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -4716,7 +4716,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_coinsurance',
     'label' => 'Coinsurance',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -4782,7 +4782,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_crown',
     'label' => 'Crown',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -4914,7 +4914,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_deductible',
     'label' => 'Deductible',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -4980,7 +4980,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_dentures',
     'label' => 'Dentures',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -5046,7 +5046,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_extractions',
     'label' => 'Extractions',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -5112,7 +5112,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_fillings',
     'label' => 'Fillings',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -5311,7 +5311,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_gingivectomy',
     'label' => 'Gingivectomy',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -5377,7 +5377,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_gold_restorations',
     'label' => 'Gold restorations',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -5443,7 +5443,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_implants',
     'label' => 'Implants',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -5509,7 +5509,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_inlays',
     'label' => 'Inlays',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -5641,7 +5641,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_onlays',
     'label' => 'Onlays',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -5707,7 +5707,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_oral_surgery',
     'label' => 'Oral surgery',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -5839,7 +5839,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_overview',
     'label' => 'Overview',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -5906,7 +5906,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_periodontal_surgery',
     'label' => 'Periodontal surgery',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -6010,7 +6010,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_prescription_drugs',
     'label' => 'Prescription drugs',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -6209,7 +6209,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_root_canals',
     'label' => 'Root canals',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -6407,7 +6407,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_space_maintainers',
     'label' => 'Space maintainers',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -6473,7 +6473,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_splinting',
     'label' => 'Splinting',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -6539,7 +6539,7 @@ function stanford_benefits_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_su_tmj',
     'label' => 'TMJ (Temporomandibular joint syndrome)',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(

@@ -349,7 +349,7 @@
         // Function to return TRUE/FALSE if date is set for the plans.
         function IsDateSet() {
           var tmp = 0;
-          $('.view-header a[href*="[field_su_plan_year]"]', context).each(function() {
+          $('.view-header a[href*="[field_su_plan_year]"],.view-header a[href*="%5Bfield_su_plan_year%5D"]', context).each(function() {
             tmp++;
           });
           return tmp;
