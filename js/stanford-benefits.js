@@ -49,8 +49,8 @@
           }
           if (IsChecked('term_medical_preretirees_benefit')) {
             ShowSection(MedicalPreretirees);
-            // We want to show the NCQA for Preretirees.
-            $('.group-criteria', context).show();
+            // We want to hide the NCQA for Preretirees.
+            $('.group-criteria', context).hide();
           }
           if (IsChecked('term_medical_retirees_benefit')) {
             ShowSection(MedicalRetirees);
