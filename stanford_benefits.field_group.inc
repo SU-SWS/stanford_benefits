@@ -165,7 +165,7 @@ function stanford_benefits_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Rates',
+    'label' => 'Ratings',
     'weight' => '1',
     'children' => array(
       0 => 'field_su_access_serv',
@@ -177,7 +177,7 @@ function stanford_benefits_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Rates',
+      'label' => 'Ratings',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-criteria field-group-fieldset',
@@ -429,6 +429,7 @@ function stanford_benefits_field_group_info() {
       6 => 'field_su_christian_science',
       7 => 'field_su_cosmetic_surgery',
       8 => 'field_su_dental_treatment',
+      9 => 'field_su_alternative_medicine',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -536,6 +537,7 @@ function stanford_benefits_field_group_info() {
       6 => 'field_su_christian_science',
       7 => 'field_su_cosmetic_surgery',
       8 => 'field_su_dental_treatment',
+      9 => 'field_su_alternative_medicine',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -1066,7 +1068,7 @@ function stanford_benefits_field_group_info() {
   t('Preventive Care');
   t('Preventive Type of Care');
   t('Preventive Type of Care	');
-  t('Rates');
+  t('Ratings');
   t('Ratings - National Committee For Quality Assurance (NCQA)');
 
   return $field_groups;

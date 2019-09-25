@@ -1,6 +1,13 @@
 Stanford Benefits x.x-x.x, xxxx-xx-xx
 ---------------------------------
 
+Stanford Benefits 7.x-1.0-alpha3, 2019-09-25
+---------------------------------
+- Adding the Alternative Medicine field to Medical Benefits.
+- Fixing the ratings section workflow.
+- Hiding NCQA section from pre retirees.
+- Adding logic to show/hide EPO/Trio depending on plan year.
+
 Stanford Benefits 7.x-1.0-alpha2, 2019-09-24
 ---------------------------------
 - Bug fix: Javascript not loading
@@ -9,5 +16,5 @@ Stanford Benefits 7.x-1.0-alpha2, 2019-09-24
 
 Stanford Benefits 7.x-1.0-alpha1, 2019-09-23
 ---------------------------------
-- Initial alpha release 
+- Initial alpha release
 

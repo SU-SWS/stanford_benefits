@@ -49,12 +49,22 @@
           }
           if (IsChecked('term_medical_preretirees_benefit')) {
             ShowSection(MedicalPreretirees);
-            // We want to show the NCQA for Preretirees.
-            $('.group-criteria', context).show();
+            // We want to hide the NCQA for Preretirees.
+            $('.group-criteria', context).hide();
           }
           if (IsChecked('term_medical_retirees_benefit')) {
             ShowSection(MedicalRetirees);
+
             // We want to show the NCQA for Retirees.
+            // If it's not reported by NCQA hide the ratings for that one.
+            $('.group-criteria', context).each(function() {
+              var status = $(this).text();
+              if (status.indexOf("Not reported by NCQA") !== -1) {
+                $(this).addClass('hide');
+              }
+            });
+
+            // Show the NCQA for Retirees.
             $('.group-criteria', context).show();
           }
           if (IsChecked('term_dental_active_benefit')) {
@@ -75,6 +85,8 @@
 
         // If we have results to show, scroll to that content.
         if ( $('.view-content').is(':visible') ) {
+          // Make sure the right EPO/Trio plan is shown depending on the year.
+          CheckYearShowHide();
           $('html, body').animate({ scrollTop: $(DentalRetirees).offset().top }, 'slow');
         }
 
@@ -82,6 +94,8 @@
         $(MedicalActive + ' label:first-child', context).click(function() {
           ShowSection(MedicalActive);
           var checkboxname = GetCheckboxName(MedicalActive);
+          // Make sure the right EPO/Trio plan is shown depending on the year.
+          CheckYearShowHide();
           ClearOtherBoxes(checkboxname);
         });
 
@@ -89,6 +103,8 @@
         $(MedicalPreretirees + ' label:first-child', context).click(function() {
           ShowSection(MedicalPreretirees);
           var checkboxname = GetCheckboxName(MedicalPreretirees);
+          // Make sure the right EPO/Trio plan is shown depending on the year.
+          CheckYearShowHide();
           ClearOtherBoxes(checkboxname);
         });
 
@@ -130,6 +146,22 @@
           }
           if (IsChecked('term_dental_retirees_benefit')) {
             return IsChecked('term_dental_retirees_benefit');
+          }
+        }
+
+        // Function to make sure the right term is shown for the EPO/Trio plans.
+        function CheckYearShowHide() {
+          if (GetYearSelected() == '2019') {
+            $('.form-item-edit-term-medical-active-benefit-1021').show();
+            $('.form-item-edit-term-medical-active-benefit-1044').hide();
+            $('.form-item-edit-term-medical-preretirees-benefit-1028').show();
+            $('.form-item-edit-term-medical-preretirees-benefit-1045').hide();
+          }
+          if (GetYearSelected() == '2020') {
+            $('.form-item-edit-term-medical-active-benefit-1044').show();
+            $('.form-item-edit-term-medical-active-benefit-1021').hide();
+            $('.form-item-edit-term-medical-preretirees-benefit-1045').show();
+            $('.form-item-edit-term-medical-preretirees-benefit-1028').hide();
           }
         }
 
@@ -300,6 +332,19 @@
           var underscoreme = tmp.replace('-wrapper', '');
           var underscores = underscoreme.replace(re, '_');
           return underscores;
+        }
+
+        // Function to return the year selected.
+        function GetYearSelected() {
+          var year = "";
+          if ( $('#edit-field-su-plan-year-value-2019 a', context).hasClass('active') ) {
+            year = "2019";
+          }
+
+          if ( $('#edit-field-su-plan-year-value-2020 a', context).hasClass('active') ) {
+            year = "2020";
+          }
+          return year;
         }
 
         // Function to hide all the different exposed filters.
