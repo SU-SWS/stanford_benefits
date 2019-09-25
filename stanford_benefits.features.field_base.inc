@@ -88,6 +88,25 @@ function stanford_benefits_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_su_alternative_medicine'.
+  $field_bases['field_su_alternative_medicine'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_su_alternative_medicine',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_su_ambulance_charges'.
   $field_bases['field_su_ambulance_charges'] = array(
     'active' => 1,

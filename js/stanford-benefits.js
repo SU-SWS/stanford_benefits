@@ -54,9 +54,9 @@
           }
           if (IsChecked('term_medical_retirees_benefit')) {
             ShowSection(MedicalRetirees);
+
             // We want to show the NCQA for Retirees.
-
-
+            // If it's not reported by NCQA hide the ratings for that one.
             $('.group-criteria', context).each(function() {
               var status = $(this).text();
               if (status.indexOf("Not reported by NCQA") !== -1) {
@@ -64,6 +64,7 @@
               }
             });
 
+            // Show the NCQA for Retirees.
             $('.group-criteria', context).show();
           }
           if (IsChecked('term_dental_active_benefit')) {

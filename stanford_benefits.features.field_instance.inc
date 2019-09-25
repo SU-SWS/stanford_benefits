@@ -106,7 +106,7 @@ function stanford_benefits_field_default_field_instances() {
           'icon_type' => 'star',
         ),
         'type' => 'starrating_rating_formatter',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -329,6 +329,72 @@ function stanford_benefits_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-benefit-field_su_alternative_medicine'.
+  $field_instances['node-benefit-field_su_alternative_medicine'] = array(
+    'bundle' => 'benefit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the Alternative Medicine information for the benefit.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_su_alternative_medicine',
+    'label' => 'Alternative Medicine',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 32,
+    ),
+  );
+
   // Exported field_instance: 'node-benefit-field_su_ambulance_charges'.
   $field_instances['node-benefit-field_su_ambulance_charges'] = array(
     'bundle' => 'benefit',
@@ -341,7 +407,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -391,7 +457,7 @@ function stanford_benefits_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 32,
+      'weight' => 33,
     ),
   );
 
@@ -841,7 +907,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -891,7 +957,7 @@ function stanford_benefits_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 33,
+      'weight' => 34,
     ),
   );
 
@@ -907,7 +973,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -957,7 +1023,7 @@ function stanford_benefits_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 34,
+      'weight' => 35,
     ),
   );
 
@@ -973,7 +1039,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1023,7 +1089,7 @@ function stanford_benefits_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 35,
+      'weight' => 36,
     ),
   );
 
@@ -1105,7 +1171,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1155,7 +1221,7 @@ function stanford_benefits_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 36,
+      'weight' => 37,
     ),
   );
 
@@ -1237,7 +1303,7 @@ function stanford_benefits_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1287,7 +1353,7 @@ function stanford_benefits_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 37,
+      'weight' => 38,
     ),
   );
 
@@ -1575,7 +1641,7 @@ function stanford_benefits_field_default_field_instances() {
           'icon_type' => 'star',
         ),
         'type' => 'starrating_rating_formatter',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2082,7 +2148,7 @@ function stanford_benefits_field_default_field_instances() {
           'icon_type' => 'star',
         ),
         'type' => 'starrating_rating_formatter',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3594,7 +3660,7 @@ function stanford_benefits_field_default_field_instances() {
           'icon_type' => 'star',
         ),
         'type' => 'starrating_rating_formatter',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3771,7 +3837,7 @@ function stanford_benefits_field_default_field_instances() {
           'icon_type' => 'star',
         ),
         'type' => 'starrating_rating_formatter',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -6587,6 +6653,7 @@ function stanford_benefits_field_default_field_instances() {
   t('Acupuncture');
   t('Allergy Tests');
   t('Allergy Treatment');
+  t('Alternative Medicine');
   t('Ambulance charges');
   t('Anesthesia');
   t('Annual maximum');
@@ -6615,6 +6682,7 @@ function stanford_benefits_field_default_field_instances() {
   t('Enter the Acupuncture information for the benefit.');
   t('Enter the Allergy Tests information for the benefit.');
   t('Enter the Allergy Treatment information for the benefit.');
+  t('Enter the Alternative Medicine information for the benefit.');
   t('Enter the Ambulance charges information for the benefit.');
   t('Enter the Anesthesia information for the benefit.');
   t('Enter the Annual maximum information for the benefit.');
