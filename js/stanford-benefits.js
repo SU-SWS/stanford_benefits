@@ -82,6 +82,14 @@
         $(MedicalActive + ' label:first-child', context).click(function() {
           ShowSection(MedicalActive);
           var checkboxname = GetCheckboxName(MedicalActive);
+          if (GetYearSelected() == '2019') {
+            $('.form-item-edit-term-medical-active-benefit-1021').show();
+            $('.form-item-edit-term-medical-active-benefit-1044').hide();
+          }
+          if (GetYearSelected() == '2020') {
+            $('.form-item-edit-term-medical-active-benefit-1044').show();
+            $('.form-item-edit-term-medical-active-benefit-1021').hide();
+          }
           ClearOtherBoxes(checkboxname);
         });
 
@@ -89,6 +97,14 @@
         $(MedicalPreretirees + ' label:first-child', context).click(function() {
           ShowSection(MedicalPreretirees);
           var checkboxname = GetCheckboxName(MedicalPreretirees);
+          if (GetYearSelected() == '2019') {
+            $('.form-item-edit-term-medical-preretirees-benefit-1028').show();
+            $('.form-item-edit-term-medical-preretirees-benefit-1045').hide();
+          }
+          if (GetYearSelected() == '2020') {
+            $('.form-item-edit-term-medical-preretirees-benefit-1045').show();
+            $('.form-item-edit-term-medical-preretirees-benefit-1028').hide();
+          }
           ClearOtherBoxes(checkboxname);
         });
 
@@ -300,6 +316,19 @@
           var underscoreme = tmp.replace('-wrapper', '');
           var underscores = underscoreme.replace(re, '_');
           return underscores;
+        }
+
+        // Function to return the year selected.
+        function GetYearSelected() {
+          var year = "";
+          if ( $('#edit-field-su-plan-year-value-2019 a', context).hasClass('active') ) {
+            year = "2019";
+          }
+
+          if ( $('#edit-field-su-plan-year-value-2020 a', context).hasClass('active') ) {
+            year = "2020";
+          }
+          return year;
         }
 
         // Function to hide all the different exposed filters.
