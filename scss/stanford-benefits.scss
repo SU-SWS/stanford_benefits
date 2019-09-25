@@ -76,6 +76,18 @@ body.not-logged-in #edit-field-su-plan-year-value-wrapper {
 
     .field-group-fieldset {
       margin-top: 40px;
+
+      &.hide {
+        height: 430px;
+
+        .field-name-field-su-access-serv,
+        .field-name-field-su-qualified-providers,
+        .field-name-field-su-staying-healthy,
+        .field-name-field-su-getting-better,
+        .field-name-field-su-living-with-illness {
+          display: none;
+        }
+      }
     }
 
     .fieldset-wrapper {

@@ -61,6 +61,14 @@ body.not-logged-in #edit-field-su-plan-year-value-wrapper {
 
 .view-caw-benefit-comparison-tool article .field-group-fieldset {
   margin-top: 40px; }
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide {
+    height: 430px; }
+    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-access-serv,
+    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-qualified-providers,
+    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-staying-healthy,
+    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-getting-better,
+    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-living-with-illness {
+      display: none; }
 
 .view-caw-benefit-comparison-tool article .fieldset-wrapper {
   font-size: 13px;
