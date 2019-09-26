@@ -1,6 +1,10 @@
 Stanford Benefits x.x-x.x, xxxx-xx-xx
 ---------------------------------
 
+Stanford Benefits 7.x-1.0-alpha4, 2019-09-26
+---------------------------------
+- We only need the ratings to show for the pre-retiree plans.
+
 Stanford Benefits 7.x-1.0-alpha3, 2019-09-25
 ---------------------------------
 - Adding the Alternative Medicine field to Medical Benefits.

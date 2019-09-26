@@ -80,11 +80,16 @@ body.not-logged-in #edit-field-su-plan-year-value-wrapper {
       &.hide {
         height: 430px;
 
-        .field-name-field-su-access-serv,
-        .field-name-field-su-qualified-providers,
-        .field-name-field-su-staying-healthy,
-        .field-name-field-su-getting-better,
-        .field-name-field-su-living-with-illness {
+        .field-name-field-su-access-serv .field-label,
+        .field-name-field-su-access-serv .field-items,
+        .field-name-field-su-qualified-providers .field-label,
+        .field-name-field-su-qualified-providers .field-items,
+        .field-name-field-su-staying-healthy .field-label,
+        .field-name-field-su-staying-healthy .field-items,
+        .field-name-field-su-getting-better .field-label,
+        .field-name-field-su-getting-better .field-items,
+        .field-name-field-su-living-with-illness .field-label,
+        .field-name-field-su-living-with-illness .field-items {
           display: none;
         }
       }
