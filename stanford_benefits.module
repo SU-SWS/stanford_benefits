@@ -27,3 +27,38 @@ function stanford_benefits_views_pre_render(&$view) {
     drupal_add_js(drupal_get_path("module", "stanford_benefits") . "/js/stanford-benefits.js");
   }
 }
+
+
+/**
+ * Implements hook_element_info_alter()
+ *
+ * Sets the text format processor to a custom callback.
+ */
+function stanford_benefits_element_info_alter(&$type){
+  if (isset($type['text_format']['#process'])) {
+    foreach ($type['text_format']['#process'] as &$callback) {
+      if ($callback === 'filter_process_format') {
+        $callback = 'stanford_benefits_filter_process_format';
+      }
+    }
+  }
+}
+
+/**
+ * Callback function for stanford_benefits_element_info_alter()
+ */
+function stanford_benefits_filter_process_format($element){
+  // Get a list of fields that we're going to alter
+  $fields_to_update = [];
+  $fields = field_info_instances("node", "benefit");
+  foreach ($fields as $field_name => $field){
+      if ($field['widget']['type'] == 'text_textarea'){
+          $fields_to_update[] = $field['field_name'];
+      }
+  }
+  $element = filter_process_format($element);
+  if ($element['#bundle'] == 'benefit' && (in_array($element['#field_name'], $fields_to_update))){
+    $element['format']['format']['#default_value'] = 'benefits_formatter';
+  }
+  return $element;
+}

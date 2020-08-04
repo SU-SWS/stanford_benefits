@@ -1,0 +1,373 @@
+
+<?php
+/**
+ * @file
+ * Install, uninstall, update code for stanford_benefits module.
+ *
+ */
+
+/**
+ * This update installs a new text format for benefits, and updates existing content to use the new text format by default.
+ */
+function stanford_benefits_update_7101(){
+    // This updates our existing content to the new text formatter.
+    $formatter_machine_name = 'benefits_formatter';
+    $fields_to_update = [];
+    $fields = field_info_instances("node", "benefit");
+    foreach ($fields as $field_name => $field){
+        if ($field['widget']['type'] == 'text_textarea'){
+            $fields_to_update[] = $field['field_name'];
+        }
+    }
+    foreach ($fields_to_update as $field){
+        $data_table = 'field_data_' . $field;
+        $rev_table = 'field_revision_' . $field;
+        $update_field = $field . '_format';
+        $data_query = db_update($data_table)
+                    ->fields([
+                        $update_field => $formatter_machine_name,
+                    ])
+                    ->condition($update_field, 'content_editor_text_format', '=')
+                    ->execute();
+        $rev_query = db_update($rev_table)
+                    ->fields([
+                        $update_field => $formatter_machine_name,
+                    ])
+                    ->condition($update_field, 'content_editor_text_format', '=')
+                    ->execute();
+    }
+
+    // Now we update tables to ensure the new format is available and configured properly.
+    // WYSIWYG table update:
+    $wysiwyg_update = [
+        'format' => $formatter_machine_name,
+        'editor' => 'ckeditor',
+        'settings' => [
+            'default' => 0,
+            'user_choose' => 0,
+            'show_toggle' => 1,
+            'theme' => 'advanced',
+            'language' => 'en',
+            'buttons' =>[
+              'default' => [
+                'Bold' => 1,
+                'Italic' => 1,
+                'BulletedList' => 1,
+                'NumberedList' => 1,
+                'Outdent' => 1,
+                'Indent' => 1,
+                'Undo' => 1,
+                'Redo' => 1,
+                'Link' => 1,
+                'Unlink' => 1,
+                'Blockquote' => 1,
+                'HorizontalRule' => 1,
+                'Cut' => 1,
+                'Copy' => 1,
+                'PasteFromWord' => 1,
+                'RemoveFormat' => 1,
+                'Format' => 1,
+                'Styles' => 1,
+                'Table' => 1,
+                'CreateDiv' => 1,
+                'SpellChecker' => 1,
+              ],
+            ],
+            'toolbar_loc' => 'top',
+            'toolbar_align' => 'left',
+            'path_loc' => 'bottom',
+            'resizing' => 1,
+            'verify_html' => 1,
+            'preformatted' => 0,
+            'convert_fonts_to_spans' => 1,
+            'remove_linebreaks' => 1,
+            'apply_source_formatting' => 1,
+            'paste_auto_cleanup_on_paste' => 1,
+            'block_formats' => 'p,h2,h3,h4',
+            'css_setting' => 'easy',
+            'css_path' => '%bsites/default/files/css_injector/css_injector_3.css, %bsites/default/themes/stanford_framework/css/stanford_light/styles-plain.css, %bsites/default/themes/stanford_framework/css/stanford_light/fonts-sans.css, %bsites/default/themes/stanford_framework/css/stanford_light/stanford-light.css ',
+            'css_classes' => 'More Link=a.more-link
+Button Link=a.btn
+Call to Action=a.btn.btn-arrow-right
+Summary Paragraph=p.summary
+Caption=p.caption
+Credits=p.credits
+Descriptor=p.descriptor
+Image Right=p.float-right
+Image Left=p.float-left
+No Shadow=p.no-shadow
+Highlight Block Right=div.highlight-block-right
+Highlight Block Left=div.highlight-block-left',
+        ],
+    ];
+    $wysiwyg_query = db_insert('wysiwyg')
+                        ->fields([
+                            'format' => $wysiwyg_update['format'],
+                            'editor' => $wysiwyg_update['editor'],
+                            'settings' => serialize($wysiwyg_update['settings']),
+                        ])->execute();
+
+
+    //filter table updates
+    $pathologic_paths= <<<PATHS
+/caw/
+https://sites.stanford.edu/caw/
+https://caw.stanford.edu/"
+PATHS;
+    $filter_update = [
+        [
+            'format' => $formatter_machine_name,
+            'module' => 'faq',
+            'name' => 'faq_embed',
+            'weight' => -45,
+            'status' => 0,
+            'settings' => [],
+        ],
+        [
+            'format' => $formatter_machine_name,
+            'module' => 'filter',
+            'name' => 'filter_autop',
+            'weight' => -46,
+            'status' => 0,
+            'settings' => [],
+        ],
+        [
+            'format' => $formatter_machine_name,
+            'module' => 'filter',
+            'name' => 'filter_html',
+            'weight' => -49,
+            'status' => 0,
+            'settings' => [
+                'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd>',
+                'filter_html_help' => 1,
+                'filter_html_nofollow' => 0,
+            ],
+        ],
+        [
+            'format' => $formatter_machine_name,
+            'module' => 'filter',
+            'name' => 'filter_htmlcorrector',
+            'weight' => -44,
+            'status' => 1,
+            'settings' => [],
+        ],
+        [
+            'format' => $formatter_machine_name,
+            'module' => 'filter',
+            'name' => 'filter_html_escape',
+            'weight' => -50,
+            'status' => 0,
+            'settings' => [],
+        ],
+        [
+            'format' => $formatter_machine_name,
+            'module' => 'filter',
+            'name' => 'filter_url',
+            'weight' => -48,
+            'status' => 0,
+            'settings' => [
+                'filter_url_length' => '72',
+            ],
+        ],
+        [
+            'format' => $formatter_machine_name,
+            'module' => 'pathologic',
+            'name' => 'pathologic',
+            'weight' => -42,
+            'status' => 1,
+            'settings' => [
+                'local_paths' => $pathologic_paths,
+                'protocol_style' => 'full',
+            ],
+        ],
+        [
+            'format' => $formatter_machine_name,
+            'module' => 'transliteration',
+            'name' => 'transliteration',
+            'weight' => -47,
+            'status' => 0,
+            'settings' => [
+                'no_known_transliteration' => '?',
+            ],
+        ],
+        [
+            'format' => $formatter_machine_name,
+            'module' => 'wysiwyg_filter',
+            'name' => 'wysiwyg',
+            'weight' => -43,
+            'status' => 1,
+            'settings' => array (
+                'valid_elements' => 'a[!href|target<_blank|title],
+              div[align<center?justify?left?right],
+              p[align<center?justify?left?right],
+              br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd',
+                'allow_comments' => '0',
+                'nofollow_policy' => 'whitelist',
+                'nofollow_domains' =>
+                array (
+                  0 => 'cardinalatwork-dev.stanford.edu',
+                  1 => 'cardinalatwork-test.stanford.edu',
+                  2 => 'cardinalatwork.stanford.edu',
+                ),
+                'style_color' =>
+                array (
+                  'color' => 0,
+                  'background' => 0,
+                  'background-color' => 0,
+                  'background-image' => 0,
+                  'background-repeat' => 0,
+                  'background-attachment' => 0,
+                  'background-position' => 0,
+                ),
+                'style_font' =>
+                array (
+                  'font' => 0,
+                  'font-family' => 0,
+                  'font-size' => 0,
+                  'font-size-adjust' => 0,
+                  'font-stretch' => 0,
+                  'font-style' => 0,
+                  'font-variant' => 0,
+                  'font-weight' => 0,
+                ),
+                'style_text' =>
+                array (
+                  'text-align' => 0,
+                  'text-decoration' => 0,
+                  'text-indent' => 0,
+                  'text-transform' => 0,
+                  'letter-spacing' => 0,
+                  'word-spacing' => 0,
+                  'white-space' => 0,
+                  'direction' => 0,
+                  'unicode-bidi' => 0,
+                ),
+                'style_box' =>
+                array (
+                  'margin' => 0,
+                  'margin-top' => 0,
+                  'margin-right' => 0,
+                  'margin-bottom' => 0,
+                  'margin-left' => 0,
+                  'padding' => 0,
+                  'padding-top' => 0,
+                  'padding-right' => 0,
+                  'padding-bottom' => 0,
+                  'padding-left' => 0,
+                ),
+                'style_border-1' =>
+                array (
+                  'border' => 0,
+                  'border-top' => 0,
+                  'border-right' => 0,
+                  'border-bottom' => 0,
+                  'border-left' => 0,
+                  'border-width' => 0,
+                  'border-top-width' => 0,
+                  'border-right-width' => 0,
+                  'border-bottom-width' => 0,
+                  'border-left-width' => 0,
+                ),
+                'style_border-2' =>
+                array (
+                  'border-color' => 0,
+                  'border-top-color' => 0,
+                  'border-right-color' => 0,
+                  'border-bottom-color' => 0,
+                  'border-left-color' => 0,
+                  'border-style' => 0,
+                  'border-top-style' => 0,
+                  'border-right-style' => 0,
+                  'border-bottom-style' => 0,
+                  'border-left-style' => 0,
+                ),
+                'style_dimension' =>
+                array (
+                  'height' => 0,
+                  'line-height' => 0,
+                  'max-height' => 0,
+                  'max-width' => 0,
+                  'min-height' => 0,
+                  'min-width' => 0,
+                  'width' => 0,
+                ),
+                'style_positioning' =>
+                array (
+                  'bottom' => 0,
+                  'clip' => 0,
+                  'left' => 0,
+                  'overflow' => 0,
+                  'right' => 0,
+                  'top' => 0,
+                  'vertical-align' => 0,
+                  'z-index' => 0,
+                ),
+                'style_layout' =>
+                array (
+                  'clear' => 0,
+                  'display' => 0,
+                  'float' => 0,
+                  'position' => 0,
+                  'visibility' => 0,
+                ),
+                'style_list' =>
+                array (
+                  'list-style' => 0,
+                  'list-style-image' => 0,
+                  'list-style-position' => 0,
+                  'list-style-type' => 0,
+                ),
+                'style_table' =>
+                array (
+                  'border-collapse' => 0,
+                  'border-spacing' => 0,
+                  'caption-side' => 0,
+                  'empty-cells' => 0,
+                  'table-layout' => 0,
+                ),
+                'style_user' =>
+                array (
+                  'cursor' => 0,
+                  'outline' => 0,
+                  'outline-width' => 0,
+                  'outline-style' => 0,
+                  'outline-color' => 0,
+                  'zoom' => 0,
+                ),
+                'rule_valid_classes' =>
+                array (
+                ),
+                'rule_valid_ids' =>
+                array (
+                ),
+                'rule_style_urls' =>
+                array (
+                ),
+              ),
+        ],
+    ];
+    foreach ($filter_update as $update){
+        $filter_query = db_insert('filter')
+                        ->fields([
+                            'format' => $update['format'],
+                            'module' => $update['module'],
+                            'name' => $update['name'],
+                            'weight' => $update['weight'],
+                            'status' => $update['status'],
+                            'settings' => serialize($update['settings']),
+                        ])->execute();
+    }
+
+    //filter_format table update
+    $filter_format_update = [
+        'format' => $formatter_machine_name,
+        'name' => 'Benefits Formatter',
+        'cache' => 1,
+        'status' => 1,
+        'weight' => -9,
+    ];
+
+    $filter_format_query = db_insert('filter_format')
+                            ->fields($filter_format_update)
+                            ->execute();
+}
