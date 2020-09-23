@@ -1,10 +1,10 @@
 {
-    "name": "su-sws/stanford_benefits",
-    "description": "A Drupal 7 module to handle benefits comparison tool.",
-    "type": "drupal-custom-module",
-    "license": "GPL-2.0+",
-    "minimum-stability": "dev",
-    "require": {
-        "composer/installers": "^1.2"
-    }
+  "name": "su-sws/stanford_benefits",
+  "description": "A Drupal 7 module to handle benefits comparison tool.",
+  "type": "drupal-custom-module",
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": {
+    "composer/installers": "^1.2"
   }
+}

@@ -82,8 +82,6 @@
 
         // If we have results to show, scroll to that content.
         if ( $('.view-content').is(':visible') ) {
-          // Make sure the right EPO/Trio plan is shown depending on the year.
-          CheckYearShowHide();
           $('html, body').animate({ scrollTop: $(DentalRetirees).offset().top }, 'slow');
         }
 
@@ -91,8 +89,6 @@
         $(MedicalActive + ' label:first-child', context).click(function() {
           ShowSection(MedicalActive);
           var checkboxname = GetCheckboxName(MedicalActive);
-          // Make sure the right EPO/Trio plan is shown depending on the year.
-          CheckYearShowHide();
           ClearOtherBoxes(checkboxname);
         });
 
@@ -100,8 +96,6 @@
         $(MedicalPreretirees + ' label:first-child', context).click(function() {
           ShowSection(MedicalPreretirees);
           var checkboxname = GetCheckboxName(MedicalPreretirees);
-          // Make sure the right EPO/Trio plan is shown depending on the year.
-          CheckYearShowHide();
           ClearOtherBoxes(checkboxname);
         });
 
@@ -143,22 +137,6 @@
           }
           if (IsChecked('term_dental_retirees_benefit')) {
             return IsChecked('term_dental_retirees_benefit');
-          }
-        }
-
-        // Function to make sure the right term is shown for the EPO/Trio plans.
-        function CheckYearShowHide() {
-          if (GetYearSelected() == '2019') {
-            $('.form-item-edit-term-medical-active-benefit-1021').show();
-            $('.form-item-edit-term-medical-active-benefit-1044').hide();
-            $('.form-item-edit-term-medical-preretirees-benefit-1028').show();
-            $('.form-item-edit-term-medical-preretirees-benefit-1045').hide();
-          }
-          if (GetYearSelected() == '2020') {
-            $('.form-item-edit-term-medical-active-benefit-1044').show();
-            $('.form-item-edit-term-medical-active-benefit-1021').hide();
-            $('.form-item-edit-term-medical-preretirees-benefit-1045').show();
-            $('.form-item-edit-term-medical-preretirees-benefit-1028').hide();
           }
         }
 
@@ -331,25 +309,12 @@
           return underscores;
         }
 
-        // Function to return the year selected.
-        function GetYearSelected() {
-          var year = "";
-          if ( $('#edit-field-su-plan-year-value-2019 a', context).hasClass('active') ) {
-            year = "2019";
-          }
-
-          if ( $('#edit-field-su-plan-year-value-2020 a', context).hasClass('active') ) {
-            year = "2020";
-          }
-          return year;
-        }
-
         // Function to hide all the different exposed filters.
         function HideAll() {
           // If the date has not been selected, Hide everything but the date selector.
           if ( IsDateSet() ) {
             $('.plan-rates-title', context).html('Plans & Contribution Rates');
-            $('#edit-field-su-plan-year-value-2019 a').removeClass('active');
+            $('[id^=edit-field-su-plan-year-value] a').removeClass('active');
             $('.view-header', context).hide();
             $('#medical-plan-header', context).hide();
             $('#dental-plan-header', context).hide();
