@@ -1,5 +1,12 @@
-Stanford Benefits x.x-x.x, xxxx-xx-xx
+Stanford Benefits 7.x-1.0-alpha6, 2020-09-24
 ---------------------------------
+- added composer.json for composer compatibility
+- cleaned up bugfixes in the javascript that were no longer relevant
+- added pull request template
+
+Stanford Benefits 7.x-1.0-alpha5, 2020-08-04
+---------------------------------
+- added update functions to correct the WYSIWYG editing for medical benefits
 
 Stanford Benefits 7.x-1.0-alpha4, 2019-09-26
 ---------------------------------
