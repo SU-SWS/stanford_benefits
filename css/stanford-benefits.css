@@ -61,19 +61,17 @@ body.not-logged-in #edit-field-su-plan-year-value-wrapper {
 
 .view-caw-benefit-comparison-tool article .field-group-fieldset {
   margin-top: 40px; }
-  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide {
-    height: 430px; }
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-access-serv .field-label,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-access-serv .field-items,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-qualified-providers .field-label,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-qualified-providers .field-items,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-staying-healthy .field-label,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-staying-healthy .field-items,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-getting-better .field-label,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-getting-better .field-items,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-living-with-illness .field-label,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-living-with-illness .field-items {
-      display: none; }
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-access-serv .field-label,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-access-serv .field-items,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-qualified-providers .field-label,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-qualified-providers .field-items,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-staying-healthy .field-label,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-staying-healthy .field-items,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-getting-better .field-label,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-getting-better .field-items,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-living-with-illness .field-label,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-living-with-illness .field-items {
+    display: none; }
 
 .view-caw-benefit-comparison-tool article .fieldset-wrapper {
   font-size: 13px;
@@ -87,7 +85,7 @@ body.not-logged-in #edit-field-su-plan-year-value-wrapper {
 
 .view-caw-benefit-comparison-tool h2.plan-rates-title {
   background-color: #e9edee;
-  margin-bottom: 120px;
+  margin-bottom: 0px;
   padding: 20px; }
 
 .view-caw-benefit-comparison-tool h3.no-spacing,
@@ -118,22 +116,21 @@ body.not-logged-in #edit-field-su-plan-year-value-wrapper {
     .view-caw-benefit-comparison-tool table.views-view-grid tbody td.col-2.col-last {
       width: 50%; }
 
-.view-caw-benefit-comparison-tool #edit-field-su-plan-year-value-wrapper {
+.view-caw-benefit-comparison-tool #edit-field-su-plan-year-value-wrapper, .view-caw-benefit-comparison-tool div[id^="edit-field-su-plan-year-value--"] {
   background: #e9edee;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
   margin: 20px 0;
   padding: 10px;
-  position: absolute;
   top: 70px;
   width: auto;
   z-index: 999; }
-  .view-caw-benefit-comparison-tool #edit-field-su-plan-year-value-wrapper a {
-    display: inline-block;
+  .view-caw-benefit-comparison-tool #edit-field-su-plan-year-value-wrapper a, .view-caw-benefit-comparison-tool div[id^="edit-field-su-plan-year-value--"] a {
+    display: block;
     float: left;
     margin-right: 10px; }
-    .view-caw-benefit-comparison-tool #edit-field-su-plan-year-value-wrapper a.active {
+    .view-caw-benefit-comparison-tool #edit-field-su-plan-year-value-wrapper a.active, .view-caw-benefit-comparison-tool div[id^="edit-field-su-plan-year-value--"] a.active {
       background: #000; }
-  .view-caw-benefit-comparison-tool #edit-field-su-plan-year-value-wrapper label {
+  .view-caw-benefit-comparison-tool #edit-field-su-plan-year-value-wrapper label, .view-caw-benefit-comparison-tool div[id^="edit-field-su-plan-year-value--"] label {
     font-weight: normal; }
 
 .view-caw-benefit-comparison-tool #dental-plan-header {
@@ -250,25 +247,34 @@ body.not-logged-in #edit-field-su-plan-year-value-wrapper {
   margin-bottom: 5px;
   padding: 10px; }
 
-.view-caw-benefit-comparison-tool .vision-plan-wrapper a,
 .view-caw-benefit-comparison-tool .full-plan-costs-wrapper a {
   font-size: 13px;
   font-weight: bold; }
 
-.view-caw-benefit-comparison-tool .vision-plan-wrapper p,
 .view-caw-benefit-comparison-tool .full-plan-costs-wrapper p {
   margin: 0; }
 
-.view-caw-benefit-comparison-tool .vision-plan-wrapper ul,
 .view-caw-benefit-comparison-tool .full-plan-costs-wrapper ul {
   margin: 0; }
-  .view-caw-benefit-comparison-tool .vision-plan-wrapper ul li,
   .view-caw-benefit-comparison-tool .full-plan-costs-wrapper ul li {
     list-style-type: none; }
 
-.view-caw-benefit-comparison-tool .vision-plan-wrapper .views-widget-filter-term_node_tid_depth_join select,
 .view-caw-benefit-comparison-tool .full-plan-costs-wrapper .views-widget-filter-term_node_tid_depth_join select {
   width: 100%; }
+
+.view-caw-benefit-comparison-tool .vision-plan-wrapper {
+  padding-top: 122px; }
+  .view-caw-benefit-comparison-tool .vision-plan-wrapper a {
+    font-size: 13px;
+    font-weight: bold; }
+  .view-caw-benefit-comparison-tool .vision-plan-wrapper p {
+    margin: 0; }
+  .view-caw-benefit-comparison-tool .vision-plan-wrapper ul {
+    margin: 0; }
+    .view-caw-benefit-comparison-tool .vision-plan-wrapper ul li {
+      list-style-type: none; }
+  .view-caw-benefit-comparison-tool .vision-plan-wrapper .views-widget-filter-term_node_tid_depth_join select {
+    width: 100%; }
 
 .view-caw-benefit-comparison-tool .view-footer {
   background-color: #dff0d8;
@@ -278,3 +284,12 @@ body.not-logged-in #edit-field-su-plan-year-value-wrapper {
   padding: 5px;
   text-align: center;
   width: 99%; }
+
+@media screen and (max-width: 430px) {
+  .view-caw-benefit-comparison-tool #edit-field-su-plan-year-value-wrapper a,
+  .view-caw-benefit-comparison-tool div[id^="edit-field-su-plan-year-value--"] a {
+    margin-bottom: 10px; } }
+
+@media screen and (max-width: 1000px) {
+  .view-caw-benefit-comparison-tool .vision-plan-wrapper {
+    padding-top: 20px; } }
