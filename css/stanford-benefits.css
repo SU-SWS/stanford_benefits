@@ -61,19 +61,17 @@ body.not-logged-in #edit-field-su-plan-year-value-wrapper {
 
 .view-caw-benefit-comparison-tool article .field-group-fieldset {
   margin-top: 40px; }
-  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide {
-    height: 430px; }
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-access-serv .field-label,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-access-serv .field-items,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-qualified-providers .field-label,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-qualified-providers .field-items,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-staying-healthy .field-label,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-staying-healthy .field-items,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-getting-better .field-label,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-getting-better .field-items,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-living-with-illness .field-label,
-    .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-living-with-illness .field-items {
-      display: none; }
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-access-serv .field-label,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-access-serv .field-items,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-qualified-providers .field-label,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-qualified-providers .field-items,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-staying-healthy .field-label,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-staying-healthy .field-items,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-getting-better .field-label,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-getting-better .field-items,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-living-with-illness .field-label,
+  .view-caw-benefit-comparison-tool article .field-group-fieldset.hide .field-name-field-su-living-with-illness .field-items {
+    display: none; }
 
 .view-caw-benefit-comparison-tool article .fieldset-wrapper {
   font-size: 13px;
